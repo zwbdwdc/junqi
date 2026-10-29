@@ -4,7 +4,7 @@ Windows 离线两人暗棋游戏，可自行布阵，与职业或地狱难度的
 
 ## 下载
 
-在 [Releases](https://github.com/zwbdwdc/junqi/releases/latest) 下载 `军棋3.0.2.exe`，双击运行。仓库为私有，需要登录有访问权限的 GitHub 账号才能下载；游戏运行不需要登录或联网。
+在 [Releases](https://github.com/zwbdwdc/junqi/releases/latest) 点击 `军棋3.0.2.exe` 附件，下载后双击运行。GitHub 会移除附件文件名里的中文，因此保存的文件名是 `3.0.2.exe`，可改为 `军棋3.0.2.exe`。仓库为私有，需要登录有访问权限的 GitHub 账号才能下载；游戏运行不需要登录或联网。
 
 ## 玩法
 
