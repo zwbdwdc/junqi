@@ -1,0 +1,1666 @@
+{
+  "side": "ai",
+  "board": [
+    null,
+    {
+      "id": "6fcf63b7-ac00-4fc6-bcef-e375a3913c74",
+      "side": "ai",
+      "type": "platoon",
+      "origin": 1,
+      "moved": false
+    },
+    {
+      "id": "9bf1ead4-ca0d-420a-87fc-63c148e9d2a8",
+      "side": "ai",
+      "type": "mine",
+      "origin": 2,
+      "moved": false
+    },
+    {
+      "id": "ebce0a57-0a10-45f8-be3f-162449932324",
+      "side": "ai",
+      "type": "flag",
+      "origin": 3,
+      "moved": false
+    },
+    {
+      "id": "b8a3f18c-b61d-420f-b1ca-2706d782b526",
+      "side": "ai",
+      "type": "mine",
+      "origin": 4,
+      "moved": false
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "side": "human",
+      "type": null,
+      "origin": 39,
+      "moved": true
+    },
+    null,
+    null,
+    null,
+    {
+      "id": "dfd3470d-7fc1-4685-8a07-b03918765938",
+      "side": "ai",
+      "type": "brigade",
+      "origin": 6,
+      "moved": true
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "2e391c9e-7762-4bf6-a7fb-041bb1073827",
+      "side": "human",
+      "type": null,
+      "origin": 35,
+      "moved": true
+    },
+    null,
+    {
+      "id": "f855a055-5644-48e3-9312-f83fb258177a",
+      "side": "human",
+      "type": null,
+      "origin": 43,
+      "moved": true
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "94818851-ba8c-4207-a29b-cde44a373b68",
+      "side": "human",
+      "type": null,
+      "origin": 47,
+      "moved": true
+    },
+    {
+      "id": "c13c0326-21c0-4ae4-aec9-14b0e170f425",
+      "side": "ai",
+      "type": "platoon",
+      "origin": 28,
+      "moved": true
+    },
+    {
+      "id": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "side": "ai",
+      "type": "brigade",
+      "origin": 19,
+      "moved": true
+    },
+    {
+      "id": "6349893d-f0fe-464b-82af-7718bd2e0f06",
+      "side": "human",
+      "type": null,
+      "origin": 51,
+      "moved": false
+    },
+    {
+      "id": "b39d9f55-d5b4-4987-95e3-62eb6a52a041",
+      "side": "human",
+      "type": null,
+      "origin": 52,
+      "moved": false
+    },
+    {
+      "id": "eba6df5a-aaae-4a44-88e2-0e4c62be52f2",
+      "side": "human",
+      "type": null,
+      "origin": 53,
+      "moved": false
+    },
+    {
+      "id": "b45f72b4-985e-4a6b-ba76-9ea5c94364b9",
+      "side": "human",
+      "type": null,
+      "origin": 54,
+      "moved": false
+    },
+    {
+      "id": "6ead17bb-656c-401c-8c52-9a206dea36a4",
+      "side": "human",
+      "type": null,
+      "origin": 55,
+      "moved": false
+    },
+    {
+      "id": "ec7081d5-e5e7-406e-9065-964548ad0cce",
+      "side": "human",
+      "type": "flag",
+      "origin": 56,
+      "moved": false
+    },
+    {
+      "id": "8548ccf4-e105-4933-a959-99a33785ad5b",
+      "side": "human",
+      "type": null,
+      "origin": 57,
+      "moved": false
+    },
+    {
+      "id": "d82c304b-ad65-4634-82ec-059777622dbf",
+      "side": "human",
+      "type": null,
+      "origin": 58,
+      "moved": false
+    },
+    {
+      "id": "b2368295-9ef7-46b4-a584-15ccfcc94eaf",
+      "side": "human",
+      "type": null,
+      "origin": 59,
+      "moved": false
+    },
+    null,
+    null
+  ],
+  "turn": "ai",
+  "ply": 101,
+  "quiet": 1,
+  "result": null,
+  "revealedFlags": {
+    "human": true,
+    "ai": true
+  },
+  "rules": {
+    "engineerMountains": true
+  },
+  "history": [
+    {
+      "ply": 1,
+      "side": "human",
+      "from": 30,
+      "to": 25,
+      "attackerId": "f33ee849-26bd-40ba-a4dc-057ddf9a855b",
+      "defenderId": "477a99f0-74da-4a45-a358-4becddf486f6",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 2,
+      "side": "ai",
+      "from": 15,
+      "to": 21,
+      "attackerId": "e9b3ac01-2c7d-4dee-b8b6-aeef8571b80c",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 3,
+      "side": "human",
+      "from": 31,
+      "to": 60,
+      "attackerId": "cb64ca6e-e6e2-4fa0-9a3e-e760aeba5fd3",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": true,
+      "mountainMove": true
+    },
+    {
+      "ply": 4,
+      "side": "ai",
+      "from": 29,
+      "to": 34,
+      "attackerId": "39a2453a-413a-4592-a8d1-daf5d9f77881",
+      "defenderId": "15c79193-690a-4ad8-9534-0dd2cf456b94",
+      "result": "lose",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 5,
+      "side": "human",
+      "from": 34,
+      "to": 38,
+      "attackerId": "15c79193-690a-4ad8-9534-0dd2cf456b94",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 6,
+      "side": "ai",
+      "from": 21,
+      "to": 25,
+      "attackerId": "e9b3ac01-2c7d-4dee-b8b6-aeef8571b80c",
+      "defenderId": "f33ee849-26bd-40ba-a4dc-057ddf9a855b",
+      "result": "both",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 7,
+      "side": "human",
+      "from": 39,
+      "to": 29,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 8,
+      "side": "ai",
+      "from": 20,
+      "to": 21,
+      "attackerId": "917c00c6-2a22-441c-8f19-fbd89cbbdd96",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 9,
+      "side": "human",
+      "from": 29,
+      "to": 23,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 10,
+      "side": "ai",
+      "from": 19,
+      "to": 13,
+      "attackerId": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 11,
+      "side": "human",
+      "from": 23,
+      "to": 18,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": "eee88cd8-4c97-4a7f-b7eb-69facad3c467",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 12,
+      "side": "ai",
+      "from": 12,
+      "to": 17,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 13,
+      "side": "human",
+      "from": 18,
+      "to": 23,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 14,
+      "side": "ai",
+      "from": 24,
+      "to": 34,
+      "attackerId": "3d004ee9-a210-43b0-a674-7448dcc091a9",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 15,
+      "side": "human",
+      "from": 35,
+      "to": 36,
+      "attackerId": "2e391c9e-7762-4bf6-a7fb-041bb1073827",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 16,
+      "side": "ai",
+      "from": 10,
+      "to": 30,
+      "attackerId": "2cd94335-14a1-4618-b7e5-781008e9d09e",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 17,
+      "side": "human",
+      "from": 45,
+      "to": 46,
+      "attackerId": "44505484-f301-465e-8893-e6961e66fc87",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 18,
+      "side": "ai",
+      "from": 5,
+      "to": 20,
+      "attackerId": "8fb81072-3ee3-451f-87c1-05c71dcaffa0",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 19,
+      "side": "human",
+      "from": 37,
+      "to": 42,
+      "attackerId": "72e651c6-0d33-462e-a6fc-efa5b77fa3b2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 20,
+      "side": "ai",
+      "from": 34,
+      "to": 44,
+      "attackerId": "3d004ee9-a210-43b0-a674-7448dcc091a9",
+      "defenderId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "result": "lose",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 21,
+      "side": "human",
+      "from": 33,
+      "to": 34,
+      "attackerId": "633a1abd-0417-4a3e-821b-c6407e3bf39b",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 22,
+      "side": "ai",
+      "from": 28,
+      "to": 29,
+      "attackerId": "c13c0326-21c0-4ae4-aec9-14b0e170f425",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 23,
+      "side": "human",
+      "from": 40,
+      "to": 30,
+      "attackerId": "04275448-61c7-41bc-8d25-811a44dbee46",
+      "defenderId": "2cd94335-14a1-4618-b7e5-781008e9d09e",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 24,
+      "side": "ai",
+      "from": 29,
+      "to": 19,
+      "attackerId": "c13c0326-21c0-4ae4-aec9-14b0e170f425",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 25,
+      "side": "human",
+      "from": 41,
+      "to": 40,
+      "attackerId": "e31ed7aa-9c0f-43d9-9c92-e284c00e7c73",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 26,
+      "side": "ai",
+      "from": 27,
+      "to": 32,
+      "attackerId": "972b254b-873e-4da8-b224-697d0dd011b8",
+      "defenderId": "2a3fd554-3f36-4df3-a554-809653375549",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 27,
+      "side": "human",
+      "from": 38,
+      "to": 32,
+      "attackerId": "15c79193-690a-4ad8-9534-0dd2cf456b94",
+      "defenderId": "972b254b-873e-4da8-b224-697d0dd011b8",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 28,
+      "side": "ai",
+      "from": 17,
+      "to": 18,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 29,
+      "side": "human",
+      "from": 23,
+      "to": 17,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 30,
+      "side": "ai",
+      "from": 22,
+      "to": 23,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 31,
+      "side": "human",
+      "from": 44,
+      "to": 38,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 32,
+      "side": "ai",
+      "from": 16,
+      "to": 11,
+      "attackerId": "b990a9cd-ca42-4f4d-abdd-68101053e7d2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 33,
+      "side": "human",
+      "from": 30,
+      "to": 25,
+      "attackerId": "04275448-61c7-41bc-8d25-811a44dbee46",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 34,
+      "side": "ai",
+      "from": 23,
+      "to": 24,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 35,
+      "side": "human",
+      "from": 25,
+      "to": 26,
+      "attackerId": "04275448-61c7-41bc-8d25-811a44dbee46",
+      "defenderId": "81309496-0b03-42ee-b63c-34ac90070c4b",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 36,
+      "side": "ai",
+      "from": 20,
+      "to": 40,
+      "attackerId": "8fb81072-3ee3-451f-87c1-05c71dcaffa0",
+      "defenderId": "e31ed7aa-9c0f-43d9-9c92-e284c00e7c73",
+      "result": "lose",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 37,
+      "side": "human",
+      "from": 26,
+      "to": 28,
+      "attackerId": "04275448-61c7-41bc-8d25-811a44dbee46",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 38,
+      "side": "ai",
+      "from": 18,
+      "to": 23,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 39,
+      "side": "human",
+      "from": 40,
+      "to": 5,
+      "attackerId": "e31ed7aa-9c0f-43d9-9c92-e284c00e7c73",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 40,
+      "side": "ai",
+      "from": 23,
+      "to": 28,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": "04275448-61c7-41bc-8d25-811a44dbee46",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 41,
+      "side": "human",
+      "from": 50,
+      "to": 15,
+      "attackerId": "8071b042-fba3-4524-a6b5-483baa466013",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 42,
+      "side": "ai",
+      "from": 11,
+      "to": 5,
+      "attackerId": "b990a9cd-ca42-4f4d-abdd-68101053e7d2",
+      "defenderId": "e31ed7aa-9c0f-43d9-9c92-e284c00e7c73",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 43,
+      "side": "human",
+      "from": 15,
+      "to": 11,
+      "attackerId": "8071b042-fba3-4524-a6b5-483baa466013",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 44,
+      "side": "ai",
+      "from": 28,
+      "to": 29,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 45,
+      "side": "human",
+      "from": 42,
+      "to": 48,
+      "attackerId": "72e651c6-0d33-462e-a6fc-efa5b77fa3b2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 46,
+      "side": "ai",
+      "from": 5,
+      "to": 20,
+      "attackerId": "b990a9cd-ca42-4f4d-abdd-68101053e7d2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 47,
+      "side": "human",
+      "from": 32,
+      "to": 30,
+      "attackerId": "15c79193-690a-4ad8-9534-0dd2cf456b94",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 48,
+      "side": "ai",
+      "from": 29,
+      "to": 25,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 49,
+      "side": "human",
+      "from": 11,
+      "to": 10,
+      "attackerId": "8071b042-fba3-4524-a6b5-483baa466013",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 50,
+      "side": "ai",
+      "from": 6,
+      "to": 11,
+      "attackerId": "dfd3470d-7fc1-4685-8a07-b03918765938",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 51,
+      "side": "human",
+      "from": 38,
+      "to": 32,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 52,
+      "side": "ai",
+      "from": 25,
+      "to": 30,
+      "attackerId": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "defenderId": "15c79193-690a-4ad8-9534-0dd2cf456b94",
+      "result": "both",
+      "flagRevealed": [
+        {
+          "side": "ai",
+          "index": 3,
+          "id": "ebce0a57-0a10-45f8-be3f-162449932324"
+        },
+        {
+          "side": "human",
+          "index": 56,
+          "id": "ec7081d5-e5e7-406e-9065-964548ad0cce"
+        }
+      ],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 53,
+      "side": "human",
+      "from": 10,
+      "to": 20,
+      "attackerId": "8071b042-fba3-4524-a6b5-483baa466013",
+      "defenderId": "b990a9cd-ca42-4f4d-abdd-68101053e7d2",
+      "result": "both",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 54,
+      "side": "ai",
+      "from": 0,
+      "to": 5,
+      "attackerId": "39b0c832-7046-4f0c-a8d8-1174e6d75aca",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 55,
+      "side": "human",
+      "from": 32,
+      "to": 30,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 56,
+      "side": "ai",
+      "from": 5,
+      "to": 6,
+      "attackerId": "39b0c832-7046-4f0c-a8d8-1174e6d75aca",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 57,
+      "side": "human",
+      "from": 30,
+      "to": 5,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 58,
+      "side": "ai",
+      "from": 24,
+      "to": 34,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": "633a1abd-0417-4a3e-821b-c6407e3bf39b",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 59,
+      "side": "human",
+      "from": 43,
+      "to": 38,
+      "attackerId": "f855a055-5644-48e3-9312-f83fb258177a",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 60,
+      "side": "ai",
+      "from": 21,
+      "to": 26,
+      "attackerId": "917c00c6-2a22-441c-8f19-fbd89cbbdd96",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 61,
+      "side": "human",
+      "from": 5,
+      "to": 6,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": "39b0c832-7046-4f0c-a8d8-1174e6d75aca",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 62,
+      "side": "ai",
+      "from": 34,
+      "to": 30,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 63,
+      "side": "human",
+      "from": 49,
+      "to": 29,
+      "attackerId": "0d79894c-9502-4a08-b403-5365f76cf4a4",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 64,
+      "side": "ai",
+      "from": 26,
+      "to": 20,
+      "attackerId": "917c00c6-2a22-441c-8f19-fbd89cbbdd96",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": true,
+      "mountainMove": false
+    },
+    {
+      "ply": 65,
+      "side": "human",
+      "from": 6,
+      "to": 5,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 66,
+      "side": "ai",
+      "from": 30,
+      "to": 25,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 67,
+      "side": "human",
+      "from": 5,
+      "to": 20,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": "917c00c6-2a22-441c-8f19-fbd89cbbdd96",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 68,
+      "side": "ai",
+      "from": 25,
+      "to": 29,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": "0d79894c-9502-4a08-b403-5365f76cf4a4",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 69,
+      "side": "human",
+      "from": 17,
+      "to": 23,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 70,
+      "side": "ai",
+      "from": 29,
+      "to": 49,
+      "attackerId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 71,
+      "side": "human",
+      "from": 48,
+      "to": 49,
+      "attackerId": "72e651c6-0d33-462e-a6fc-efa5b77fa3b2",
+      "defenderId": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "result": "both",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 72,
+      "side": "ai",
+      "from": 19,
+      "to": 49,
+      "attackerId": "c13c0326-21c0-4ae4-aec9-14b0e170f425",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 73,
+      "side": "human",
+      "from": 47,
+      "to": 48,
+      "attackerId": "94818851-ba8c-4207-a29b-cde44a373b68",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 74,
+      "side": "ai",
+      "from": 13,
+      "to": 17,
+      "attackerId": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 75,
+      "side": "human",
+      "from": 20,
+      "to": 21,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 76,
+      "side": "ai",
+      "from": 14,
+      "to": 13,
+      "attackerId": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 77,
+      "side": "human",
+      "from": 60,
+      "to": 31,
+      "attackerId": "cb64ca6e-e6e2-4fa0-9a3e-e760aeba5fd3",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": true,
+      "mountainMove": true
+    },
+    {
+      "ply": 78,
+      "side": "ai",
+      "from": 11,
+      "to": 10,
+      "attackerId": "dfd3470d-7fc1-4685-8a07-b03918765938",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 79,
+      "side": "human",
+      "from": 21,
+      "to": 20,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 80,
+      "side": "ai",
+      "from": 10,
+      "to": 11,
+      "attackerId": "dfd3470d-7fc1-4685-8a07-b03918765938",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 81,
+      "side": "human",
+      "from": 31,
+      "to": 9,
+      "attackerId": "cb64ca6e-e6e2-4fa0-9a3e-e760aeba5fd3",
+      "defenderId": "f062f54d-1572-4e5f-b3ba-fcedc2441157",
+      "result": "both",
+      "flagRevealed": [],
+      "engineerTurn": true,
+      "mountainMove": false
+    },
+    {
+      "ply": 82,
+      "side": "ai",
+      "from": 17,
+      "to": 21,
+      "attackerId": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 83,
+      "side": "human",
+      "from": 46,
+      "to": 45,
+      "attackerId": "44505484-f301-465e-8893-e6961e66fc87",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 84,
+      "side": "ai",
+      "from": 13,
+      "to": 17,
+      "attackerId": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 85,
+      "side": "human",
+      "from": 45,
+      "to": 8,
+      "attackerId": "44505484-f301-465e-8893-e6961e66fc87",
+      "defenderId": "304d9b21-02f1-4ceb-ae55-5fbafc10fa20",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": true,
+      "mountainMove": false
+    },
+    {
+      "ply": 86,
+      "side": "ai",
+      "from": 7,
+      "to": 8,
+      "attackerId": "e791c93e-608d-443f-9f9f-6077eacc25ba",
+      "defenderId": "44505484-f301-465e-8893-e6961e66fc87",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 87,
+      "side": "human",
+      "from": 23,
+      "to": 19,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 88,
+      "side": "ai",
+      "from": 17,
+      "to": 13,
+      "attackerId": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 89,
+      "side": "human",
+      "from": 19,
+      "to": 23,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 90,
+      "side": "ai",
+      "from": 11,
+      "to": 17,
+      "attackerId": "dfd3470d-7fc1-4685-8a07-b03918765938",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 91,
+      "side": "human",
+      "from": 20,
+      "to": 5,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 92,
+      "side": "ai",
+      "from": 13,
+      "to": 7,
+      "attackerId": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 93,
+      "side": "human",
+      "from": 5,
+      "to": 11,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 94,
+      "side": "ai",
+      "from": 21,
+      "to": 25,
+      "attackerId": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 95,
+      "side": "human",
+      "from": 23,
+      "to": 19,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 96,
+      "side": "ai",
+      "from": 7,
+      "to": 13,
+      "attackerId": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 97,
+      "side": "human",
+      "from": 11,
+      "to": 6,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 98,
+      "side": "ai",
+      "from": 25,
+      "to": 50,
+      "attackerId": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 99,
+      "side": "human",
+      "from": 6,
+      "to": 8,
+      "attackerId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "defenderId": "e791c93e-608d-443f-9f9f-6077eacc25ba",
+      "result": "win",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 100,
+      "side": "ai",
+      "from": 13,
+      "to": 8,
+      "attackerId": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "defenderId": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "result": "both",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    },
+    {
+      "ply": 101,
+      "side": "human",
+      "from": 19,
+      "to": 13,
+      "attackerId": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "defenderId": null,
+      "result": "move",
+      "flagRevealed": [],
+      "engineerTurn": false,
+      "mountainMove": false
+    }
+  ],
+  "ownRoster": [
+    {
+      "id": "39b0c832-7046-4f0c-a8d8-1174e6d75aca",
+      "type": "regiment",
+      "origin": 0
+    },
+    {
+      "id": "6fcf63b7-ac00-4fc6-bcef-e375a3913c74",
+      "type": "platoon",
+      "origin": 1
+    },
+    {
+      "id": "9bf1ead4-ca0d-420a-87fc-63c148e9d2a8",
+      "type": "mine",
+      "origin": 2
+    },
+    {
+      "id": "ebce0a57-0a10-45f8-be3f-162449932324",
+      "type": "flag",
+      "origin": 3
+    },
+    {
+      "id": "b8a3f18c-b61d-420f-b1ca-2706d782b526",
+      "type": "mine",
+      "origin": 4
+    },
+    {
+      "id": "8fb81072-3ee3-451f-87c1-05c71dcaffa0",
+      "type": "platoon",
+      "origin": 5
+    },
+    {
+      "id": "dfd3470d-7fc1-4685-8a07-b03918765938",
+      "type": "brigade",
+      "origin": 6
+    },
+    {
+      "id": "e791c93e-608d-443f-9f9f-6077eacc25ba",
+      "type": "company",
+      "origin": 7
+    },
+    {
+      "id": "304d9b21-02f1-4ceb-ae55-5fbafc10fa20",
+      "type": "mine",
+      "origin": 8
+    },
+    {
+      "id": "f062f54d-1572-4e5f-b3ba-fcedc2441157",
+      "type": "engineer",
+      "origin": 9
+    },
+    {
+      "id": "2cd94335-14a1-4618-b7e5-781008e9d09e",
+      "type": "company",
+      "origin": 10
+    },
+    {
+      "id": "2554cd89-9c88-47d6-8407-d70d3c2ff190",
+      "type": "commander",
+      "origin": 12
+    },
+    {
+      "id": "2ee51d6f-d00d-4f99-8605-3c8d7eef1493",
+      "type": "bomb",
+      "origin": 14
+    },
+    {
+      "id": "e9b3ac01-2c7d-4dee-b8b6-aeef8571b80c",
+      "type": "bomb",
+      "origin": 15
+    },
+    {
+      "id": "b990a9cd-ca42-4f4d-abdd-68101053e7d2",
+      "type": "division",
+      "origin": 16
+    },
+    {
+      "id": "eee88cd8-4c97-4a7f-b7eb-69facad3c467",
+      "type": "battalion",
+      "origin": 18
+    },
+    {
+      "id": "463c8219-e5f9-4de1-b7cb-0230179a46d0",
+      "type": "brigade",
+      "origin": 19
+    },
+    {
+      "id": "917c00c6-2a22-441c-8f19-fbd89cbbdd96",
+      "type": "engineer",
+      "origin": 20
+    },
+    {
+      "id": "ed49c8fb-3961-438b-a388-2d68fb8892e2",
+      "type": "division",
+      "origin": 22
+    },
+    {
+      "id": "3d004ee9-a210-43b0-a674-7448dcc091a9",
+      "type": "battalion",
+      "origin": 24
+    },
+    {
+      "id": "477a99f0-74da-4a45-a358-4becddf486f6",
+      "type": "company",
+      "origin": 25
+    },
+    {
+      "id": "81309496-0b03-42ee-b63c-34ac90070c4b",
+      "type": "engineer",
+      "origin": 26
+    },
+    {
+      "id": "972b254b-873e-4da8-b224-697d0dd011b8",
+      "type": "regiment",
+      "origin": 27
+    },
+    {
+      "id": "c13c0326-21c0-4ae4-aec9-14b0e170f425",
+      "type": "platoon",
+      "origin": 28
+    },
+    {
+      "id": "39a2453a-413a-4592-a8d1-daf5d9f77881",
+      "type": "general",
+      "origin": 29
+    }
+  ],
+  "enemyRoster": [
+    {
+      "id": "f33ee849-26bd-40ba-a4dc-057ddf9a855b",
+      "origin": 30
+    },
+    {
+      "id": "cb64ca6e-e6e2-4fa0-9a3e-e760aeba5fd3",
+      "origin": 31
+    },
+    {
+      "id": "2a3fd554-3f36-4df3-a554-809653375549",
+      "origin": 32
+    },
+    {
+      "id": "633a1abd-0417-4a3e-821b-c6407e3bf39b",
+      "origin": 33
+    },
+    {
+      "id": "15c79193-690a-4ad8-9534-0dd2cf456b94",
+      "origin": 34
+    },
+    {
+      "id": "2e391c9e-7762-4bf6-a7fb-041bb1073827",
+      "origin": 35
+    },
+    {
+      "id": "72e651c6-0d33-462e-a6fc-efa5b77fa3b2",
+      "origin": 37
+    },
+    {
+      "id": "64f32866-4001-42bf-9ca0-7905bef43344",
+      "origin": 39
+    },
+    {
+      "id": "04275448-61c7-41bc-8d25-811a44dbee46",
+      "origin": 40
+    },
+    {
+      "id": "e31ed7aa-9c0f-43d9-9c92-e284c00e7c73",
+      "origin": 41
+    },
+    {
+      "id": "f855a055-5644-48e3-9312-f83fb258177a",
+      "origin": 43
+    },
+    {
+      "id": "6948d4d4-667b-4e95-ae2e-0789c4e6d184",
+      "origin": 44
+    },
+    {
+      "id": "44505484-f301-465e-8893-e6961e66fc87",
+      "origin": 45
+    },
+    {
+      "id": "94818851-ba8c-4207-a29b-cde44a373b68",
+      "origin": 47
+    },
+    {
+      "id": "0d79894c-9502-4a08-b403-5365f76cf4a4",
+      "origin": 49
+    },
+    {
+      "id": "8071b042-fba3-4524-a6b5-483baa466013",
+      "origin": 50
+    },
+    {
+      "id": "6349893d-f0fe-464b-82af-7718bd2e0f06",
+      "origin": 51
+    },
+    {
+      "id": "b39d9f55-d5b4-4987-95e3-62eb6a52a041",
+      "origin": 52
+    },
+    {
+      "id": "eba6df5a-aaae-4a44-88e2-0e4c62be52f2",
+      "origin": 53
+    },
+    {
+      "id": "b45f72b4-985e-4a6b-ba76-9ea5c94364b9",
+      "origin": 54
+    },
+    {
+      "id": "6ead17bb-656c-401c-8c52-9a206dea36a4",
+      "origin": 55
+    },
+    {
+      "id": "ec7081d5-e5e7-406e-9065-964548ad0cce",
+      "origin": 56
+    },
+    {
+      "id": "8548ccf4-e105-4933-a959-99a33785ad5b",
+      "origin": 57
+    },
+    {
+      "id": "d82c304b-ad65-4634-82ec-059777622dbf",
+      "origin": 58
+    },
+    {
+      "id": "b2368295-9ef7-46b4-a584-15ccfcc94eaf",
+      "origin": 59
+    }
+  ],
+  "enemyCounts": {
+    "flag": 1,
+    "mine": 3,
+    "bomb": 2,
+    "commander": 1,
+    "general": 1,
+    "division": 2,
+    "brigade": 2,
+    "regiment": 2,
+    "battalion": 2,
+    "company": 3,
+    "platoon": 3,
+    "engineer": 3
+  }
+}

@@ -1,0 +1,2218 @@
+{
+  "kind": "public-only-directed-regression",
+  "sourceArchiveSha": "02c0553f51266ee023e9a3730042959047e6baa598f8c307640009678f54ab59",
+  "recordSha": "e571af88a21fb479a3c1603116327f98ba5013444e25b809dd3b99ffcc80b6d8",
+  "sourcePly": 125,
+  "decisionPly": 150,
+  "rngParts": [
+    20261013,
+    125,
+    149,
+    "ai"
+  ],
+  "context": {
+    "style": "balanced",
+    "wing": -1,
+    "seed": 3921804345
+  },
+  "observation": {
+    "side": "ai",
+    "board": [
+      null,
+      {
+        "id": "ai-01",
+        "side": "ai",
+        "type": "mine",
+        "origin": 1,
+        "moved": false
+      },
+      {
+        "id": "ai-02",
+        "side": "ai",
+        "type": "mine",
+        "origin": 2,
+        "moved": false
+      },
+      {
+        "id": "ai-03",
+        "side": "ai",
+        "type": "flag",
+        "origin": 3,
+        "moved": false
+      },
+      null,
+      {
+        "id": "human-22",
+        "side": "human",
+        "type": null,
+        "origin": 57,
+        "moved": true
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "id": "ai-06",
+        "side": "ai",
+        "type": "engineer",
+        "origin": 6,
+        "moved": true
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "id": "ai-21",
+        "side": "ai",
+        "type": "regiment",
+        "origin": 26,
+        "moved": true
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "id": "human-15",
+        "side": "human",
+        "type": null,
+        "origin": 50,
+        "moved": false
+      },
+      null,
+      null,
+      {
+        "id": "human-18",
+        "side": "human",
+        "type": null,
+        "origin": 53,
+        "moved": false
+      },
+      {
+        "id": "human-19",
+        "side": "human",
+        "type": null,
+        "origin": 54,
+        "moved": false
+      },
+      {
+        "id": "human-20",
+        "side": "human",
+        "type": null,
+        "origin": 55,
+        "moved": false
+      },
+      {
+        "id": "human-21",
+        "side": "human",
+        "type": null,
+        "origin": 56,
+        "moved": false
+      },
+      null,
+      {
+        "id": "human-23",
+        "side": "human",
+        "type": "flag",
+        "origin": 58,
+        "moved": false
+      },
+      {
+        "id": "human-24",
+        "side": "human",
+        "type": null,
+        "origin": 59,
+        "moved": false
+      },
+      null,
+      null
+    ],
+    "turn": "ai",
+    "ply": 149,
+    "quiet": 6,
+    "result": null,
+    "revealedFlags": {
+      "human": true,
+      "ai": true
+    },
+    "rules": {
+      "engineerMountains": true
+    },
+    "history": [
+      {
+        "ply": 1,
+        "side": "human",
+        "from": 32,
+        "to": 27,
+        "attackerId": "human-02",
+        "defenderId": "ai-22",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 2,
+        "side": "ai",
+        "from": 25,
+        "to": 30,
+        "attackerId": "ai-20",
+        "defenderId": "human-00",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 3,
+        "side": "human",
+        "from": 35,
+        "to": 30,
+        "attackerId": "human-05",
+        "defenderId": "ai-20",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 4,
+        "side": "ai",
+        "from": 20,
+        "to": 21,
+        "attackerId": "ai-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 5,
+        "side": "human",
+        "from": 40,
+        "to": 15,
+        "attackerId": "human-08",
+        "defenderId": "ai-13",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 6,
+        "side": "ai",
+        "from": 16,
+        "to": 15,
+        "attackerId": "ai-14",
+        "defenderId": "human-08",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 7,
+        "side": "human",
+        "from": 41,
+        "to": 40,
+        "attackerId": "human-09",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 8,
+        "side": "ai",
+        "from": 15,
+        "to": 30,
+        "attackerId": "ai-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 9,
+        "side": "human",
+        "from": 37,
+        "to": 36,
+        "attackerId": "human-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 10,
+        "side": "ai",
+        "from": 30,
+        "to": 31,
+        "attackerId": "ai-14",
+        "defenderId": "human-01",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 11,
+        "side": "human",
+        "from": 33,
+        "to": 61,
+        "attackerId": "human-03",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": true
+      },
+      {
+        "ply": 12,
+        "side": "ai",
+        "from": 31,
+        "to": 34,
+        "attackerId": "ai-14",
+        "defenderId": "human-04",
+        "result": "both",
+        "flagRevealed": [
+          {
+            "side": "ai",
+            "index": 3,
+            "id": "ai-03"
+          },
+          {
+            "side": "human",
+            "index": 58,
+            "id": "human-23"
+          }
+        ],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 13,
+        "side": "human",
+        "from": 40,
+        "to": 10,
+        "attackerId": "human-09",
+        "defenderId": "ai-10",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 14,
+        "side": "ai",
+        "from": 5,
+        "to": 11,
+        "attackerId": "ai-05",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 15,
+        "side": "human",
+        "from": 43,
+        "to": 38,
+        "attackerId": "human-10",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 16,
+        "side": "ai",
+        "from": 14,
+        "to": 13,
+        "attackerId": "ai-12",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 17,
+        "side": "human",
+        "from": 38,
+        "to": 33,
+        "attackerId": "human-10",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 18,
+        "side": "ai",
+        "from": 19,
+        "to": 23,
+        "attackerId": "ai-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 19,
+        "side": "human",
+        "from": 47,
+        "to": 42,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 20,
+        "side": "ai",
+        "from": 27,
+        "to": 32,
+        "attackerId": "ai-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 21,
+        "side": "human",
+        "from": 39,
+        "to": 38,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 22,
+        "side": "ai",
+        "from": 32,
+        "to": 30,
+        "attackerId": "ai-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 23,
+        "side": "human",
+        "from": 33,
+        "to": 30,
+        "attackerId": "human-10",
+        "defenderId": "ai-22",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 24,
+        "side": "ai",
+        "from": 30,
+        "to": 10,
+        "attackerId": "ai-22",
+        "defenderId": "human-09",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 25,
+        "side": "human",
+        "from": 38,
+        "to": 34,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 26,
+        "side": "ai",
+        "from": 29,
+        "to": 34,
+        "attackerId": "ai-24",
+        "defenderId": "human-07",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 27,
+        "side": "human",
+        "from": 34,
+        "to": 32,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 28,
+        "side": "ai",
+        "from": 13,
+        "to": 17,
+        "attackerId": "ai-12",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 29,
+        "side": "human",
+        "from": 49,
+        "to": 48,
+        "attackerId": "human-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 30,
+        "side": "ai",
+        "from": 9,
+        "to": 19,
+        "attackerId": "ai-09",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 31,
+        "side": "human",
+        "from": 48,
+        "to": 43,
+        "attackerId": "human-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 32,
+        "side": "ai",
+        "from": 24,
+        "to": 29,
+        "attackerId": "ai-19",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 33,
+        "side": "human",
+        "from": 43,
+        "to": 38,
+        "attackerId": "human-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 34,
+        "side": "ai",
+        "from": 4,
+        "to": 9,
+        "attackerId": "ai-04",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 35,
+        "side": "human",
+        "from": 38,
+        "to": 34,
+        "attackerId": "human-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 36,
+        "side": "ai",
+        "from": 9,
+        "to": 13,
+        "attackerId": "ai-04",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 37,
+        "side": "human",
+        "from": 51,
+        "to": 46,
+        "attackerId": "human-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 38,
+        "side": "ai",
+        "from": 17,
+        "to": 16,
+        "attackerId": "ai-12",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 39,
+        "side": "human",
+        "from": 46,
+        "to": 40,
+        "attackerId": "human-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 40,
+        "side": "ai",
+        "from": 11,
+        "to": 17,
+        "attackerId": "ai-05",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 41,
+        "side": "human",
+        "from": 40,
+        "to": 10,
+        "attackerId": "human-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 42,
+        "side": "ai",
+        "from": 16,
+        "to": 11,
+        "attackerId": "ai-12",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 43,
+        "side": "human",
+        "from": 52,
+        "to": 46,
+        "attackerId": "human-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 44,
+        "side": "ai",
+        "from": 17,
+        "to": 16,
+        "attackerId": "ai-05",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 45,
+        "side": "human",
+        "from": 46,
+        "to": 40,
+        "attackerId": "human-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 46,
+        "side": "ai",
+        "from": 16,
+        "to": 15,
+        "attackerId": "ai-05",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 47,
+        "side": "human",
+        "from": 44,
+        "to": 38,
+        "attackerId": "human-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 48,
+        "side": "ai",
+        "from": 15,
+        "to": 10,
+        "attackerId": "ai-05",
+        "defenderId": "human-16",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 49,
+        "side": "human",
+        "from": 40,
+        "to": 46,
+        "attackerId": "human-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 50,
+        "side": "ai",
+        "from": 23,
+        "to": 17,
+        "attackerId": "ai-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 51,
+        "side": "human",
+        "from": 34,
+        "to": 29,
+        "attackerId": "human-14",
+        "defenderId": "ai-19",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 52,
+        "side": "ai",
+        "from": 13,
+        "to": 14,
+        "attackerId": "ai-04",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 53,
+        "side": "human",
+        "from": 29,
+        "to": 23,
+        "attackerId": "human-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 54,
+        "side": "ai",
+        "from": 18,
+        "to": 13,
+        "attackerId": "ai-15",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 55,
+        "side": "human",
+        "from": 38,
+        "to": 34,
+        "attackerId": "human-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 56,
+        "side": "ai",
+        "from": 17,
+        "to": 16,
+        "attackerId": "ai-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 57,
+        "side": "human",
+        "from": 34,
+        "to": 38,
+        "attackerId": "human-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 58,
+        "side": "ai",
+        "from": 11,
+        "to": 10,
+        "attackerId": "ai-12",
+        "defenderId": "human-16",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 59,
+        "side": "human",
+        "from": 46,
+        "to": 40,
+        "attackerId": "human-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 60,
+        "side": "ai",
+        "from": 16,
+        "to": 15,
+        "attackerId": "ai-16",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 61,
+        "side": "human",
+        "from": 32,
+        "to": 30,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 62,
+        "side": "ai",
+        "from": 15,
+        "to": 30,
+        "attackerId": "ai-16",
+        "defenderId": "human-07",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 63,
+        "side": "human",
+        "from": 30,
+        "to": 10,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 64,
+        "side": "ai",
+        "from": 22,
+        "to": 27,
+        "attackerId": "ai-18",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 65,
+        "side": "human",
+        "from": 10,
+        "to": 11,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 66,
+        "side": "ai",
+        "from": 28,
+        "to": 29,
+        "attackerId": "ai-23",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 67,
+        "side": "human",
+        "from": 40,
+        "to": 30,
+        "attackerId": "human-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 68,
+        "side": "ai",
+        "from": 27,
+        "to": 32,
+        "attackerId": "ai-18",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 69,
+        "side": "human",
+        "from": 30,
+        "to": 32,
+        "attackerId": "human-17",
+        "defenderId": "ai-18",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 70,
+        "side": "ai",
+        "from": 12,
+        "to": 17,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 71,
+        "side": "human",
+        "from": 36,
+        "to": 32,
+        "attackerId": "human-06",
+        "defenderId": "ai-18",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 72,
+        "side": "ai",
+        "from": 6,
+        "to": 31,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": false
+      },
+      {
+        "ply": 73,
+        "side": "human",
+        "from": 42,
+        "to": 36,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 74,
+        "side": "ai",
+        "from": 31,
+        "to": 60,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": true
+      },
+      {
+        "ply": 75,
+        "side": "human",
+        "from": 45,
+        "to": 7,
+        "attackerId": "human-12",
+        "defenderId": "ai-07",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": false
+      },
+      {
+        "ply": 76,
+        "side": "ai",
+        "from": 29,
+        "to": 49,
+        "attackerId": "ai-23",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 77,
+        "side": "human",
+        "from": 11,
+        "to": 7,
+        "attackerId": "human-07",
+        "defenderId": "ai-07",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 78,
+        "side": "ai",
+        "from": 21,
+        "to": 16,
+        "attackerId": "ai-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 79,
+        "side": "human",
+        "from": 7,
+        "to": 11,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 80,
+        "side": "ai",
+        "from": 19,
+        "to": 45,
+        "attackerId": "ai-09",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": false
+      },
+      {
+        "ply": 81,
+        "side": "human",
+        "from": 61,
+        "to": 33,
+        "attackerId": "human-03",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": true
+      },
+      {
+        "ply": 82,
+        "side": "ai",
+        "from": 45,
+        "to": 33,
+        "attackerId": "ai-09",
+        "defenderId": "human-03",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": false
+      },
+      {
+        "ply": 83,
+        "side": "human",
+        "from": 36,
+        "to": 40,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 84,
+        "side": "ai",
+        "from": 26,
+        "to": 25,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 85,
+        "side": "human",
+        "from": 40,
+        "to": 36,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 86,
+        "side": "ai",
+        "from": 49,
+        "to": 48,
+        "attackerId": "ai-23",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 87,
+        "side": "human",
+        "from": 11,
+        "to": 10,
+        "attackerId": "human-07",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 88,
+        "side": "ai",
+        "from": 16,
+        "to": 15,
+        "attackerId": "ai-17",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 89,
+        "side": "human",
+        "from": 10,
+        "to": 15,
+        "attackerId": "human-07",
+        "defenderId": "ai-17",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 90,
+        "side": "ai",
+        "from": 48,
+        "to": 53,
+        "attackerId": "ai-23",
+        "defenderId": "human-18",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 91,
+        "side": "human",
+        "from": 38,
+        "to": 34,
+        "attackerId": "human-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 92,
+        "side": "ai",
+        "from": 60,
+        "to": 26,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": true
+      },
+      {
+        "ply": 93,
+        "side": "human",
+        "from": 34,
+        "to": 29,
+        "attackerId": "human-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 94,
+        "side": "ai",
+        "from": 26,
+        "to": 21,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 95,
+        "side": "human",
+        "from": 29,
+        "to": 14,
+        "attackerId": "human-11",
+        "defenderId": "ai-04",
+        "result": "lose",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 96,
+        "side": "ai",
+        "from": 0,
+        "to": 5,
+        "attackerId": "ai-00",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 97,
+        "side": "human",
+        "from": 23,
+        "to": 19,
+        "attackerId": "human-14",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 98,
+        "side": "ai",
+        "from": 17,
+        "to": 23,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 99,
+        "side": "human",
+        "from": 19,
+        "to": 14,
+        "attackerId": "human-14",
+        "defenderId": "ai-04",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 100,
+        "side": "ai",
+        "from": 25,
+        "to": 29,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 101,
+        "side": "human",
+        "from": 57,
+        "to": 52,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 102,
+        "side": "ai",
+        "from": 13,
+        "to": 19,
+        "attackerId": "ai-15",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 103,
+        "side": "human",
+        "from": 52,
+        "to": 48,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 104,
+        "side": "ai",
+        "from": 5,
+        "to": 25,
+        "attackerId": "ai-00",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 105,
+        "side": "human",
+        "from": 36,
+        "to": 31,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 106,
+        "side": "ai",
+        "from": 29,
+        "to": 34,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 107,
+        "side": "human",
+        "from": 31,
+        "to": 36,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 108,
+        "side": "ai",
+        "from": 21,
+        "to": 27,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 109,
+        "side": "human",
+        "from": 36,
+        "to": 42,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 110,
+        "side": "ai",
+        "from": 27,
+        "to": 28,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 111,
+        "side": "human",
+        "from": 42,
+        "to": 38,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 112,
+        "side": "ai",
+        "from": 34,
+        "to": 49,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 113,
+        "side": "human",
+        "from": 38,
+        "to": 42,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 114,
+        "side": "ai",
+        "from": 25,
+        "to": 45,
+        "attackerId": "ai-00",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 115,
+        "side": "human",
+        "from": 42,
+        "to": 46,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 116,
+        "side": "ai",
+        "from": 19,
+        "to": 39,
+        "attackerId": "ai-15",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 117,
+        "side": "human",
+        "from": 46,
+        "to": 42,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 118,
+        "side": "ai",
+        "from": 28,
+        "to": 61,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": true
+      },
+      {
+        "ply": 119,
+        "side": "human",
+        "from": 42,
+        "to": 37,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 120,
+        "side": "ai",
+        "from": 23,
+        "to": 28,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 121,
+        "side": "human",
+        "from": 37,
+        "to": 32,
+        "attackerId": "human-13",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 122,
+        "side": "ai",
+        "from": 28,
+        "to": 29,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 123,
+        "side": "human",
+        "from": 32,
+        "to": 8,
+        "attackerId": "human-13",
+        "defenderId": "ai-08",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": false
+      },
+      {
+        "ply": 124,
+        "side": "ai",
+        "from": 39,
+        "to": 8,
+        "attackerId": "ai-15",
+        "defenderId": "human-13",
+        "result": "both",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": false
+      },
+      {
+        "ply": 125,
+        "side": "human",
+        "from": 48,
+        "to": 42,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 126,
+        "side": "ai",
+        "from": 29,
+        "to": 14,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 127,
+        "side": "human",
+        "from": 42,
+        "to": 38,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 128,
+        "side": "ai",
+        "from": 45,
+        "to": 40,
+        "attackerId": "ai-00",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 129,
+        "side": "human",
+        "from": 38,
+        "to": 32,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 130,
+        "side": "ai",
+        "from": 40,
+        "to": 35,
+        "attackerId": "ai-00",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 131,
+        "side": "human",
+        "from": 32,
+        "to": 30,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 132,
+        "side": "ai",
+        "from": 14,
+        "to": 13,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 133,
+        "side": "human",
+        "from": 30,
+        "to": 5,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 134,
+        "side": "ai",
+        "from": 13,
+        "to": 7,
+        "attackerId": "ai-11",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 135,
+        "side": "human",
+        "from": 5,
+        "to": 7,
+        "attackerId": "human-22",
+        "defenderId": "ai-11",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 136,
+        "side": "ai",
+        "from": 49,
+        "to": 9,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 137,
+        "side": "human",
+        "from": 7,
+        "to": 12,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 138,
+        "side": "ai",
+        "from": 9,
+        "to": 13,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 139,
+        "side": "human",
+        "from": 12,
+        "to": 11,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 140,
+        "side": "ai",
+        "from": 61,
+        "to": 33,
+        "attackerId": "ai-06",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": true,
+        "mountainMove": true
+      },
+      {
+        "ply": 141,
+        "side": "human",
+        "from": 11,
+        "to": 5,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 142,
+        "side": "ai",
+        "from": 13,
+        "to": 7,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 143,
+        "side": "human",
+        "from": 5,
+        "to": 35,
+        "attackerId": "human-22",
+        "defenderId": "ai-00",
+        "result": "win",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 144,
+        "side": "ai",
+        "from": 7,
+        "to": 5,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 145,
+        "side": "human",
+        "from": 35,
+        "to": 36,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 146,
+        "side": "ai",
+        "from": 5,
+        "to": 9,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 147,
+        "side": "human",
+        "from": 36,
+        "to": 40,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 148,
+        "side": "ai",
+        "from": 9,
+        "to": 44,
+        "attackerId": "ai-21",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      },
+      {
+        "ply": 149,
+        "side": "human",
+        "from": 40,
+        "to": 5,
+        "attackerId": "human-22",
+        "defenderId": null,
+        "result": "move",
+        "flagRevealed": [],
+        "engineerTurn": false,
+        "mountainMove": false
+      }
+    ],
+    "ownRoster": [
+      {
+        "id": "ai-00",
+        "type": "platoon",
+        "origin": 0
+      },
+      {
+        "id": "ai-01",
+        "type": "mine",
+        "origin": 1
+      },
+      {
+        "id": "ai-02",
+        "type": "mine",
+        "origin": 2
+      },
+      {
+        "id": "ai-03",
+        "type": "flag",
+        "origin": 3
+      },
+      {
+        "id": "ai-04",
+        "type": "brigade",
+        "origin": 4
+      },
+      {
+        "id": "ai-05",
+        "type": "regiment",
+        "origin": 5
+      },
+      {
+        "id": "ai-06",
+        "type": "engineer",
+        "origin": 6
+      },
+      {
+        "id": "ai-07",
+        "type": "platoon",
+        "origin": 7
+      },
+      {
+        "id": "ai-08",
+        "type": "mine",
+        "origin": 8
+      },
+      {
+        "id": "ai-09",
+        "type": "engineer",
+        "origin": 9
+      },
+      {
+        "id": "ai-10",
+        "type": "company",
+        "origin": 10
+      },
+      {
+        "id": "ai-11",
+        "type": "platoon",
+        "origin": 12
+      },
+      {
+        "id": "ai-12",
+        "type": "bomb",
+        "origin": 14
+      },
+      {
+        "id": "ai-13",
+        "type": "company",
+        "origin": 15
+      },
+      {
+        "id": "ai-14",
+        "type": "commander",
+        "origin": 16
+      },
+      {
+        "id": "ai-15",
+        "type": "engineer",
+        "origin": 18
+      },
+      {
+        "id": "ai-16",
+        "type": "division",
+        "origin": 19
+      },
+      {
+        "id": "ai-17",
+        "type": "bomb",
+        "origin": 20
+      },
+      {
+        "id": "ai-18",
+        "type": "brigade",
+        "origin": 22
+      },
+      {
+        "id": "ai-19",
+        "type": "battalion",
+        "origin": 24
+      },
+      {
+        "id": "ai-20",
+        "type": "general",
+        "origin": 25
+      },
+      {
+        "id": "ai-21",
+        "type": "regiment",
+        "origin": 26
+      },
+      {
+        "id": "ai-22",
+        "type": "division",
+        "origin": 27
+      },
+      {
+        "id": "ai-23",
+        "type": "company",
+        "origin": 28
+      },
+      {
+        "id": "ai-24",
+        "type": "battalion",
+        "origin": 29
+      }
+    ],
+    "enemyRoster": [
+      {
+        "id": "human-00",
+        "origin": 30
+      },
+      {
+        "id": "human-01",
+        "origin": 31
+      },
+      {
+        "id": "human-02",
+        "origin": 32
+      },
+      {
+        "id": "human-03",
+        "origin": 33
+      },
+      {
+        "id": "human-04",
+        "origin": 34
+      },
+      {
+        "id": "human-05",
+        "origin": 35
+      },
+      {
+        "id": "human-06",
+        "origin": 37
+      },
+      {
+        "id": "human-07",
+        "origin": 39
+      },
+      {
+        "id": "human-08",
+        "origin": 40
+      },
+      {
+        "id": "human-09",
+        "origin": 41
+      },
+      {
+        "id": "human-10",
+        "origin": 43
+      },
+      {
+        "id": "human-11",
+        "origin": 44
+      },
+      {
+        "id": "human-12",
+        "origin": 45
+      },
+      {
+        "id": "human-13",
+        "origin": 47
+      },
+      {
+        "id": "human-14",
+        "origin": 49
+      },
+      {
+        "id": "human-15",
+        "origin": 50
+      },
+      {
+        "id": "human-16",
+        "origin": 51
+      },
+      {
+        "id": "human-17",
+        "origin": 52
+      },
+      {
+        "id": "human-18",
+        "origin": 53
+      },
+      {
+        "id": "human-19",
+        "origin": 54
+      },
+      {
+        "id": "human-20",
+        "origin": 55
+      },
+      {
+        "id": "human-21",
+        "origin": 56
+      },
+      {
+        "id": "human-22",
+        "origin": 57
+      },
+      {
+        "id": "human-23",
+        "origin": 58
+      },
+      {
+        "id": "human-24",
+        "origin": 59
+      }
+    ],
+    "enemyCounts": {
+      "flag": 1,
+      "mine": 3,
+      "bomb": 2,
+      "commander": 1,
+      "general": 1,
+      "division": 2,
+      "brigade": 2,
+      "regiment": 2,
+      "battalion": 2,
+      "company": 3,
+      "platoon": 3,
+      "engineer": 3
+    }
+  }
+}

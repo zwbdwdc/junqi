@@ -1,0 +1,46 @@
+{
+  "name": "junqi-hidden-command",
+  "version": "3.0.2",
+  "private": true,
+  "type": "module",
+  "description": "离线双人暗棋 · 公平人机对战",
+  "author": "Junqi Studio",
+  "main": "main.cjs",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "start": "electron .",
+    "package": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "local.junqi.hiddencommand",
+    "productName": "军棋·暗战",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "main.cjs",
+      "package.json",
+      "preload.cjs",
+      "storage.cjs",
+      "diagnostics-store.cjs",
+      "archive-store.cjs"
+    ],
+    "asar": true,
+    "win": {
+      "target": "portable",
+      "signAndEditExecutable": true,
+      "icon": "icon.ico",
+      "signExecutable": false
+    },
+    "portable": {
+      "useZip": true,
+      "artifactName": "军棋暗战-便携版.exe"
+    },
+    "electronDist": "node_modules/electron/dist"
+  },
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  }
+}

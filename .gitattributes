@@ -1,0 +1,4 @@
+# Preserve the imported, verified release source bytes, including line endings.
+* -text
+*.png binary
+*.ico binary

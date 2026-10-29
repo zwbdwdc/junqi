@@ -1,0 +1,6887 @@
+[
+  {
+    "name": "generated-late-flag-cover-150",
+    "beforePly": 150,
+    "actualMove": {
+      "from": 21,
+      "to": 16,
+      "result": "move"
+    },
+    "observation": {
+      "side": "ai",
+      "board": [
+        {
+          "id": "generated-token-0",
+          "side": "ai",
+          "type": "mine",
+          "origin": 0,
+          "moved": false
+        },
+        {
+          "id": "generated-token-1",
+          "side": "ai",
+          "type": "flag",
+          "origin": 1,
+          "moved": false
+        },
+        null,
+        {
+          "id": "generated-token-3",
+          "side": "ai",
+          "type": "company",
+          "origin": 3,
+          "moved": false
+        },
+        {
+          "id": "generated-token-4",
+          "side": "ai",
+          "type": "mine",
+          "origin": 4,
+          "moved": false
+        },
+        null,
+        {
+          "id": "generated-token-6",
+          "side": "ai",
+          "type": "mine",
+          "origin": 6,
+          "moved": false
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-43",
+          "side": "human",
+          "type": null,
+          "origin": 53,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-11",
+          "side": "ai",
+          "type": "bomb",
+          "origin": 12,
+          "moved": true
+        },
+        null,
+        null,
+        {
+          "id": "generated-token-22",
+          "side": "ai",
+          "type": "battalion",
+          "origin": 27,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-5",
+          "side": "ai",
+          "type": "company",
+          "origin": 5,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-13",
+          "side": "ai",
+          "type": "engineer",
+          "origin": 15,
+          "moved": true
+        },
+        null,
+        null,
+        {
+          "id": "generated-token-15",
+          "side": "ai",
+          "type": "brigade",
+          "origin": 18,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-42",
+          "side": "human",
+          "type": "engineer",
+          "origin": 52,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-2",
+          "side": "ai",
+          "type": "platoon",
+          "origin": 2,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-37",
+          "side": "human",
+          "type": null,
+          "origin": 45,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-7",
+          "side": "ai",
+          "type": "platoon",
+          "origin": 7,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-40",
+          "side": "human",
+          "type": null,
+          "origin": 50,
+          "moved": false
+        },
+        {
+          "id": "generated-token-41",
+          "side": "human",
+          "type": null,
+          "origin": 51,
+          "moved": false
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-45",
+          "side": "human",
+          "type": null,
+          "origin": 55,
+          "moved": false
+        },
+        {
+          "id": "generated-token-46",
+          "side": "human",
+          "type": "flag",
+          "origin": 56,
+          "moved": false
+        },
+        {
+          "id": "generated-token-47",
+          "side": "human",
+          "type": null,
+          "origin": 57,
+          "moved": false
+        },
+        {
+          "id": "generated-token-48",
+          "side": "human",
+          "type": null,
+          "origin": 58,
+          "moved": false
+        },
+        {
+          "id": "generated-token-31",
+          "side": "human",
+          "type": null,
+          "origin": 37,
+          "moved": true
+        },
+        {
+          "id": "generated-token-44",
+          "side": "human",
+          "type": "engineer",
+          "origin": 54,
+          "moved": true
+        },
+        null
+      ],
+      "turn": "ai",
+      "ply": 149,
+      "quiet": 7,
+      "result": null,
+      "revealedFlags": {
+        "human": true,
+        "ai": true
+      },
+      "rules": {
+        "engineerMountains": true
+      },
+      "history": [
+        {
+          "ply": 1,
+          "side": "human",
+          "from": 34,
+          "to": 29,
+          "attackerId": "generated-token-29",
+          "defenderId": "generated-token-24",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 2,
+          "side": "ai",
+          "from": 27,
+          "to": 23,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 3,
+          "side": "human",
+          "from": 39,
+          "to": 38,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 4,
+          "side": "ai",
+          "from": 25,
+          "to": 30,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-25",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 5,
+          "side": "human",
+          "from": 35,
+          "to": 36,
+          "attackerId": "generated-token-30",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 6,
+          "side": "ai",
+          "from": 30,
+          "to": 31,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-26",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 7,
+          "side": "human",
+          "from": 44,
+          "to": 29,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 8,
+          "side": "ai",
+          "from": 31,
+          "to": 32,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-27",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 9,
+          "side": "human",
+          "from": 29,
+          "to": 28,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-23",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 10,
+          "side": "ai",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-28",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 11,
+          "side": "human",
+          "from": 28,
+          "to": 26,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-21",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 12,
+          "side": "ai",
+          "from": 9,
+          "to": 13,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 13,
+          "side": "human",
+          "from": 26,
+          "to": 21,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 14,
+          "side": "ai",
+          "from": 22,
+          "to": 17,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 15,
+          "side": "human",
+          "from": 45,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 16,
+          "side": "ai",
+          "from": 15,
+          "to": 11,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 17,
+          "side": "human",
+          "from": 41,
+          "to": 42,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 18,
+          "side": "ai",
+          "from": 20,
+          "to": 28,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 19,
+          "side": "human",
+          "from": 49,
+          "to": 29,
+          "attackerId": "generated-token-39",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 20,
+          "side": "ai",
+          "from": 28,
+          "to": 61,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 21,
+          "side": "human",
+          "from": 29,
+          "to": 44,
+          "attackerId": "generated-token-39",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 22,
+          "side": "ai",
+          "from": 24,
+          "to": 44,
+          "attackerId": "generated-token-19",
+          "defenderId": "generated-token-39",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 23,
+          "side": "human",
+          "from": 40,
+          "to": 41,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 24,
+          "side": "ai",
+          "from": 19,
+          "to": 28,
+          "attackerId": "generated-token-16",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 25,
+          "side": "human",
+          "from": 21,
+          "to": 27,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 26,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 27,
+          "side": "human",
+          "from": 27,
+          "to": 28,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-16",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 28,
+          "side": "ai",
+          "from": 19,
+          "to": 44,
+          "attackerId": "generated-token-9",
+          "defenderId": "generated-token-39",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 29,
+          "side": "human",
+          "from": 42,
+          "to": 48,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 30,
+          "side": "ai",
+          "from": 44,
+          "to": 29,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 31,
+          "side": "human",
+          "from": 28,
+          "to": 29,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-9",
+          "result": "both",
+          "flagRevealed": [
+            {
+              "side": "human",
+              "index": 56,
+              "id": "generated-token-46"
+            },
+            {
+              "side": "ai",
+              "index": 1,
+              "id": "generated-token-1"
+            }
+          ],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 32,
+          "side": "ai",
+          "from": 33,
+          "to": 34,
+          "attackerId": "generated-token-20",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 33,
+          "side": "human",
+          "from": 48,
+          "to": 49,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 34,
+          "side": "ai",
+          "from": 34,
+          "to": 29,
+          "attackerId": "generated-token-20",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 35,
+          "side": "human",
+          "from": 49,
+          "to": 29,
+          "attackerId": "generated-token-34",
+          "defenderId": "generated-token-20",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 36,
+          "side": "ai",
+          "from": 14,
+          "to": 49,
+          "attackerId": "generated-token-12",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 37,
+          "side": "human",
+          "from": 54,
+          "to": 48,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 38,
+          "side": "ai",
+          "from": 10,
+          "to": 25,
+          "attackerId": "generated-token-10",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 39,
+          "side": "human",
+          "from": 37,
+          "to": 32,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 40,
+          "side": "ai",
+          "from": 17,
+          "to": 21,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 41,
+          "side": "human",
+          "from": 43,
+          "to": 44,
+          "attackerId": "generated-token-35",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 42,
+          "side": "ai",
+          "from": 49,
+          "to": 44,
+          "attackerId": "generated-token-12",
+          "defenderId": "generated-token-35",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 43,
+          "side": "human",
+          "from": 59,
+          "to": 54,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 44,
+          "side": "ai",
+          "from": 12,
+          "to": 17,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 45,
+          "side": "human",
+          "from": 54,
+          "to": 34,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 46,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 47,
+          "side": "human",
+          "from": 38,
+          "to": 33,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 48,
+          "side": "ai",
+          "from": 5,
+          "to": 20,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 49,
+          "side": "human",
+          "from": 34,
+          "to": 14,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 50,
+          "side": "ai",
+          "from": 18,
+          "to": 13,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 51,
+          "side": "human",
+          "from": 48,
+          "to": 44,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 52,
+          "side": "ai",
+          "from": 21,
+          "to": 26,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 53,
+          "side": "human",
+          "from": 41,
+          "to": 42,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 54,
+          "side": "ai",
+          "from": 26,
+          "to": 29,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 55,
+          "side": "human",
+          "from": 44,
+          "to": 38,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 56,
+          "side": "ai",
+          "from": 16,
+          "to": 17,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 57,
+          "side": "human",
+          "from": 14,
+          "to": 29,
+          "attackerId": "generated-token-49",
+          "defenderId": "generated-token-18",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 58,
+          "side": "ai",
+          "from": 17,
+          "to": 21,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 59,
+          "side": "human",
+          "from": 42,
+          "to": 48,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 60,
+          "side": "ai",
+          "from": 11,
+          "to": 17,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 61,
+          "side": "human",
+          "from": 48,
+          "to": 49,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 62,
+          "side": "ai",
+          "from": 29,
+          "to": 49,
+          "attackerId": "generated-token-18",
+          "defenderId": "generated-token-33",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 63,
+          "side": "human",
+          "from": 38,
+          "to": 34,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 64,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 65,
+          "side": "human",
+          "from": 34,
+          "to": 38,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 66,
+          "side": "ai",
+          "from": 19,
+          "to": 13,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 67,
+          "side": "human",
+          "from": 49,
+          "to": 39,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 68,
+          "side": "ai",
+          "from": 13,
+          "to": 12,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 69,
+          "side": "human",
+          "from": 39,
+          "to": 14,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 70,
+          "side": "ai",
+          "from": 8,
+          "to": 13,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 71,
+          "side": "human",
+          "from": 14,
+          "to": 29,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 72,
+          "side": "ai",
+          "from": 21,
+          "to": 26,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 73,
+          "side": "human",
+          "from": 29,
+          "to": 24,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 74,
+          "side": "ai",
+          "from": 26,
+          "to": 29,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 75,
+          "side": "human",
+          "from": 53,
+          "to": 48,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 76,
+          "side": "ai",
+          "from": 29,
+          "to": 24,
+          "attackerId": "generated-token-14",
+          "defenderId": "generated-token-33",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 77,
+          "side": "human",
+          "from": 52,
+          "to": 39,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 78,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 79,
+          "side": "human",
+          "from": 39,
+          "to": 53,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 80,
+          "side": "ai",
+          "from": 12,
+          "to": 11,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 81,
+          "side": "human",
+          "from": 48,
+          "to": 42,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 82,
+          "side": "ai",
+          "from": 19,
+          "to": 54,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 83,
+          "side": "human",
+          "from": 53,
+          "to": 48,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 84,
+          "side": "ai",
+          "from": 54,
+          "to": 59,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 85,
+          "side": "human",
+          "from": 32,
+          "to": 27,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 86,
+          "side": "ai",
+          "from": 22,
+          "to": 21,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 87,
+          "side": "human",
+          "from": 27,
+          "to": 29,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 88,
+          "side": "ai",
+          "from": 25,
+          "to": 29,
+          "attackerId": "generated-token-10",
+          "defenderId": "generated-token-31",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 89,
+          "side": "human",
+          "from": 29,
+          "to": 54,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 90,
+          "side": "ai",
+          "from": 23,
+          "to": 28,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 91,
+          "side": "human",
+          "from": 54,
+          "to": 59,
+          "attackerId": "generated-token-31",
+          "defenderId": "generated-token-8",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 92,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 93,
+          "side": "human",
+          "from": 48,
+          "to": 44,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 94,
+          "side": "ai",
+          "from": 7,
+          "to": 9,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 95,
+          "side": "human",
+          "from": 44,
+          "to": 43,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 96,
+          "side": "ai",
+          "from": 9,
+          "to": 29,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 97,
+          "side": "human",
+          "from": 38,
+          "to": 32,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 98,
+          "side": "ai",
+          "from": 29,
+          "to": 44,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 99,
+          "side": "human",
+          "from": 43,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 100,
+          "side": "ai",
+          "from": 44,
+          "to": 48,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 101,
+          "side": "human",
+          "from": 38,
+          "to": 34,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 102,
+          "side": "ai",
+          "from": 28,
+          "to": 29,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 103,
+          "side": "human",
+          "from": 34,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 104,
+          "side": "ai",
+          "from": 2,
+          "to": 7,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 105,
+          "side": "human",
+          "from": 36,
+          "to": 31,
+          "attackerId": "generated-token-30",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 106,
+          "side": "ai",
+          "from": 11,
+          "to": 17,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 107,
+          "side": "human",
+          "from": 32,
+          "to": 60,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 108,
+          "side": "ai",
+          "from": 29,
+          "to": 49,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 109,
+          "side": "human",
+          "from": 42,
+          "to": 36,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 110,
+          "side": "ai",
+          "from": 61,
+          "to": 27,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 111,
+          "side": "human",
+          "from": 31,
+          "to": 27,
+          "attackerId": "generated-token-30",
+          "defenderId": "generated-token-17",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 112,
+          "side": "ai",
+          "from": 20,
+          "to": 25,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 113,
+          "side": "human",
+          "from": 47,
+          "to": 42,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 114,
+          "side": "ai",
+          "from": 22,
+          "to": 27,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 115,
+          "side": "human",
+          "from": 42,
+          "to": 37,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 116,
+          "side": "ai",
+          "from": 7,
+          "to": 13,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 117,
+          "side": "human",
+          "from": 33,
+          "to": 31,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 118,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 119,
+          "side": "human",
+          "from": 38,
+          "to": 33,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 120,
+          "side": "ai",
+          "from": 27,
+          "to": 61,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 121,
+          "side": "human",
+          "from": 37,
+          "to": 32,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 122,
+          "side": "ai",
+          "from": 19,
+          "to": 34,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 123,
+          "side": "human",
+          "from": 33,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 124,
+          "side": "ai",
+          "from": 34,
+          "to": 44,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 125,
+          "side": "human",
+          "from": 46,
+          "to": 42,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 126,
+          "side": "ai",
+          "from": 25,
+          "to": 29,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 127,
+          "side": "human",
+          "from": 42,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 128,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 129,
+          "side": "human",
+          "from": 60,
+          "to": 30,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 130,
+          "side": "ai",
+          "from": 29,
+          "to": 25,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 131,
+          "side": "human",
+          "from": 30,
+          "to": 60,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 132,
+          "side": "ai",
+          "from": 25,
+          "to": 26,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 133,
+          "side": "human",
+          "from": 46,
+          "to": 40,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 134,
+          "side": "ai",
+          "from": 44,
+          "to": 43,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 135,
+          "side": "human",
+          "from": 40,
+          "to": 41,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 136,
+          "side": "ai",
+          "from": 43,
+          "to": 42,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 137,
+          "side": "human",
+          "from": 41,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 138,
+          "side": "ai",
+          "from": 22,
+          "to": 27,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 139,
+          "side": "human",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 140,
+          "side": "ai",
+          "from": 27,
+          "to": 32,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 141,
+          "side": "human",
+          "from": 31,
+          "to": 32,
+          "attackerId": "generated-token-32",
+          "defenderId": "generated-token-15",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 142,
+          "side": "ai",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-15",
+          "defenderId": "generated-token-38",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 143,
+          "side": "human",
+          "from": 36,
+          "to": 40,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 144,
+          "side": "ai",
+          "from": 49,
+          "to": 24,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 145,
+          "side": "human",
+          "from": 40,
+          "to": 35,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 146,
+          "side": "ai",
+          "from": 33,
+          "to": 31,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 147,
+          "side": "human",
+          "from": 35,
+          "to": 45,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 148,
+          "side": "ai",
+          "from": 61,
+          "to": 28,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 149,
+          "side": "human",
+          "from": 45,
+          "to": 10,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        }
+      ],
+      "ownRoster": [
+        {
+          "id": "generated-token-0",
+          "type": "mine",
+          "origin": 0
+        },
+        {
+          "id": "generated-token-1",
+          "type": "flag",
+          "origin": 1
+        },
+        {
+          "id": "generated-token-2",
+          "type": "platoon",
+          "origin": 2
+        },
+        {
+          "id": "generated-token-3",
+          "type": "company",
+          "origin": 3
+        },
+        {
+          "id": "generated-token-4",
+          "type": "mine",
+          "origin": 4
+        },
+        {
+          "id": "generated-token-5",
+          "type": "company",
+          "origin": 5
+        },
+        {
+          "id": "generated-token-6",
+          "type": "mine",
+          "origin": 6
+        },
+        {
+          "id": "generated-token-7",
+          "type": "platoon",
+          "origin": 7
+        },
+        {
+          "id": "generated-token-8",
+          "type": "battalion",
+          "origin": 8
+        },
+        {
+          "id": "generated-token-9",
+          "type": "commander",
+          "origin": 9
+        },
+        {
+          "id": "generated-token-10",
+          "type": "company",
+          "origin": 10
+        },
+        {
+          "id": "generated-token-11",
+          "type": "bomb",
+          "origin": 12
+        },
+        {
+          "id": "generated-token-12",
+          "type": "brigade",
+          "origin": 14
+        },
+        {
+          "id": "generated-token-13",
+          "type": "engineer",
+          "origin": 15
+        },
+        {
+          "id": "generated-token-14",
+          "type": "bomb",
+          "origin": 16
+        },
+        {
+          "id": "generated-token-15",
+          "type": "brigade",
+          "origin": 18
+        },
+        {
+          "id": "generated-token-16",
+          "type": "engineer",
+          "origin": 19
+        },
+        {
+          "id": "generated-token-17",
+          "type": "engineer",
+          "origin": 20
+        },
+        {
+          "id": "generated-token-18",
+          "type": "division",
+          "origin": 22
+        },
+        {
+          "id": "generated-token-19",
+          "type": "regiment",
+          "origin": 24
+        },
+        {
+          "id": "generated-token-20",
+          "type": "general",
+          "origin": 25
+        },
+        {
+          "id": "generated-token-21",
+          "type": "platoon",
+          "origin": 26
+        },
+        {
+          "id": "generated-token-22",
+          "type": "battalion",
+          "origin": 27
+        },
+        {
+          "id": "generated-token-23",
+          "type": "regiment",
+          "origin": 28
+        },
+        {
+          "id": "generated-token-24",
+          "type": "division",
+          "origin": 29
+        }
+      ],
+      "enemyRoster": [
+        {
+          "id": "generated-token-25",
+          "origin": 30
+        },
+        {
+          "id": "generated-token-26",
+          "origin": 31
+        },
+        {
+          "id": "generated-token-27",
+          "origin": 32
+        },
+        {
+          "id": "generated-token-28",
+          "origin": 33
+        },
+        {
+          "id": "generated-token-29",
+          "origin": 34
+        },
+        {
+          "id": "generated-token-30",
+          "origin": 35
+        },
+        {
+          "id": "generated-token-31",
+          "origin": 37
+        },
+        {
+          "id": "generated-token-32",
+          "origin": 39
+        },
+        {
+          "id": "generated-token-33",
+          "origin": 40
+        },
+        {
+          "id": "generated-token-34",
+          "origin": 41
+        },
+        {
+          "id": "generated-token-35",
+          "origin": 43
+        },
+        {
+          "id": "generated-token-36",
+          "origin": 44
+        },
+        {
+          "id": "generated-token-37",
+          "origin": 45
+        },
+        {
+          "id": "generated-token-38",
+          "origin": 47
+        },
+        {
+          "id": "generated-token-39",
+          "origin": 49
+        },
+        {
+          "id": "generated-token-40",
+          "origin": 50
+        },
+        {
+          "id": "generated-token-41",
+          "origin": 51
+        },
+        {
+          "id": "generated-token-42",
+          "origin": 52
+        },
+        {
+          "id": "generated-token-43",
+          "origin": 53
+        },
+        {
+          "id": "generated-token-44",
+          "origin": 54
+        },
+        {
+          "id": "generated-token-45",
+          "origin": 55
+        },
+        {
+          "id": "generated-token-46",
+          "origin": 56
+        },
+        {
+          "id": "generated-token-47",
+          "origin": 57
+        },
+        {
+          "id": "generated-token-48",
+          "origin": 58
+        },
+        {
+          "id": "generated-token-49",
+          "origin": 59
+        }
+      ],
+      "enemyCounts": {
+        "flag": 1,
+        "mine": 3,
+        "bomb": 2,
+        "commander": 1,
+        "general": 1,
+        "division": 2,
+        "brigade": 2,
+        "regiment": 2,
+        "battalion": 2,
+        "company": 3,
+        "platoon": 3,
+        "engineer": 3
+      }
+    },
+    "provenance": "Public observation from a fresh generated benchmark game; no user game or hidden arrangement.",
+    "limitation": "Bomb 21->17->12 can intercept the named 10->11->7 invasion for every currently possible rank. This is a legal defensive line, not a proof against all enemy actions."
+  },
+  {
+    "name": "generated-late-flag-cover-152",
+    "beforePly": 152,
+    "actualMove": {
+      "from": 24,
+      "to": 23,
+      "result": "move"
+    },
+    "observation": {
+      "side": "ai",
+      "board": [
+        {
+          "id": "generated-token-0",
+          "side": "ai",
+          "type": "mine",
+          "origin": 0,
+          "moved": false
+        },
+        {
+          "id": "generated-token-1",
+          "side": "ai",
+          "type": "flag",
+          "origin": 1,
+          "moved": false
+        },
+        null,
+        {
+          "id": "generated-token-3",
+          "side": "ai",
+          "type": "company",
+          "origin": 3,
+          "moved": false
+        },
+        {
+          "id": "generated-token-4",
+          "side": "ai",
+          "type": "mine",
+          "origin": 4,
+          "moved": false
+        },
+        null,
+        {
+          "id": "generated-token-6",
+          "side": "ai",
+          "type": "mine",
+          "origin": 6,
+          "moved": false
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-43",
+          "side": "human",
+          "type": null,
+          "origin": 53,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-11",
+          "side": "ai",
+          "type": "bomb",
+          "origin": 12,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-22",
+          "side": "ai",
+          "type": "battalion",
+          "origin": 27,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-5",
+          "side": "ai",
+          "type": "company",
+          "origin": 5,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-13",
+          "side": "ai",
+          "type": "engineer",
+          "origin": 15,
+          "moved": true
+        },
+        null,
+        null,
+        {
+          "id": "generated-token-15",
+          "side": "ai",
+          "type": "brigade",
+          "origin": 18,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-42",
+          "side": "human",
+          "type": "engineer",
+          "origin": 52,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-2",
+          "side": "ai",
+          "type": "platoon",
+          "origin": 2,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-37",
+          "side": "human",
+          "type": null,
+          "origin": 45,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-7",
+          "side": "ai",
+          "type": "platoon",
+          "origin": 7,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-40",
+          "side": "human",
+          "type": null,
+          "origin": 50,
+          "moved": false
+        },
+        {
+          "id": "generated-token-41",
+          "side": "human",
+          "type": null,
+          "origin": 51,
+          "moved": false
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-45",
+          "side": "human",
+          "type": null,
+          "origin": 55,
+          "moved": false
+        },
+        {
+          "id": "generated-token-46",
+          "side": "human",
+          "type": "flag",
+          "origin": 56,
+          "moved": false
+        },
+        {
+          "id": "generated-token-47",
+          "side": "human",
+          "type": null,
+          "origin": 57,
+          "moved": false
+        },
+        {
+          "id": "generated-token-48",
+          "side": "human",
+          "type": null,
+          "origin": 58,
+          "moved": false
+        },
+        {
+          "id": "generated-token-31",
+          "side": "human",
+          "type": null,
+          "origin": 37,
+          "moved": true
+        },
+        {
+          "id": "generated-token-44",
+          "side": "human",
+          "type": "engineer",
+          "origin": 54,
+          "moved": true
+        },
+        null
+      ],
+      "turn": "ai",
+      "ply": 151,
+      "quiet": 9,
+      "result": null,
+      "revealedFlags": {
+        "human": true,
+        "ai": true
+      },
+      "rules": {
+        "engineerMountains": true
+      },
+      "history": [
+        {
+          "ply": 1,
+          "side": "human",
+          "from": 34,
+          "to": 29,
+          "attackerId": "generated-token-29",
+          "defenderId": "generated-token-24",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 2,
+          "side": "ai",
+          "from": 27,
+          "to": 23,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 3,
+          "side": "human",
+          "from": 39,
+          "to": 38,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 4,
+          "side": "ai",
+          "from": 25,
+          "to": 30,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-25",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 5,
+          "side": "human",
+          "from": 35,
+          "to": 36,
+          "attackerId": "generated-token-30",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 6,
+          "side": "ai",
+          "from": 30,
+          "to": 31,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-26",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 7,
+          "side": "human",
+          "from": 44,
+          "to": 29,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 8,
+          "side": "ai",
+          "from": 31,
+          "to": 32,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-27",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 9,
+          "side": "human",
+          "from": 29,
+          "to": 28,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-23",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 10,
+          "side": "ai",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-28",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 11,
+          "side": "human",
+          "from": 28,
+          "to": 26,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-21",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 12,
+          "side": "ai",
+          "from": 9,
+          "to": 13,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 13,
+          "side": "human",
+          "from": 26,
+          "to": 21,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 14,
+          "side": "ai",
+          "from": 22,
+          "to": 17,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 15,
+          "side": "human",
+          "from": 45,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 16,
+          "side": "ai",
+          "from": 15,
+          "to": 11,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 17,
+          "side": "human",
+          "from": 41,
+          "to": 42,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 18,
+          "side": "ai",
+          "from": 20,
+          "to": 28,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 19,
+          "side": "human",
+          "from": 49,
+          "to": 29,
+          "attackerId": "generated-token-39",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 20,
+          "side": "ai",
+          "from": 28,
+          "to": 61,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 21,
+          "side": "human",
+          "from": 29,
+          "to": 44,
+          "attackerId": "generated-token-39",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 22,
+          "side": "ai",
+          "from": 24,
+          "to": 44,
+          "attackerId": "generated-token-19",
+          "defenderId": "generated-token-39",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 23,
+          "side": "human",
+          "from": 40,
+          "to": 41,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 24,
+          "side": "ai",
+          "from": 19,
+          "to": 28,
+          "attackerId": "generated-token-16",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 25,
+          "side": "human",
+          "from": 21,
+          "to": 27,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 26,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 27,
+          "side": "human",
+          "from": 27,
+          "to": 28,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-16",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 28,
+          "side": "ai",
+          "from": 19,
+          "to": 44,
+          "attackerId": "generated-token-9",
+          "defenderId": "generated-token-39",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 29,
+          "side": "human",
+          "from": 42,
+          "to": 48,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 30,
+          "side": "ai",
+          "from": 44,
+          "to": 29,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 31,
+          "side": "human",
+          "from": 28,
+          "to": 29,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-9",
+          "result": "both",
+          "flagRevealed": [
+            {
+              "side": "human",
+              "index": 56,
+              "id": "generated-token-46"
+            },
+            {
+              "side": "ai",
+              "index": 1,
+              "id": "generated-token-1"
+            }
+          ],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 32,
+          "side": "ai",
+          "from": 33,
+          "to": 34,
+          "attackerId": "generated-token-20",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 33,
+          "side": "human",
+          "from": 48,
+          "to": 49,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 34,
+          "side": "ai",
+          "from": 34,
+          "to": 29,
+          "attackerId": "generated-token-20",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 35,
+          "side": "human",
+          "from": 49,
+          "to": 29,
+          "attackerId": "generated-token-34",
+          "defenderId": "generated-token-20",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 36,
+          "side": "ai",
+          "from": 14,
+          "to": 49,
+          "attackerId": "generated-token-12",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 37,
+          "side": "human",
+          "from": 54,
+          "to": 48,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 38,
+          "side": "ai",
+          "from": 10,
+          "to": 25,
+          "attackerId": "generated-token-10",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 39,
+          "side": "human",
+          "from": 37,
+          "to": 32,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 40,
+          "side": "ai",
+          "from": 17,
+          "to": 21,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 41,
+          "side": "human",
+          "from": 43,
+          "to": 44,
+          "attackerId": "generated-token-35",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 42,
+          "side": "ai",
+          "from": 49,
+          "to": 44,
+          "attackerId": "generated-token-12",
+          "defenderId": "generated-token-35",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 43,
+          "side": "human",
+          "from": 59,
+          "to": 54,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 44,
+          "side": "ai",
+          "from": 12,
+          "to": 17,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 45,
+          "side": "human",
+          "from": 54,
+          "to": 34,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 46,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 47,
+          "side": "human",
+          "from": 38,
+          "to": 33,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 48,
+          "side": "ai",
+          "from": 5,
+          "to": 20,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 49,
+          "side": "human",
+          "from": 34,
+          "to": 14,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 50,
+          "side": "ai",
+          "from": 18,
+          "to": 13,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 51,
+          "side": "human",
+          "from": 48,
+          "to": 44,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 52,
+          "side": "ai",
+          "from": 21,
+          "to": 26,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 53,
+          "side": "human",
+          "from": 41,
+          "to": 42,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 54,
+          "side": "ai",
+          "from": 26,
+          "to": 29,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 55,
+          "side": "human",
+          "from": 44,
+          "to": 38,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 56,
+          "side": "ai",
+          "from": 16,
+          "to": 17,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 57,
+          "side": "human",
+          "from": 14,
+          "to": 29,
+          "attackerId": "generated-token-49",
+          "defenderId": "generated-token-18",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 58,
+          "side": "ai",
+          "from": 17,
+          "to": 21,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 59,
+          "side": "human",
+          "from": 42,
+          "to": 48,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 60,
+          "side": "ai",
+          "from": 11,
+          "to": 17,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 61,
+          "side": "human",
+          "from": 48,
+          "to": 49,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 62,
+          "side": "ai",
+          "from": 29,
+          "to": 49,
+          "attackerId": "generated-token-18",
+          "defenderId": "generated-token-33",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 63,
+          "side": "human",
+          "from": 38,
+          "to": 34,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 64,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 65,
+          "side": "human",
+          "from": 34,
+          "to": 38,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 66,
+          "side": "ai",
+          "from": 19,
+          "to": 13,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 67,
+          "side": "human",
+          "from": 49,
+          "to": 39,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 68,
+          "side": "ai",
+          "from": 13,
+          "to": 12,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 69,
+          "side": "human",
+          "from": 39,
+          "to": 14,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 70,
+          "side": "ai",
+          "from": 8,
+          "to": 13,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 71,
+          "side": "human",
+          "from": 14,
+          "to": 29,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 72,
+          "side": "ai",
+          "from": 21,
+          "to": 26,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 73,
+          "side": "human",
+          "from": 29,
+          "to": 24,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 74,
+          "side": "ai",
+          "from": 26,
+          "to": 29,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 75,
+          "side": "human",
+          "from": 53,
+          "to": 48,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 76,
+          "side": "ai",
+          "from": 29,
+          "to": 24,
+          "attackerId": "generated-token-14",
+          "defenderId": "generated-token-33",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 77,
+          "side": "human",
+          "from": 52,
+          "to": 39,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 78,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 79,
+          "side": "human",
+          "from": 39,
+          "to": 53,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 80,
+          "side": "ai",
+          "from": 12,
+          "to": 11,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 81,
+          "side": "human",
+          "from": 48,
+          "to": 42,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 82,
+          "side": "ai",
+          "from": 19,
+          "to": 54,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 83,
+          "side": "human",
+          "from": 53,
+          "to": 48,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 84,
+          "side": "ai",
+          "from": 54,
+          "to": 59,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 85,
+          "side": "human",
+          "from": 32,
+          "to": 27,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 86,
+          "side": "ai",
+          "from": 22,
+          "to": 21,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 87,
+          "side": "human",
+          "from": 27,
+          "to": 29,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 88,
+          "side": "ai",
+          "from": 25,
+          "to": 29,
+          "attackerId": "generated-token-10",
+          "defenderId": "generated-token-31",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 89,
+          "side": "human",
+          "from": 29,
+          "to": 54,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 90,
+          "side": "ai",
+          "from": 23,
+          "to": 28,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 91,
+          "side": "human",
+          "from": 54,
+          "to": 59,
+          "attackerId": "generated-token-31",
+          "defenderId": "generated-token-8",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 92,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 93,
+          "side": "human",
+          "from": 48,
+          "to": 44,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 94,
+          "side": "ai",
+          "from": 7,
+          "to": 9,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 95,
+          "side": "human",
+          "from": 44,
+          "to": 43,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 96,
+          "side": "ai",
+          "from": 9,
+          "to": 29,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 97,
+          "side": "human",
+          "from": 38,
+          "to": 32,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 98,
+          "side": "ai",
+          "from": 29,
+          "to": 44,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 99,
+          "side": "human",
+          "from": 43,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 100,
+          "side": "ai",
+          "from": 44,
+          "to": 48,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 101,
+          "side": "human",
+          "from": 38,
+          "to": 34,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 102,
+          "side": "ai",
+          "from": 28,
+          "to": 29,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 103,
+          "side": "human",
+          "from": 34,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 104,
+          "side": "ai",
+          "from": 2,
+          "to": 7,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 105,
+          "side": "human",
+          "from": 36,
+          "to": 31,
+          "attackerId": "generated-token-30",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 106,
+          "side": "ai",
+          "from": 11,
+          "to": 17,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 107,
+          "side": "human",
+          "from": 32,
+          "to": 60,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 108,
+          "side": "ai",
+          "from": 29,
+          "to": 49,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 109,
+          "side": "human",
+          "from": 42,
+          "to": 36,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 110,
+          "side": "ai",
+          "from": 61,
+          "to": 27,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 111,
+          "side": "human",
+          "from": 31,
+          "to": 27,
+          "attackerId": "generated-token-30",
+          "defenderId": "generated-token-17",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 112,
+          "side": "ai",
+          "from": 20,
+          "to": 25,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 113,
+          "side": "human",
+          "from": 47,
+          "to": 42,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 114,
+          "side": "ai",
+          "from": 22,
+          "to": 27,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 115,
+          "side": "human",
+          "from": 42,
+          "to": 37,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 116,
+          "side": "ai",
+          "from": 7,
+          "to": 13,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 117,
+          "side": "human",
+          "from": 33,
+          "to": 31,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 118,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 119,
+          "side": "human",
+          "from": 38,
+          "to": 33,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 120,
+          "side": "ai",
+          "from": 27,
+          "to": 61,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 121,
+          "side": "human",
+          "from": 37,
+          "to": 32,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 122,
+          "side": "ai",
+          "from": 19,
+          "to": 34,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 123,
+          "side": "human",
+          "from": 33,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 124,
+          "side": "ai",
+          "from": 34,
+          "to": 44,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 125,
+          "side": "human",
+          "from": 46,
+          "to": 42,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 126,
+          "side": "ai",
+          "from": 25,
+          "to": 29,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 127,
+          "side": "human",
+          "from": 42,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 128,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 129,
+          "side": "human",
+          "from": 60,
+          "to": 30,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 130,
+          "side": "ai",
+          "from": 29,
+          "to": 25,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 131,
+          "side": "human",
+          "from": 30,
+          "to": 60,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 132,
+          "side": "ai",
+          "from": 25,
+          "to": 26,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 133,
+          "side": "human",
+          "from": 46,
+          "to": 40,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 134,
+          "side": "ai",
+          "from": 44,
+          "to": 43,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 135,
+          "side": "human",
+          "from": 40,
+          "to": 41,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 136,
+          "side": "ai",
+          "from": 43,
+          "to": 42,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 137,
+          "side": "human",
+          "from": 41,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 138,
+          "side": "ai",
+          "from": 22,
+          "to": 27,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 139,
+          "side": "human",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 140,
+          "side": "ai",
+          "from": 27,
+          "to": 32,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 141,
+          "side": "human",
+          "from": 31,
+          "to": 32,
+          "attackerId": "generated-token-32",
+          "defenderId": "generated-token-15",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 142,
+          "side": "ai",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-15",
+          "defenderId": "generated-token-38",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 143,
+          "side": "human",
+          "from": 36,
+          "to": 40,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 144,
+          "side": "ai",
+          "from": 49,
+          "to": 24,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 145,
+          "side": "human",
+          "from": 40,
+          "to": 35,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 146,
+          "side": "ai",
+          "from": 33,
+          "to": 31,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 147,
+          "side": "human",
+          "from": 35,
+          "to": 45,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 148,
+          "side": "ai",
+          "from": 61,
+          "to": 28,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 149,
+          "side": "human",
+          "from": 45,
+          "to": 10,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 150,
+          "side": "ai",
+          "from": 21,
+          "to": 16,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 151,
+          "side": "human",
+          "from": 10,
+          "to": 11,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        }
+      ],
+      "ownRoster": [
+        {
+          "id": "generated-token-0",
+          "type": "mine",
+          "origin": 0
+        },
+        {
+          "id": "generated-token-1",
+          "type": "flag",
+          "origin": 1
+        },
+        {
+          "id": "generated-token-2",
+          "type": "platoon",
+          "origin": 2
+        },
+        {
+          "id": "generated-token-3",
+          "type": "company",
+          "origin": 3
+        },
+        {
+          "id": "generated-token-4",
+          "type": "mine",
+          "origin": 4
+        },
+        {
+          "id": "generated-token-5",
+          "type": "company",
+          "origin": 5
+        },
+        {
+          "id": "generated-token-6",
+          "type": "mine",
+          "origin": 6
+        },
+        {
+          "id": "generated-token-7",
+          "type": "platoon",
+          "origin": 7
+        },
+        {
+          "id": "generated-token-8",
+          "type": "battalion",
+          "origin": 8
+        },
+        {
+          "id": "generated-token-9",
+          "type": "commander",
+          "origin": 9
+        },
+        {
+          "id": "generated-token-10",
+          "type": "company",
+          "origin": 10
+        },
+        {
+          "id": "generated-token-11",
+          "type": "bomb",
+          "origin": 12
+        },
+        {
+          "id": "generated-token-12",
+          "type": "brigade",
+          "origin": 14
+        },
+        {
+          "id": "generated-token-13",
+          "type": "engineer",
+          "origin": 15
+        },
+        {
+          "id": "generated-token-14",
+          "type": "bomb",
+          "origin": 16
+        },
+        {
+          "id": "generated-token-15",
+          "type": "brigade",
+          "origin": 18
+        },
+        {
+          "id": "generated-token-16",
+          "type": "engineer",
+          "origin": 19
+        },
+        {
+          "id": "generated-token-17",
+          "type": "engineer",
+          "origin": 20
+        },
+        {
+          "id": "generated-token-18",
+          "type": "division",
+          "origin": 22
+        },
+        {
+          "id": "generated-token-19",
+          "type": "regiment",
+          "origin": 24
+        },
+        {
+          "id": "generated-token-20",
+          "type": "general",
+          "origin": 25
+        },
+        {
+          "id": "generated-token-21",
+          "type": "platoon",
+          "origin": 26
+        },
+        {
+          "id": "generated-token-22",
+          "type": "battalion",
+          "origin": 27
+        },
+        {
+          "id": "generated-token-23",
+          "type": "regiment",
+          "origin": 28
+        },
+        {
+          "id": "generated-token-24",
+          "type": "division",
+          "origin": 29
+        }
+      ],
+      "enemyRoster": [
+        {
+          "id": "generated-token-25",
+          "origin": 30
+        },
+        {
+          "id": "generated-token-26",
+          "origin": 31
+        },
+        {
+          "id": "generated-token-27",
+          "origin": 32
+        },
+        {
+          "id": "generated-token-28",
+          "origin": 33
+        },
+        {
+          "id": "generated-token-29",
+          "origin": 34
+        },
+        {
+          "id": "generated-token-30",
+          "origin": 35
+        },
+        {
+          "id": "generated-token-31",
+          "origin": 37
+        },
+        {
+          "id": "generated-token-32",
+          "origin": 39
+        },
+        {
+          "id": "generated-token-33",
+          "origin": 40
+        },
+        {
+          "id": "generated-token-34",
+          "origin": 41
+        },
+        {
+          "id": "generated-token-35",
+          "origin": 43
+        },
+        {
+          "id": "generated-token-36",
+          "origin": 44
+        },
+        {
+          "id": "generated-token-37",
+          "origin": 45
+        },
+        {
+          "id": "generated-token-38",
+          "origin": 47
+        },
+        {
+          "id": "generated-token-39",
+          "origin": 49
+        },
+        {
+          "id": "generated-token-40",
+          "origin": 50
+        },
+        {
+          "id": "generated-token-41",
+          "origin": 51
+        },
+        {
+          "id": "generated-token-42",
+          "origin": 52
+        },
+        {
+          "id": "generated-token-43",
+          "origin": 53
+        },
+        {
+          "id": "generated-token-44",
+          "origin": 54
+        },
+        {
+          "id": "generated-token-45",
+          "origin": 55
+        },
+        {
+          "id": "generated-token-46",
+          "origin": 56
+        },
+        {
+          "id": "generated-token-47",
+          "origin": 57
+        },
+        {
+          "id": "generated-token-48",
+          "origin": 58
+        },
+        {
+          "id": "generated-token-49",
+          "origin": 59
+        }
+      ],
+      "enemyCounts": {
+        "flag": 1,
+        "mine": 3,
+        "bomb": 2,
+        "commander": 1,
+        "general": 1,
+        "division": 2,
+        "brigade": 2,
+        "regiment": 2,
+        "battalion": 2,
+        "company": 3,
+        "platoon": 3,
+        "engineer": 3
+      }
+    },
+    "provenance": "Public observation from a fresh generated benchmark game; no user game or hidden arrangement.",
+    "limitation": "Actual 24->23 abandons the option 24->9 then 9->7 against company/platoon attackers. This is conditional on unknown rank, not a universally sufficient defence."
+  },
+  {
+    "name": "generated-late-flag-cover-154",
+    "beforePly": 154,
+    "actualMove": {
+      "from": 16,
+      "to": 11,
+      "result": "move"
+    },
+    "observation": {
+      "side": "ai",
+      "board": [
+        {
+          "id": "generated-token-0",
+          "side": "ai",
+          "type": "mine",
+          "origin": 0,
+          "moved": false
+        },
+        {
+          "id": "generated-token-1",
+          "side": "ai",
+          "type": "flag",
+          "origin": 1,
+          "moved": false
+        },
+        null,
+        {
+          "id": "generated-token-3",
+          "side": "ai",
+          "type": "company",
+          "origin": 3,
+          "moved": false
+        },
+        {
+          "id": "generated-token-4",
+          "side": "ai",
+          "type": "mine",
+          "origin": 4,
+          "moved": false
+        },
+        null,
+        {
+          "id": "generated-token-6",
+          "side": "ai",
+          "type": "mine",
+          "origin": 6,
+          "moved": false
+        },
+        {
+          "id": "generated-token-43",
+          "side": "human",
+          "type": null,
+          "origin": 53,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-11",
+          "side": "ai",
+          "type": "bomb",
+          "origin": 12,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-22",
+          "side": "ai",
+          "type": "battalion",
+          "origin": 27,
+          "moved": true
+        },
+        null,
+        null,
+        {
+          "id": "generated-token-5",
+          "side": "ai",
+          "type": "company",
+          "origin": 5,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-13",
+          "side": "ai",
+          "type": "engineer",
+          "origin": 15,
+          "moved": true
+        },
+        null,
+        null,
+        {
+          "id": "generated-token-15",
+          "side": "ai",
+          "type": "brigade",
+          "origin": 18,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-42",
+          "side": "human",
+          "type": "engineer",
+          "origin": 52,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-2",
+          "side": "ai",
+          "type": "platoon",
+          "origin": 2,
+          "moved": true
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-37",
+          "side": "human",
+          "type": null,
+          "origin": 45,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-7",
+          "side": "ai",
+          "type": "platoon",
+          "origin": 7,
+          "moved": true
+        },
+        null,
+        {
+          "id": "generated-token-40",
+          "side": "human",
+          "type": null,
+          "origin": 50,
+          "moved": false
+        },
+        {
+          "id": "generated-token-41",
+          "side": "human",
+          "type": null,
+          "origin": 51,
+          "moved": false
+        },
+        null,
+        null,
+        null,
+        {
+          "id": "generated-token-45",
+          "side": "human",
+          "type": null,
+          "origin": 55,
+          "moved": false
+        },
+        {
+          "id": "generated-token-46",
+          "side": "human",
+          "type": "flag",
+          "origin": 56,
+          "moved": false
+        },
+        {
+          "id": "generated-token-47",
+          "side": "human",
+          "type": null,
+          "origin": 57,
+          "moved": false
+        },
+        {
+          "id": "generated-token-48",
+          "side": "human",
+          "type": null,
+          "origin": 58,
+          "moved": false
+        },
+        {
+          "id": "generated-token-31",
+          "side": "human",
+          "type": null,
+          "origin": 37,
+          "moved": true
+        },
+        {
+          "id": "generated-token-44",
+          "side": "human",
+          "type": "engineer",
+          "origin": 54,
+          "moved": true
+        },
+        null
+      ],
+      "turn": "ai",
+      "ply": 153,
+      "quiet": 11,
+      "result": null,
+      "revealedFlags": {
+        "human": true,
+        "ai": true
+      },
+      "rules": {
+        "engineerMountains": true
+      },
+      "history": [
+        {
+          "ply": 1,
+          "side": "human",
+          "from": 34,
+          "to": 29,
+          "attackerId": "generated-token-29",
+          "defenderId": "generated-token-24",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 2,
+          "side": "ai",
+          "from": 27,
+          "to": 23,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 3,
+          "side": "human",
+          "from": 39,
+          "to": 38,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 4,
+          "side": "ai",
+          "from": 25,
+          "to": 30,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-25",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 5,
+          "side": "human",
+          "from": 35,
+          "to": 36,
+          "attackerId": "generated-token-30",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 6,
+          "side": "ai",
+          "from": 30,
+          "to": 31,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-26",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 7,
+          "side": "human",
+          "from": 44,
+          "to": 29,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 8,
+          "side": "ai",
+          "from": 31,
+          "to": 32,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-27",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 9,
+          "side": "human",
+          "from": 29,
+          "to": 28,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-23",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 10,
+          "side": "ai",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-20",
+          "defenderId": "generated-token-28",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 11,
+          "side": "human",
+          "from": 28,
+          "to": 26,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-21",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 12,
+          "side": "ai",
+          "from": 9,
+          "to": 13,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 13,
+          "side": "human",
+          "from": 26,
+          "to": 21,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 14,
+          "side": "ai",
+          "from": 22,
+          "to": 17,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 15,
+          "side": "human",
+          "from": 45,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 16,
+          "side": "ai",
+          "from": 15,
+          "to": 11,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 17,
+          "side": "human",
+          "from": 41,
+          "to": 42,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 18,
+          "side": "ai",
+          "from": 20,
+          "to": 28,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 19,
+          "side": "human",
+          "from": 49,
+          "to": 29,
+          "attackerId": "generated-token-39",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 20,
+          "side": "ai",
+          "from": 28,
+          "to": 61,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 21,
+          "side": "human",
+          "from": 29,
+          "to": 44,
+          "attackerId": "generated-token-39",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 22,
+          "side": "ai",
+          "from": 24,
+          "to": 44,
+          "attackerId": "generated-token-19",
+          "defenderId": "generated-token-39",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 23,
+          "side": "human",
+          "from": 40,
+          "to": 41,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 24,
+          "side": "ai",
+          "from": 19,
+          "to": 28,
+          "attackerId": "generated-token-16",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 25,
+          "side": "human",
+          "from": 21,
+          "to": 27,
+          "attackerId": "generated-token-36",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 26,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 27,
+          "side": "human",
+          "from": 27,
+          "to": 28,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-16",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 28,
+          "side": "ai",
+          "from": 19,
+          "to": 44,
+          "attackerId": "generated-token-9",
+          "defenderId": "generated-token-39",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 29,
+          "side": "human",
+          "from": 42,
+          "to": 48,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 30,
+          "side": "ai",
+          "from": 44,
+          "to": 29,
+          "attackerId": "generated-token-9",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 31,
+          "side": "human",
+          "from": 28,
+          "to": 29,
+          "attackerId": "generated-token-36",
+          "defenderId": "generated-token-9",
+          "result": "both",
+          "flagRevealed": [
+            {
+              "side": "human",
+              "index": 56,
+              "id": "generated-token-46"
+            },
+            {
+              "side": "ai",
+              "index": 1,
+              "id": "generated-token-1"
+            }
+          ],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 32,
+          "side": "ai",
+          "from": 33,
+          "to": 34,
+          "attackerId": "generated-token-20",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 33,
+          "side": "human",
+          "from": 48,
+          "to": 49,
+          "attackerId": "generated-token-34",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 34,
+          "side": "ai",
+          "from": 34,
+          "to": 29,
+          "attackerId": "generated-token-20",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 35,
+          "side": "human",
+          "from": 49,
+          "to": 29,
+          "attackerId": "generated-token-34",
+          "defenderId": "generated-token-20",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 36,
+          "side": "ai",
+          "from": 14,
+          "to": 49,
+          "attackerId": "generated-token-12",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 37,
+          "side": "human",
+          "from": 54,
+          "to": 48,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 38,
+          "side": "ai",
+          "from": 10,
+          "to": 25,
+          "attackerId": "generated-token-10",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 39,
+          "side": "human",
+          "from": 37,
+          "to": 32,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 40,
+          "side": "ai",
+          "from": 17,
+          "to": 21,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 41,
+          "side": "human",
+          "from": 43,
+          "to": 44,
+          "attackerId": "generated-token-35",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 42,
+          "side": "ai",
+          "from": 49,
+          "to": 44,
+          "attackerId": "generated-token-12",
+          "defenderId": "generated-token-35",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 43,
+          "side": "human",
+          "from": 59,
+          "to": 54,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 44,
+          "side": "ai",
+          "from": 12,
+          "to": 17,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 45,
+          "side": "human",
+          "from": 54,
+          "to": 34,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 46,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 47,
+          "side": "human",
+          "from": 38,
+          "to": 33,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 48,
+          "side": "ai",
+          "from": 5,
+          "to": 20,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 49,
+          "side": "human",
+          "from": 34,
+          "to": 14,
+          "attackerId": "generated-token-49",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 50,
+          "side": "ai",
+          "from": 18,
+          "to": 13,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 51,
+          "side": "human",
+          "from": 48,
+          "to": 44,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 52,
+          "side": "ai",
+          "from": 21,
+          "to": 26,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 53,
+          "side": "human",
+          "from": 41,
+          "to": 42,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 54,
+          "side": "ai",
+          "from": 26,
+          "to": 29,
+          "attackerId": "generated-token-18",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 55,
+          "side": "human",
+          "from": 44,
+          "to": 38,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 56,
+          "side": "ai",
+          "from": 16,
+          "to": 17,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 57,
+          "side": "human",
+          "from": 14,
+          "to": 29,
+          "attackerId": "generated-token-49",
+          "defenderId": "generated-token-18",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 58,
+          "side": "ai",
+          "from": 17,
+          "to": 21,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 59,
+          "side": "human",
+          "from": 42,
+          "to": 48,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 60,
+          "side": "ai",
+          "from": 11,
+          "to": 17,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 61,
+          "side": "human",
+          "from": 48,
+          "to": 49,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 62,
+          "side": "ai",
+          "from": 29,
+          "to": 49,
+          "attackerId": "generated-token-18",
+          "defenderId": "generated-token-33",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 63,
+          "side": "human",
+          "from": 38,
+          "to": 34,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 64,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 65,
+          "side": "human",
+          "from": 34,
+          "to": 38,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 66,
+          "side": "ai",
+          "from": 19,
+          "to": 13,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 67,
+          "side": "human",
+          "from": 49,
+          "to": 39,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 68,
+          "side": "ai",
+          "from": 13,
+          "to": 12,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 69,
+          "side": "human",
+          "from": 39,
+          "to": 14,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 70,
+          "side": "ai",
+          "from": 8,
+          "to": 13,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 71,
+          "side": "human",
+          "from": 14,
+          "to": 29,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 72,
+          "side": "ai",
+          "from": 21,
+          "to": 26,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 73,
+          "side": "human",
+          "from": 29,
+          "to": 24,
+          "attackerId": "generated-token-33",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 74,
+          "side": "ai",
+          "from": 26,
+          "to": 29,
+          "attackerId": "generated-token-14",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 75,
+          "side": "human",
+          "from": 53,
+          "to": 48,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 76,
+          "side": "ai",
+          "from": 29,
+          "to": 24,
+          "attackerId": "generated-token-14",
+          "defenderId": "generated-token-33",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 77,
+          "side": "human",
+          "from": 52,
+          "to": 39,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 78,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 79,
+          "side": "human",
+          "from": 39,
+          "to": 53,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 80,
+          "side": "ai",
+          "from": 12,
+          "to": 11,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 81,
+          "side": "human",
+          "from": 48,
+          "to": 42,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 82,
+          "side": "ai",
+          "from": 19,
+          "to": 54,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 83,
+          "side": "human",
+          "from": 53,
+          "to": 48,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 84,
+          "side": "ai",
+          "from": 54,
+          "to": 59,
+          "attackerId": "generated-token-8",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 85,
+          "side": "human",
+          "from": 32,
+          "to": 27,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 86,
+          "side": "ai",
+          "from": 22,
+          "to": 21,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 87,
+          "side": "human",
+          "from": 27,
+          "to": 29,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 88,
+          "side": "ai",
+          "from": 25,
+          "to": 29,
+          "attackerId": "generated-token-10",
+          "defenderId": "generated-token-31",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 89,
+          "side": "human",
+          "from": 29,
+          "to": 54,
+          "attackerId": "generated-token-31",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 90,
+          "side": "ai",
+          "from": 23,
+          "to": 28,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 91,
+          "side": "human",
+          "from": 54,
+          "to": 59,
+          "attackerId": "generated-token-31",
+          "defenderId": "generated-token-8",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 92,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 93,
+          "side": "human",
+          "from": 48,
+          "to": 44,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 94,
+          "side": "ai",
+          "from": 7,
+          "to": 9,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 95,
+          "side": "human",
+          "from": 44,
+          "to": 43,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 96,
+          "side": "ai",
+          "from": 9,
+          "to": 29,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 97,
+          "side": "human",
+          "from": 38,
+          "to": 32,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 98,
+          "side": "ai",
+          "from": 29,
+          "to": 44,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 99,
+          "side": "human",
+          "from": 43,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 100,
+          "side": "ai",
+          "from": 44,
+          "to": 48,
+          "attackerId": "generated-token-7",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 101,
+          "side": "human",
+          "from": 38,
+          "to": 34,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 102,
+          "side": "ai",
+          "from": 28,
+          "to": 29,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 103,
+          "side": "human",
+          "from": 34,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 104,
+          "side": "ai",
+          "from": 2,
+          "to": 7,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 105,
+          "side": "human",
+          "from": 36,
+          "to": 31,
+          "attackerId": "generated-token-30",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 106,
+          "side": "ai",
+          "from": 11,
+          "to": 17,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 107,
+          "side": "human",
+          "from": 32,
+          "to": 60,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 108,
+          "side": "ai",
+          "from": 29,
+          "to": 49,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 109,
+          "side": "human",
+          "from": 42,
+          "to": 36,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 110,
+          "side": "ai",
+          "from": 61,
+          "to": 27,
+          "attackerId": "generated-token-17",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 111,
+          "side": "human",
+          "from": 31,
+          "to": 27,
+          "attackerId": "generated-token-30",
+          "defenderId": "generated-token-17",
+          "result": "both",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": false
+        },
+        {
+          "ply": 112,
+          "side": "ai",
+          "from": 20,
+          "to": 25,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 113,
+          "side": "human",
+          "from": 47,
+          "to": 42,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 114,
+          "side": "ai",
+          "from": 22,
+          "to": 27,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 115,
+          "side": "human",
+          "from": 42,
+          "to": 37,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 116,
+          "side": "ai",
+          "from": 7,
+          "to": 13,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 117,
+          "side": "human",
+          "from": 33,
+          "to": 31,
+          "attackerId": "generated-token-32",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 118,
+          "side": "ai",
+          "from": 13,
+          "to": 19,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 119,
+          "side": "human",
+          "from": 38,
+          "to": 33,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 120,
+          "side": "ai",
+          "from": 27,
+          "to": 61,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 121,
+          "side": "human",
+          "from": 37,
+          "to": 32,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 122,
+          "side": "ai",
+          "from": 19,
+          "to": 34,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 123,
+          "side": "human",
+          "from": 33,
+          "to": 38,
+          "attackerId": "generated-token-42",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 124,
+          "side": "ai",
+          "from": 34,
+          "to": 44,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 125,
+          "side": "human",
+          "from": 46,
+          "to": 42,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 126,
+          "side": "ai",
+          "from": 25,
+          "to": 29,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 127,
+          "side": "human",
+          "from": 42,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 128,
+          "side": "ai",
+          "from": 17,
+          "to": 22,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 129,
+          "side": "human",
+          "from": 60,
+          "to": 30,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 130,
+          "side": "ai",
+          "from": 29,
+          "to": 25,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 131,
+          "side": "human",
+          "from": 30,
+          "to": 60,
+          "attackerId": "generated-token-44",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 132,
+          "side": "ai",
+          "from": 25,
+          "to": 26,
+          "attackerId": "generated-token-5",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 133,
+          "side": "human",
+          "from": 46,
+          "to": 40,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 134,
+          "side": "ai",
+          "from": 44,
+          "to": 43,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 135,
+          "side": "human",
+          "from": 40,
+          "to": 41,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 136,
+          "side": "ai",
+          "from": 43,
+          "to": 42,
+          "attackerId": "generated-token-2",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 137,
+          "side": "human",
+          "from": 41,
+          "to": 46,
+          "attackerId": "generated-token-37",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 138,
+          "side": "ai",
+          "from": 22,
+          "to": 27,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 139,
+          "side": "human",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-38",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 140,
+          "side": "ai",
+          "from": 27,
+          "to": 32,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 141,
+          "side": "human",
+          "from": 31,
+          "to": 32,
+          "attackerId": "generated-token-32",
+          "defenderId": "generated-token-15",
+          "result": "lose",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 142,
+          "side": "ai",
+          "from": 32,
+          "to": 33,
+          "attackerId": "generated-token-15",
+          "defenderId": "generated-token-38",
+          "result": "win",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 143,
+          "side": "human",
+          "from": 36,
+          "to": 40,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 144,
+          "side": "ai",
+          "from": 49,
+          "to": 24,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 145,
+          "side": "human",
+          "from": 40,
+          "to": 35,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 146,
+          "side": "ai",
+          "from": 33,
+          "to": 31,
+          "attackerId": "generated-token-15",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 147,
+          "side": "human",
+          "from": 35,
+          "to": 45,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 148,
+          "side": "ai",
+          "from": 61,
+          "to": 28,
+          "attackerId": "generated-token-13",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": true,
+          "mountainMove": true
+        },
+        {
+          "ply": 149,
+          "side": "human",
+          "from": 45,
+          "to": 10,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 150,
+          "side": "ai",
+          "from": 21,
+          "to": 16,
+          "attackerId": "generated-token-11",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 151,
+          "side": "human",
+          "from": 10,
+          "to": 11,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 152,
+          "side": "ai",
+          "from": 24,
+          "to": 23,
+          "attackerId": "generated-token-22",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        },
+        {
+          "ply": 153,
+          "side": "human",
+          "from": 11,
+          "to": 7,
+          "attackerId": "generated-token-43",
+          "defenderId": null,
+          "result": "move",
+          "flagRevealed": [],
+          "engineerTurn": false,
+          "mountainMove": false
+        }
+      ],
+      "ownRoster": [
+        {
+          "id": "generated-token-0",
+          "type": "mine",
+          "origin": 0
+        },
+        {
+          "id": "generated-token-1",
+          "type": "flag",
+          "origin": 1
+        },
+        {
+          "id": "generated-token-2",
+          "type": "platoon",
+          "origin": 2
+        },
+        {
+          "id": "generated-token-3",
+          "type": "company",
+          "origin": 3
+        },
+        {
+          "id": "generated-token-4",
+          "type": "mine",
+          "origin": 4
+        },
+        {
+          "id": "generated-token-5",
+          "type": "company",
+          "origin": 5
+        },
+        {
+          "id": "generated-token-6",
+          "type": "mine",
+          "origin": 6
+        },
+        {
+          "id": "generated-token-7",
+          "type": "platoon",
+          "origin": 7
+        },
+        {
+          "id": "generated-token-8",
+          "type": "battalion",
+          "origin": 8
+        },
+        {
+          "id": "generated-token-9",
+          "type": "commander",
+          "origin": 9
+        },
+        {
+          "id": "generated-token-10",
+          "type": "company",
+          "origin": 10
+        },
+        {
+          "id": "generated-token-11",
+          "type": "bomb",
+          "origin": 12
+        },
+        {
+          "id": "generated-token-12",
+          "type": "brigade",
+          "origin": 14
+        },
+        {
+          "id": "generated-token-13",
+          "type": "engineer",
+          "origin": 15
+        },
+        {
+          "id": "generated-token-14",
+          "type": "bomb",
+          "origin": 16
+        },
+        {
+          "id": "generated-token-15",
+          "type": "brigade",
+          "origin": 18
+        },
+        {
+          "id": "generated-token-16",
+          "type": "engineer",
+          "origin": 19
+        },
+        {
+          "id": "generated-token-17",
+          "type": "engineer",
+          "origin": 20
+        },
+        {
+          "id": "generated-token-18",
+          "type": "division",
+          "origin": 22
+        },
+        {
+          "id": "generated-token-19",
+          "type": "regiment",
+          "origin": 24
+        },
+        {
+          "id": "generated-token-20",
+          "type": "general",
+          "origin": 25
+        },
+        {
+          "id": "generated-token-21",
+          "type": "platoon",
+          "origin": 26
+        },
+        {
+          "id": "generated-token-22",
+          "type": "battalion",
+          "origin": 27
+        },
+        {
+          "id": "generated-token-23",
+          "type": "regiment",
+          "origin": 28
+        },
+        {
+          "id": "generated-token-24",
+          "type": "division",
+          "origin": 29
+        }
+      ],
+      "enemyRoster": [
+        {
+          "id": "generated-token-25",
+          "origin": 30
+        },
+        {
+          "id": "generated-token-26",
+          "origin": 31
+        },
+        {
+          "id": "generated-token-27",
+          "origin": 32
+        },
+        {
+          "id": "generated-token-28",
+          "origin": 33
+        },
+        {
+          "id": "generated-token-29",
+          "origin": 34
+        },
+        {
+          "id": "generated-token-30",
+          "origin": 35
+        },
+        {
+          "id": "generated-token-31",
+          "origin": 37
+        },
+        {
+          "id": "generated-token-32",
+          "origin": 39
+        },
+        {
+          "id": "generated-token-33",
+          "origin": 40
+        },
+        {
+          "id": "generated-token-34",
+          "origin": 41
+        },
+        {
+          "id": "generated-token-35",
+          "origin": 43
+        },
+        {
+          "id": "generated-token-36",
+          "origin": 44
+        },
+        {
+          "id": "generated-token-37",
+          "origin": 45
+        },
+        {
+          "id": "generated-token-38",
+          "origin": 47
+        },
+        {
+          "id": "generated-token-39",
+          "origin": 49
+        },
+        {
+          "id": "generated-token-40",
+          "origin": 50
+        },
+        {
+          "id": "generated-token-41",
+          "origin": 51
+        },
+        {
+          "id": "generated-token-42",
+          "origin": 52
+        },
+        {
+          "id": "generated-token-43",
+          "origin": 53
+        },
+        {
+          "id": "generated-token-44",
+          "origin": 54
+        },
+        {
+          "id": "generated-token-45",
+          "origin": 55
+        },
+        {
+          "id": "generated-token-46",
+          "origin": 56
+        },
+        {
+          "id": "generated-token-47",
+          "origin": 57
+        },
+        {
+          "id": "generated-token-48",
+          "origin": 58
+        },
+        {
+          "id": "generated-token-49",
+          "origin": 59
+        }
+      ],
+      "enemyCounts": {
+        "flag": 1,
+        "mine": 3,
+        "bomb": 2,
+        "commander": 1,
+        "general": 1,
+        "division": 2,
+        "brigade": 2,
+        "regiment": 2,
+        "battalion": 2,
+        "company": 3,
+        "platoon": 3,
+        "engineer": 3
+      }
+    },
+    "provenance": "Public observation from a fresh generated benchmark game; no user game or hidden arrangement.",
+    "limitation": "After this point every own move fails against the named 7->2->1 line for each compatible non-bomb rank; do not blame the final move alone."
+  }
+]

@@ -1,0 +1,364 @@
+{
+  "side": "ai",
+  "board": [
+    null,
+    null,
+    null,
+    {
+      "id": "2951bc0c-c33d-492d-b912-d11116eeb787",
+      "side": "ai",
+      "type": "flag",
+      "origin": 3,
+      "moved": false
+    },
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "d5692cfc-1f0d-45a5-8602-03436f2f79f5",
+      "side": "ai",
+      "type": "commander",
+      "origin": 15,
+      "moved": true
+    },
+    {
+      "id": "129a68a8-d13d-4b5b-89fd-e3372e9e48c5",
+      "side": "human",
+      "type": "engineer",
+      "origin": 41,
+      "moved": true
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "id": "7bb28029-0eaa-4b50-9005-57c0beff037d",
+      "side": "ai",
+      "type": "brigade",
+      "origin": 20,
+      "moved": true
+    },
+    {
+      "id": "065d0cce-ea62-4a70-83fb-a8d9a265b129",
+      "side": "human",
+      "type": null,
+      "origin": 51,
+      "moved": false
+    },
+    null,
+    null,
+    null,
+    {
+      "id": "09a4c95e-f5f7-4939-ba79-926a8e178719",
+      "side": "human",
+      "type": null,
+      "origin": 55,
+      "moved": false
+    },
+    {
+      "id": "84b4e1dc-5824-4b91-94d6-2a48e8359216",
+      "side": "human",
+      "type": "flag",
+      "origin": 56,
+      "moved": false
+    },
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "turn": "ai",
+  "ply": 1,
+  "quiet": 0,
+  "result": null,
+  "revealedFlags": {
+    "ai": true,
+    "human": true
+  },
+  "rules": {
+    "engineerMountains": true
+  },
+  "history": [],
+  "ownRoster": [
+    {
+      "id": "4c4956c3-f6a4-4c16-acf2-a047d5169c2e",
+      "type": "company",
+      "origin": 0
+    },
+    {
+      "id": "7feecf44-20ea-4c27-b975-e5744af6c500",
+      "type": "mine",
+      "origin": 1
+    },
+    {
+      "id": "efaeb5f5-5be9-44e0-8614-539385f68fb3",
+      "type": "bomb",
+      "origin": 2
+    },
+    {
+      "id": "2951bc0c-c33d-492d-b912-d11116eeb787",
+      "type": "flag",
+      "origin": 3
+    },
+    {
+      "id": "6c05a783-1799-4495-94ee-8bc5afaf9d8a",
+      "type": "platoon",
+      "origin": 4
+    },
+    {
+      "id": "507ec9c2-8ef7-4616-85a5-f5e0fe9cd490",
+      "type": "engineer",
+      "origin": 5
+    },
+    {
+      "id": "29b903d1-f320-461f-9562-adf84ca09a81",
+      "type": "mine",
+      "origin": 6
+    },
+    {
+      "id": "f93db71c-35c7-451a-88e0-c0fb3da19182",
+      "type": "general",
+      "origin": 7
+    },
+    {
+      "id": "b748f534-25c9-4fc9-a88e-2c926dc72c44",
+      "type": "division",
+      "origin": 8
+    },
+    {
+      "id": "25a76ce8-8427-49ae-9c74-4bc278df4f5c",
+      "type": "mine",
+      "origin": 9
+    },
+    {
+      "id": "50dd395b-b671-481b-8188-da690489168d",
+      "type": "battalion",
+      "origin": 10
+    },
+    {
+      "id": "30221a58-dea9-42b4-b879-39f77a5c684d",
+      "type": "platoon",
+      "origin": 12
+    },
+    {
+      "id": "6cedc34d-6e71-4ef9-8061-d53d9fb158b7",
+      "type": "bomb",
+      "origin": 14
+    },
+    {
+      "id": "d5692cfc-1f0d-45a5-8602-03436f2f79f5",
+      "type": "commander",
+      "origin": 15
+    },
+    {
+      "id": "4f93632b-ae12-425c-801c-28c84d53a71a",
+      "type": "platoon",
+      "origin": 16
+    },
+    {
+      "id": "635e8e1c-1cf8-4cb7-8675-4482962bcc63",
+      "type": "division",
+      "origin": 18
+    },
+    {
+      "id": "06351c9a-ddc8-453f-b2e6-718524b558f7",
+      "type": "engineer",
+      "origin": 19
+    },
+    {
+      "id": "7bb28029-0eaa-4b50-9005-57c0beff037d",
+      "type": "brigade",
+      "origin": 20
+    },
+    {
+      "id": "828449b0-89a4-429b-82c2-0df8c6e1db34",
+      "type": "company",
+      "origin": 22
+    },
+    {
+      "id": "daae2368-8a07-4c72-97a4-04e402e8d126",
+      "type": "battalion",
+      "origin": 24
+    },
+    {
+      "id": "54bb598d-22b5-41f9-8537-4288369609e1",
+      "type": "regiment",
+      "origin": 25
+    },
+    {
+      "id": "1710d4ae-3334-41f9-ad3e-006efd360aca",
+      "type": "regiment",
+      "origin": 26
+    },
+    {
+      "id": "5e58fc66-1698-4278-81bf-944e96079843",
+      "type": "engineer",
+      "origin": 27
+    },
+    {
+      "id": "068175eb-8d5b-4b27-ab01-812316639954",
+      "type": "company",
+      "origin": 28
+    },
+    {
+      "id": "dc0c9b4a-96f2-4588-b46d-ad2833c974d3",
+      "type": "brigade",
+      "origin": 29
+    }
+  ],
+  "enemyRoster": [
+    {
+      "id": "5260483c-41fc-4e16-a193-7b4777cd335f",
+      "origin": 30
+    },
+    {
+      "id": "51946489-36ef-49d7-9af0-ff03872b4388",
+      "origin": 31
+    },
+    {
+      "id": "fc7dc4a5-49a0-4ca0-af63-4fe3ab0e6ee9",
+      "origin": 32
+    },
+    {
+      "id": "3ba38d2a-dedb-4e37-a721-0ee56bf65497",
+      "origin": 33
+    },
+    {
+      "id": "cb8874ad-5735-402e-99c3-d69bbb303f7b",
+      "origin": 34
+    },
+    {
+      "id": "424ecb0c-69b7-45c7-9ddd-86b6da7874ba",
+      "origin": 35
+    },
+    {
+      "id": "6c1e57f3-88b9-4de5-9f6d-aaab84a509d3",
+      "origin": 37
+    },
+    {
+      "id": "7f627918-60b9-4d5f-b5fb-0e69d8c616d1",
+      "origin": 39
+    },
+    {
+      "id": "39a5f3ce-99a7-42d6-9998-167661d4abaa",
+      "origin": 40
+    },
+    {
+      "id": "129a68a8-d13d-4b5b-89fd-e3372e9e48c5",
+      "origin": 41
+    },
+    {
+      "id": "b78a8055-4ebd-48fb-9aa8-e02e1b1daf72",
+      "origin": 43
+    },
+    {
+      "id": "6c2a2144-8ec9-4ae3-a20c-686484bfa8aa",
+      "origin": 44
+    },
+    {
+      "id": "0320881b-ba62-4629-9c8e-11af45244acd",
+      "origin": 45
+    },
+    {
+      "id": "9413f608-8edd-483a-a9a5-fb735bb979a6",
+      "origin": 47
+    },
+    {
+      "id": "3629453c-25e7-467d-9a04-75d663b765e6",
+      "origin": 49
+    },
+    {
+      "id": "b1671f88-a0e6-4567-9b47-7446c9f5544a",
+      "origin": 50
+    },
+    {
+      "id": "065d0cce-ea62-4a70-83fb-a8d9a265b129",
+      "origin": 51
+    },
+    {
+      "id": "3446d004-afab-4815-85c8-b32a86b99e40",
+      "origin": 52
+    },
+    {
+      "id": "01814d1a-6457-4e5a-9cc8-06c339049213",
+      "origin": 53
+    },
+    {
+      "id": "d4d0f03d-926e-4f4e-9026-d380cfe4e3b7",
+      "origin": 54
+    },
+    {
+      "id": "09a4c95e-f5f7-4939-ba79-926a8e178719",
+      "origin": 55
+    },
+    {
+      "id": "84b4e1dc-5824-4b91-94d6-2a48e8359216",
+      "origin": 56
+    },
+    {
+      "id": "b2328636-7a3c-42a0-b821-fee69cfdda8d",
+      "origin": 57
+    },
+    {
+      "id": "f0d199ba-4e02-4234-a2c2-6f1a97a26841",
+      "origin": 58
+    },
+    {
+      "id": "50ce5f6d-dbc2-4131-bda3-249ef1d3d8e4",
+      "origin": 59
+    }
+  ],
+  "enemyCounts": {
+    "flag": 1,
+    "mine": 3,
+    "bomb": 2,
+    "commander": 1,
+    "general": 1,
+    "division": 2,
+    "brigade": 2,
+    "regiment": 2,
+    "battalion": 2,
+    "company": 3,
+    "platoon": 3,
+    "engineer": 3
+  }
+}
