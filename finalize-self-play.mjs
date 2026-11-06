@@ -6,27 +6,14 @@ import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {verifyPart,scoreBatch,validatePlan} from './benchmarks/self-play-batch.mjs';
+import {searchSummary as summarizeDecisions} from './benchmarks/self-play-v2.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const read=name=>JSON.parse(readFileSync(path.resolve(root,name),'utf8').replace(/^\uFEFF/,''));
 const hash=name=>createHash('sha256').update(readFileSync(path.resolve(root,name))).digest('hex');
 const result=name=>JSON.parse(readFileSync(path.resolve(root,name),'utf8').replace(/^\uFEFF/,'').trim().split(/\r?\n/).filter(line=>line.startsWith('{')).at(-1));
 const evidence=name=>({file:name,sha256:hash(name)});
-function distribution(values){
-  const sorted=values.filter(Number.isFinite).sort((a,b)=>a-b);
-  return sorted.length?{count:sorted.length,min:sorted[0],median:sorted[Math.floor(sorted.length*.5)],
-    p95:sorted[Math.min(sorted.length-1,Math.floor(sorted.length*.95))],max:sorted.at(-1),
-    mean:sorted.reduce((sum,value)=>sum+value,0)/sorted.length}:null;
-}
 function searchSummary(records){
-  const rows=records.flatMap(record=>record.decisions),result={};
-  for(const policy of ['challenger','opponent']){
-    const decisions=rows.filter(row=>row.policy===policy);
-    result[policy]={moves:decisions.length,elapsedMs:distribution(decisions.map(row=>row.elapsedMs)),
-      completedDepth:distribution(decisions.map(row=>row.info.diagnostics?.completedDepth)),
-      searchedNodes:distribution(decisions.map(row=>row.info.searchedNodes)),
-      depthCounts:decisions.reduce((counts,row)=>{const depth=row.info.diagnostics?.completedDepth??'unreported';counts[depth]=(counts[depth]||0)+1;return counts;},{})};
-  }
-  return result;
+  return summarizeDecisions(new Map(records.map((record,index)=>[index,record])));
 }
 
 export function parseUnitTotals(text){
@@ -109,10 +96,12 @@ export async function verifiedBatch(filename,expectedMode,expectedGames){
   assert.deepEqual(batch.sourceHashes,plan.sourceHashes);
   return {file:filename,sha256:hash(filename),sourceHashes:batch.sourceHashes,
     protocol:{mode:plan.config.mode,opponent:plan.config.opponent,games:plan.config.games,paired:plan.config.paired,
+      decisionEntry:reports[0].protocol.decisionEntry,harnessFiles:reports[0].protocol.harnessFiles,
       maxPlies:plan.config.maxPlies,seeds:plan.config.seeds,budgets:{hell:5000,professional:900}},
     summary:score,allReplaysVerified:true,
     games:records.map(record=>({seed:record.descriptor.seed,hellSide:record.descriptor.challengerSide,
-      outcome:record.winner,plies:record.game.ply,reason:record.game.result?.reason||(record.winner==='capped'?'evaluation-ply-cap':null),terminal:record.terminal})),
+      outcome:record.winner,plies:record.game.ply,reason:record.game.result?.reason||(record.winner==='capped'?'evaluation-ply-cap':null),terminal:record.terminal,
+      terminalKind:record.terminalKind})),
     timing:searchSummary(records)};
 }
 

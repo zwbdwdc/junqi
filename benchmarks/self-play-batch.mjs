@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync, renameSync, linkSyn
 import { createHash, randomUUID } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { parseArgs, planGames, sourceHashes, validateRecord } from './self-play-v2.mjs';
+import { parseArgs, planGames, sourceHashes, validateRecord, DESKTOP_ENTRY, harnessFiles } from './self-play-v2.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const read = file => JSON.parse(readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
@@ -81,14 +81,18 @@ export function scoreBatch(plan, reports) {
     reportSeeds.every(seed => expectedSeeds.includes(seed)) && new Set(reportSeeds).size === reportSeeds.length &&
     pairs.every(pair => expectedPairs.includes(pair)) && new Set(pairs).size === pairs.length &&
     games.every(game => game.status !== 'finished' ||
-      (['challenger', 'opponent', 'draw', 'capped'].includes(game.winner) && game.terminal === (game.winner !== 'capped')));
+      (['challenger', 'opponent', 'draw', 'capped'].includes(game.winner) && game.terminal === (game.winner !== 'capped') &&
+        (game.terminal ? ['rule', 'resignation'].includes(game.terminalKind) : game.terminalKind === null)));
   const complete = coverage && reports.length === plan.parts.length && pairs.length === expectedPairs.length &&
     reports.every(report => report.completed === true && report.sourceUnchanged === true && report.games.length === 2);
   const terminal = games.filter(game => game.status === 'finished' && game.terminal).length;
+  const ruleTerminals = games.filter(game => game.status === 'finished' && game.terminalKind === 'rule').length;
+  const resignations = games.filter(game => game.status === 'finished' && game.terminalKind === 'resignation').length;
   const eligible = plan.config.mode === 'acceptance' && plan.config.opponent === 'professional' &&
     plan.config.games === 20 && plan.config.paired && plan.config.trainingReports.length > 0 &&
-    reports.every(report => report.protocol.testOnly === false) && !errors;
-  return { planned: plan.config.games, wins, losses, draws, capped, errors, terminal,
+    reports.every(report => report.schema === 2 && report.protocol.testOnly === false &&
+      report.protocol.decisionEntry === DESKTOP_ENTRY && same(report.protocol.harnessFiles, harnessFiles())) && !errors;
+  return { planned: plan.config.games, wins, losses, draws, capped, errors, terminal, ruleTerminals, resignations,
     pending: Math.max(0, plan.config.games - wins - losses - draws - capped), complete, coverageValid: coverage,
     winRate: wins / plan.config.games, eligible,
     // All twenty must finish under the actual rules. A cap is never a victory.
@@ -96,13 +100,14 @@ export function scoreBatch(plan, reports) {
 }
 
 export async function verifyPart(plan, part, report) {
-  check(report.schema === 1, `Invalid report schema in ${part.output}`);
+  check(report.schema === 2, `Invalid report schema in ${part.output}; current verification requires desktop Worker reports`);
   check(same(report.sourceHashes, plan.sourceHashes), `Different source in ${part.output}`);
   check(report.protocol.mode === plan.config.mode && report.protocol.opponent === plan.config.opponent &&
     report.protocol.games === 2 && report.protocol.paired && same(report.protocol.seeds, [part.seed]) &&
     report.protocol.maxPlies === plan.config.maxPlies && report.protocol.sourceRoot === plan.config.sourceRoot &&
     report.protocol.budgets.hell === 5000 && report.protocol.budgets.professional === 900 &&
-    report.protocol.testOnly === false, `Different protocol in ${part.output}`);
+    report.protocol.testOnly === false && report.protocol.decisionEntry === DESKTOP_ENTRY &&
+    same(report.protocol.harnessFiles, harnessFiles()), `Different protocol in ${part.output}`);
   check(report.protocol.trainingReports.length === plan.exclusions.length &&
     report.protocol.trainingReports.every((item, i) => item.file === plan.exclusions[i].file &&
       item.sha256 === plan.exclusions[i].sha256 && same(item.seeds, plan.exclusions[i].seeds)), `Different training exclusions in ${part.output}`);
@@ -113,7 +118,7 @@ export async function verifyPart(plan, part, report) {
   const sourceSignature = JSON.stringify(plan.sourceHashes), priorSignature = loadedValidationSources.get(plan.config.sourceRoot);
   check(!priorSignature || priorSignature === sourceSignature, 'Source changed in this verifier process; restart before verifying a new candidate');
   loadedValidationSources.set(plan.config.sourceRoot, sourceSignature);
-  const modules = await Promise.all(['engine.js', 'formations.js', 'ai-context.js']
+  const modules = await Promise.all(['engine.js', 'formations.js', 'ai-context.js', 'resignation.js']
     .map(name => import(pathToFileURL(path.join(plan.config.sourceRoot, name)).href)));
   const api = Object.assign({}, ...modules);
   const records = [];
@@ -129,7 +134,8 @@ export async function verifyPart(plan, part, report) {
     check(Array.isArray(record.failures) && record.failures.every(failure => typeof failure.error === 'string' &&
       Number.isInteger(failure.ply) && failure.ply >= 1), 'Invalid recorded policy failures');
     check(item.seed === part.seed && item.terminal === record.terminal && item.winner === record.winner &&
-      item.plies === record.game.ply && item.status === record.status, 'Report disagrees with replay');
+      item.plies === record.game.ply && item.status === record.status && item.terminalKind === record.terminalKind &&
+      item.reason === (record.game.result?.reason || (record.winner === 'capped' ? 'evaluation-ply-cap' : null)), 'Report disagrees with replay');
     for (const decision of record.decisions) {
       const diagnostic = decision.info.diagnostics;
       check(diagnostic && diagnostic.timeLimitMs === report.protocol.budgets[decision.difficulty] &&
@@ -137,6 +143,10 @@ export async function verifyPart(plan, part, report) {
         Number.isSafeInteger(diagnostic.attemptedDepth) && diagnostic.completedDepth <= diagnostic.attemptedDepth &&
         Number.isSafeInteger(decision.info.searchedNodes) && decision.info.searchedNodes >= 0 &&
         Number.isFinite(diagnostic.elapsedMs) && diagnostic.elapsedMs >= 0 &&
+        Number.isFinite(diagnostic.resignationCheckMs) && diagnostic.resignationCheckMs >= 0 &&
+        Number.isFinite(diagnostic.searchTimeLimitMs) && diagnostic.searchTimeLimitMs >= 0 &&
+        diagnostic.searchTimeLimitMs <= report.protocol.budgets[decision.difficulty] &&
+        Math.abs(diagnostic.searchTimeLimitMs - Math.max(0, diagnostic.timeLimitMs - diagnostic.resignationCheckMs)) <= 0.02 &&
         decision.info.searchDepth === diagnostic.completedDepth, 'Missing production search diagnostics');
     }
     records.push(record);
@@ -145,8 +155,10 @@ export async function verifyPart(plan, part, report) {
   const count = winner => finished.filter(record => record.winner === winner).length;
   const wins = count('challenger'), losses = count('opponent'), draws = count('draw'), capped = count('capped');
   const errors = records.reduce((total, record) => total + record.failures.length, 0);
-  const actual = { planned: 2, finished: finished.length, terminal: finished.length - capped, challengerWins: wins,
-    opponentWins: losses, ruleDraws: draws, capped, errors, unfinished: 2 - finished.length, winsNeeded: 2,
+  const actual = { planned: 2, finished: finished.length, terminal: finished.length - capped,
+    ruleTerminals: finished.filter(record => record.terminalKind === 'rule').length,
+    resignations: finished.filter(record => record.terminalKind === 'resignation').length,
+    challengerWins: wins, opponentWins: losses, ruleDraws: draws, capped, errors, unfinished: 2 - finished.length, winsNeeded: 2,
     winRate: wins / 2, scoreBounds: [(wins + draws * .5) / 2, (wins + draws * .5 + capped + 2 - finished.length) / 2] };
   check(same(report.summary, actual), 'Report summary disagrees with raw outcomes or policy failures');
   check(report.completed === (finished.length === 2 && !report.error && report.sourceUnchanged === true), 'Report completion disagrees with raw games');

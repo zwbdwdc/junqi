@@ -6,17 +6,17 @@ import path from 'node:path';
 import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { scoreBatch, validatePlan, collectExclusions, verifyPart, runBatch } from '../benchmarks/self-play-batch.mjs';
-import { parseArgs, runSelfPlay, sourceHashes } from '../benchmarks/self-play-v2.mjs';
+import { parseArgs, runSelfPlay, sourceHashes, DESKTOP_ENTRY, harnessFiles } from '../benchmarks/self-play-v2.mjs';
 import { legalMoves } from '../dist/engine.js';
 
 const plan = { config: { games: 20, mode: 'acceptance', opponent: 'professional', paired: true,
   trainingReports: ['training.json'], seeds: Array.from({ length: 10 }, (_, i) => i + 1) },
   parts: Array.from({ length: 10 }, (_, i) => ({ seed: i + 1 })) };
 function reports(outcomes) {
-  return Array.from({ length: 10 }, (_, pair) => ({ completed: true, sourceUnchanged: true,
-    protocol: { testOnly: false, seeds: [pair + 1] }, summary: { errors: 0 },
+  return Array.from({ length: 10 }, (_, pair) => ({ schema: 2, completed: true, sourceUnchanged: true,
+    protocol: { testOnly: false, seeds: [pair + 1], decisionEntry: DESKTOP_ENTRY, harnessFiles: harnessFiles() }, summary: { errors: 0 },
     games: outcomes.slice(pair * 2, pair * 2 + 2).map((winner, index) => ({ seed: pair + 1,
-      challengerSide: index ? 'ai' : 'human', winner, status: 'finished', terminal: winner !== 'capped' })) }));
+      challengerSide: index ? 'ai' : 'human', winner, status: 'finished', terminal: winner !== 'capped', terminalKind: winner === 'capped' ? null : 'rule' })) }));
 }
 test('batch counts every planned game and requires more than nine wins per ten', () => {
   assert.equal(scoreBatch(plan, reports([...Array(19).fill('challenger'), 'opponent'])).passed, true);
@@ -28,7 +28,9 @@ test('caps, missing pairs, source changes, errors and test policies cannot pass 
   assert.equal(capped.passed, false); assert.equal(capped.capped, 1); assert.equal(capped.winRate, .95);
   const allWins = reports(Array(20).fill('challenger'));
   assert.equal(scoreBatch(plan, allWins.slice(0, 9)).passed, false);
-  for (const modify of [r => r[0].sourceUnchanged = false, r => r[0].summary.errors++, r => r[0].protocol.testOnly = true]) {
+  for (const modify of [r => r[0].sourceUnchanged = false, r => r[0].summary.errors++, r => r[0].protocol.testOnly = true,
+    r => r[0].schema = 1, r => delete r[0].protocol.decisionEntry, r => r[0].protocol.decisionEntry = 'core-only',
+    r => delete r[0].protocol.harnessFiles['desktop-policy.mjs']]) {
     const bad = structuredClone(allWins); modify(bad); assert.equal(scoreBatch(plan, bad).passed, false);
   }
   assert.equal(scoreBatch({ ...plan, config: { ...plan.config, mode: 'training' } }, allWins).passed, false);
@@ -49,6 +51,20 @@ function temporary(t) {
 }
 const partsFor = config => config.seeds.map((seed, index) => ({ seed,
   output: path.join(config.output.replace(/\.json$/i, '.parts'), `${index + 1}-${seed}.json`) }));
+
+function fastFixturePolicy(source) {
+  // Only this temporary test bundle replaces the AI. Its real desktop Worker,
+  // proof check, referee and bridge still run; hashes cannot match the product.
+  writeFileSync(path.join(source, 'ai.js'), `import {legalMoves} from './engine.js';
+export const DIFFICULTIES={hell:{timeLimitMs:5000},professional:{timeLimitMs:900}};
+export function chooseMove(o,d,r,p,c,options){
+ if(arguments.length!==6||o.initial||o.repetitions||p!==null||!Object.isFrozen(o))throw Error('Private state leaked or Worker bypassed');
+ for(let from=0;from<o.board.length;from++)if(o.board[from]?.side===o.side){
+  const moves=legalMoves(o.board,from);if(moves.length)return{from,to:moves[0],info:{searchDepth:0,searchedNodes:0,
+   diagnostics:{completedDepth:0,attemptedDepth:0,elapsedMs:0,timeLimitMs:options.timeLimitMs}}};
+ }
+}`);
+}
 
 test('duplicate reports or repeated games cannot satisfy the complete seed plan', () => {
   const all = reports(Array(20).fill('challenger'));
@@ -90,21 +106,11 @@ async function shortPart(t) {
   const directory = temporary(t), source = path.join(directory, 'source');
   mkdirSync(source); writeFileSync(path.join(directory, 'package.json'), '{"type":"module"}');
   cpSync(path.join(root, 'dist'), source, { recursive: true });
+  fastFixturePolicy(source);
   const config = parseArgs(['--source-root', source, '--games', '2', '--seeds', '601001', '--max-plies', '1',
     '--output', path.join(directory, 'batch.json')]);
   const part = partsFor(config)[0];
-  const policy = (observation, level) => {
-    for (let from = 0; from < observation.board.length; from++) {
-      if (observation.board[from]?.side !== observation.side) continue;
-      const moves = legalMoves(observation.board, from);
-      if (moves.length) return { from, to: moves[0], info: { searchDepth: 2, searchedNodes: 1,
-        diagnostics: { completedDepth: 2, attemptedDepth: 2, elapsedMs: 1, timeLimitMs: level === 'hell' ? 5000 : 900 } } };
-    }
-  };
-  const report = await runSelfPlay({ ...config, output: part.output }, { policy, signals: false });
-  // This synthetic report only exercises the verifier. It never becomes a
-  // delivered run, and its capped games cannot satisfy acceptance.
-  report.protocol.testOnly = false;
+  const report = await runSelfPlay({ ...config, output: part.output }, { signals: false });
   const batchPlan = { schema: 1, config, sourceHashes: report.sourceHashes, exclusions: [], parts: [part] };
   return { directory, source, config, part, report, plan: batchPlan };
 }
@@ -156,19 +162,10 @@ test('the batch itself rejects real userData before creating a plan', async () =
 test('parallel child runners consume the frozen exclusion snapshot and aggregation replays every capped record', async t => {
   const directory = temporary(t), source = path.join(directory, 'fixture-source');
   mkdirSync(source); writeFileSync(path.join(directory, 'package.json'), '{"type":"module"}');
-  for (const file of ['engine.js', 'formations.js', 'beliefs.js', 'ai-context.js'])
-    copyFileSync(path.join(root, 'dist', file), path.join(source, file));
+  cpSync(path.join(root, 'dist'), source, { recursive: true });
   // A source bundle dedicated to this process-plumbing test, never a playing
   // strength result. It still uses the real referee and redacted observation.
-  writeFileSync(path.join(source, 'ai.js'), `import {legalMoves} from './engine.js';
-export const DIFFICULTIES={hell:{timeLimitMs:5000},professional:{timeLimitMs:900}};
-export function chooseMove(o,d,r,p,c){
- if(arguments.length!==5||o.initial||o.repetitions||p!==null)throw Error('Private state leaked');
- for(let from=0;from<o.board.length;from++)if(o.board[from]?.side===o.side){
-  const moves=legalMoves(o.board,from);if(moves.length)return{from,to:moves[0],info:{searchDepth:0,searchedNodes:0,
-   diagnostics:{completedDepth:0,attemptedDepth:0,elapsedMs:0,timeLimitMs:DIFFICULTIES[d].timeLimitMs}}};
- }
-}`);
+  fastFixturePolicy(source);
   const oldEvaluation = path.join(directory, 'previous-acceptance.json');
   writeFileSync(oldEvaluation, JSON.stringify({ schema: 1, completed: false, protocol: { mode: 'acceptance', seeds: [50] } }));
   const config = parseArgs(['--mode', 'training', '--source-root', source, '--games', '4', '--seeds', '61,62',

@@ -8,9 +8,21 @@ import {lastJsonResult,verifyUnitBinding,verifyBridgeReport,verifyFeatureReport,
 
 const sources={'ai.js':'a','engine.js':'e','offense.js':'o'};
 const acceptance=()=>({sourceHashes:{...sources,harness:'h'},allReplaysVerified:true,
-  protocol:{mode:'acceptance',games:20,paired:true},
+  protocol:{mode:'acceptance',opponent:'professional',games:20,paired:true,decisionEntry:'desktop-worker-v1'},
   summary:{planned:20,wins:19,losses:1,draws:0,capped:0,errors:0,terminal:20,pending:0,
-    complete:true,coverageValid:true,eligible:true,passed:true}});
+    ruleTerminals:18,resignations:2,complete:true,coverageValid:true,eligible:true,passed:true}});
+
+test('release strength cannot accept legacy core-only results or ambiguous terminal counts',()=>{
+  for(const mutate of [
+    r=>delete r.protocol.decisionEntry,
+    r=>r.protocol.decisionEntry='chooseMove',
+    r=>r.protocol.decisionEntry='test-policy',
+    r=>r.protocol.opponent='hell',
+    r=>delete r.summary.ruleTerminals,
+    r=>r.summary.resignations=3,
+    r=>{r.summary.ruleTerminals=21;r.summary.resignations=-1;},
+  ]){const data=acceptance();mutate(data);assert.equal(classifyStrength(data,sources).strengthAccepted,false);}
+});
 
 test('update evidence never promotes absent or different-source acceptance to current playing strength',()=>{
   assert.equal(classifyStrength(null,sources).strengthAccepted,false);

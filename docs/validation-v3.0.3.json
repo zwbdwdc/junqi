@@ -1,0 +1,71 @@
+{
+  "version": "3.0.3",
+  "verifiedAt": "2026-11-06T06:50:35.878Z",
+  "executable": "军棋3.0.3.exe",
+  "downloadFilename": "3.0.3.exe",
+  "sha256": "99db25380629b6e11a710b22e36ae67be12eed5cb2b74050f7d3db054a8a5449",
+  "bytes": 157731793,
+  "asarSha256": "c5704b684caa3e1f39f9a169446a1135ea10b36fcd2eee6b56d5724dcfe733cb",
+  "technicalChecksPassed": true,
+  "unitTests": {
+    "tests": 294,
+    "pass": 294,
+    "fail": 0
+  },
+  "packageChecks": [
+    "smoke",
+    "reveal",
+    "archive",
+    "experience",
+    "consolidation",
+    "features",
+    "session-save",
+    "early-resign",
+    "desktop-ui",
+    "board-geometry",
+    "replay-controls"
+  ],
+  "replayControls": {
+    "checks": 12,
+    "passed": true,
+    "testSha256": "461503a2679fe085e11537ba6d10d6c92eac0e72b5e87d5d2185abbc42dc5af6"
+  },
+  "boardGeometry": {
+    "checks": 730,
+    "passed": true,
+    "testSha256": "dc2feb629457c1bf8b03fff189cf1c0506c285036f3895ba85770dbfc0a23aed"
+  },
+  "strengthAccepted": false,
+  "packageFiles": {
+    "dist/ai-context.js": "a0d5d9602ceddcc3e50dc5cba1696814dcbb0cf22aff701479f49d8b8a401456",
+    "dist/ai-worker.js": "4305afb698701060073a01e2f117820cf4c9e9fef6eaa7533412ea3c160d44a1",
+    "dist/ai.js": "6d9e0e39e2142ae3005c491ed6a00c2e9629cd92867c37914ba89dab5960ad3a",
+    "dist/app.js": "fcc62e630ae65c0c8f8432c4cddf5bc0af42c51c3819d0476cffa29ab2e948a9",
+    "dist/battle-effects.js": "49dd297404fdbef9cb55048c618a98ba3708f3fc32a6fceddbd2c652503faf93",
+    "dist/beliefs.js": "899e4a17c36632e4daf37f56074f7333a1258cbc0dbe99f4b0f743c3964b63d8",
+    "dist/engine.js": "72d665bc52cbfa8b45fb7aca9ec9fc3222640182e792664980a9522f6a1406a9",
+    "dist/formations.js": "33c6b53a273483f38631ec85b70a9d21b7b9f23a44c7160d0af778858d390954",
+    "dist/icon.png": "16e8d0792d8afecbebd92b090e853eac8f753bca5daca4180bbce04a77396e7d",
+    "dist/index.html": "3f6d239f52787602661d941a4d35616110c9a79148f08d72d4d645787afc7fc4",
+    "dist/learning-recovery.js": "2e56b81d82348cb8e1e524afe0b58ede6ad0c425a5553ef8c7e4d5f953f54232",
+    "dist/learning.js": "73c91614be46227fafe2b455d51351dc39e2a1607f4354123becc9ac591c2b1a",
+    "dist/offense.js": "58bbef732c982561f5dafca98a0bb24381bbc4a1d06f19077f1d42fe32209d50",
+    "dist/piece-marks.js": "91df485ae6dc35d7a8a682bd8c87f5622d5cc6ff88271e7ba293f9da49183c58",
+    "dist/postgame-review.js": "c626f2f8e65dc8acb49bdfd928b0e73f8b2c0bdc43211a3ae17d7eb9eee09a1c",
+    "dist/quiet-flag.js": "0e3ba97ad45f5b042ce60c7baf1e6638a8318d425b4f19d767206d5363ab0529",
+    "dist/replay.js": "e7570568c25465fc2188c0e2fa1e14066d4ded00efba30fae90a53e18bd44938",
+    "dist/resignation.js": "4e4231d888e9531d5a5570c7fd0c203c5c8ac21883a7b7a01af88ce964fbe26c",
+    "dist/route-defense.js": "fe8828bf2085aa463f8440cbd88d9802e2f8f6f25a37b5966f435a1e5b880eb3",
+    "dist/style.css": "6506d6860ba000f4f716069fac50faf973d8a065f4577d370a0be1032716e9a0",
+    "main.cjs": "228bbe020d02e5e9cdd4a5a14364fe3e5af26d7ce1662d0922a018ebff7799a4",
+    "preload.cjs": "be6555e6b0ab57e1f2e94bb268a22b576794cff47cfef86b722fb72bdfe73be2",
+    "storage.cjs": "d634af9672d330fcd34c260642f7ab07a854233f4269b97376cb122406919692",
+    "archive-store.cjs": "11c0e11ccddbc1c5aeac697b619ac53cd8258b7bf002dc58b7583f2c49cd1c74",
+    "diagnostics-store.cjs": "4ebe33d97f8a74607d44f2a4acf3a4158712fffd0b6b5345dbf9ced96493f913"
+  },
+  "sourceTestsEvidence": "The source and test files match the 294-pass tested build byte for byte. The copied Git checkout did not rerun that suite.",
+  "limits": [
+    "This patch repairs replay interaction and does not change playing strategy.",
+    "Passing software checks does not establish the required 19 wins in 20 complete games."
+  ]
+}

@@ -245,10 +245,31 @@ function render(skipArsenal=false){
     $('#replay-first').disabled=$('#replay-prev').disabled=replay.index===0;
     $('#replay-next').disabled=$('#replay-last').disabled=replay.index===replay.frames.length-1;
     $('#replay-play').textContent=replayTimer?'暂停':'播放';$('#replay-play').disabled=replay.frames.length<2;
-    const log=$('#replay-log');log.innerHTML='';
-    replay.frames.forEach((item,index)=>{const li=document.createElement('li'),button=document.createElement('button');button.textContent=`${String(index).padStart(2,'0')}  ${describeReplay(item,replay.game.initial,coord)}`;button.className='replay-event'+(index===replay.index?' current':'');button.onclick=()=>{stopReplay();replayAt(index);};li.append(button);log.append(li);});
-    const current=log.querySelector('.current');if(current)log.scrollTop=current.offsetTop-log.offsetTop-log.clientHeight/2;
+    renderReplayLog();
   }
+}
+
+function renderReplayLog(){
+  const log=$('#replay-log');
+  if(!replay.logButtons){
+    log.replaceChildren();
+    replay.logButtons=replay.frames.map((item,index)=>{
+      const li=document.createElement('li'),button=document.createElement('button');
+      button.textContent=`${String(index).padStart(2,'0')}  ${describeReplay(item,replay.game.initial,coord)}`;
+      button.className='replay-event';button.onclick=()=>{stopReplay();replayAt(index);};
+      li.append(button);log.append(li);return button;
+    });
+  }
+  // Playback controls can render without changing position. Leave the player's
+  // scroll and focus alone in that case, and retain the row nodes across steps.
+  if(replay.logIndex===replay.index)return;
+  const focused=log.contains(document.activeElement),previous=replay.logButtons[replay.logIndex],current=replay.logButtons[replay.index];
+  previous?.classList.remove('current');previous?.removeAttribute('aria-current');
+  current.classList.add('current');current.setAttribute('aria-current','step');
+  replay.logIndex=replay.index;
+  if(focused)current.focus({preventScroll:true});
+  const row=current.getBoundingClientRect(),bounds=log.getBoundingClientRect();
+  log.scrollTop+=row.top-bounds.top-(log.clientHeight-row.height)/2;
 }
 
 function renderArsenal(){
@@ -381,7 +402,23 @@ $('#replay-first').onclick=()=>{stopReplay();replayAt(0);};$('#replay-prev').onc
 $('#replay-next').onclick=()=>{stopReplay();replayAt(replay.index+1);};$('#replay-last').onclick=()=>{stopReplay();replayAt(replay.frames.length-1);};
 $('#replay-play').onclick=toggleReplayPlay;$('#replay-range').oninput=event=>{stopReplay();replayAt(Number(event.target.value));};
 $('#resign-btn').onclick=()=>confirmAction('确认认输','认输后本局结束，电脑获胜。',()=>finishByResignation('human'));
-window.addEventListener('keydown',event=>{if(markTarget&&event.key==='Escape'){event.preventDefault();closeMarkMenu(true);return;}if(replay&&!document.querySelector('dialog[open]')){if(['ArrowLeft','ArrowRight',' '].includes(event.key)){event.preventDefault();if(event.key===' ')toggleReplayPlay();else{stopReplay();replayAt(replay.index+(event.key==='ArrowLeft'?-1:1));}return;}}if(event.key==='Escape'){selected=null;reserve=null;render();}});
+window.addEventListener('keydown',event=>{
+  if(event.defaultPrevented||event.ctrlKey||event.altKey||event.metaKey)return;
+  if(markTarget&&event.key==='Escape'){event.preventDefault();closeMarkMenu(true);return;}
+  if(replay&&!document.querySelector('dialog[open]')){
+    const target=event.target;
+    // Native sliders and text inputs own their keys; focused buttons and links
+    // own Space so keyboard users can activate the same controls as the mouse.
+    if(target.closest?.('input,select,textarea')||target.isContentEditable||event.key===' '&&target.closest?.('button,a[href]'))return;
+    if(['ArrowLeft','ArrowRight',' '].includes(event.key)){
+      event.preventDefault();
+      if(event.key===' ')toggleReplayPlay();
+      else{stopReplay();replayAt(replay.index+(event.key==='ArrowLeft'?-1:1));}
+      return;
+    }
+  }
+  if(event.key==='Escape'){selected=null;reserve=null;render();}
+});
 document.addEventListener('pointermove',event=>{
   if(!pointerDrag||pointerDrag.active||Math.hypot(event.clientX-pointerDrag.x,event.clientY-pointerDrag.y)<7)return;
   pointerDrag.active=true;selected=pointerDrag.type?null:pointerDrag.from;reserve=pointerDrag.type||null;render(true);

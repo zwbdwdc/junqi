@@ -80,12 +80,17 @@ export function sourceMatches(sourceHashes,current){
 export function classifyStrength(batch,current){
   if(!batch)return {strengthAccepted:false,reason:'no-new-independent-acceptance'};
   const matchesCurrentCandidate=sourceMatches(batch.sourceHashes,current), s=batch.summary||{};
-  const passed=matchesCurrentCandidate&&batch.allReplaysVerified===true&&batch.protocol?.mode==='acceptance'&&
+  const desktopEntry=batch.protocol?.decisionEntry==='desktop-worker-v1';
+  const terminalCounts=Number.isSafeInteger(s.ruleTerminals)&&s.ruleTerminals>=0&&
+    Number.isSafeInteger(s.resignations)&&s.resignations>=0&&s.ruleTerminals+s.resignations===20;
+  const passed=matchesCurrentCandidate&&desktopEntry&&terminalCounts&&batch.allReplaysVerified===true&&batch.protocol?.mode==='acceptance'&&
+    batch.protocol?.opponent==='professional'&&
     batch.protocol?.games===20&&batch.protocol?.paired===true&&s.planned===20&&s.complete===true&&
     s.coverageValid===true&&s.eligible===true&&s.passed===true&&s.wins>=19&&
     s.terminal===20&&s.capped===0&&s.errors===0&&s.pending===0;
   return {strengthAccepted:passed,matchesCurrentCandidate,
-    reason:passed?'new-current-source-acceptance-passed':!matchesCurrentCandidate?'acceptance-source-not-current':'acceptance-threshold-not-met'};
+    reason:passed?'new-current-source-acceptance-passed':!matchesCurrentCandidate?'acceptance-source-not-current':
+      !desktopEntry?'acceptance-decision-entry-not-current':'acceptance-threshold-not-met'};
 }
 
 export function verifyFreshAcceptance(batch,historical){

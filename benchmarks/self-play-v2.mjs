@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { performance } from 'node:perf_hooks';
 import { setImmediate as yieldTurn } from 'node:timers/promises';
+import { createDesktopPolicy } from './desktop-policy.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DEFAULT_SOURCE = path.resolve(HERE, '../dist');
@@ -22,6 +23,9 @@ export function seeded(seed) {
 }
 const seedFor = (...parts) => createHash('sha256').update(parts.join(':')).digest().readUInt32LE(0);
 const uint = value => Number.isSafeInteger(value) && value >= 0 && value <= 0xffffffff;
+export const DESKTOP_ENTRY = 'desktop-worker-v1';
+export const harnessFiles = () => Object.fromEntries(['self-play-v2.mjs', 'desktop-policy.mjs']
+  .map(name => [name, hash(readFileSync(path.join(HERE, name)))]));
 
 export function parseArgs(args) {
   const values = {};
@@ -86,19 +90,19 @@ export function sourceHashes(sourceRoot) {
     }
   };
   visit(sourceRoot);
-  ensure(['ai.js', 'engine.js', 'formations.js', 'beliefs.js', 'ai-context.js'].every(name => modules.includes(name)),
+  ensure(['ai.js', 'ai-worker.js', 'resignation.js', 'engine.js', 'formations.js', 'beliefs.js', 'ai-context.js'].every(name => modules.includes(name)),
     'Source bundle is missing a required module');
   return { ...Object.fromEntries(modules.sort().map(name => [name, hash(readFileSync(path.join(sourceRoot, name)))])),
-    harness: hash(readFileSync(fileURLToPath(import.meta.url))) };
+    harness: hash(json(harnessFiles())) };
 }
 
 async function bundle(sourceRoot, hashes) {
   const signature = json(hashes), previous = loadedSources.get(sourceRoot);
   ensure(!previous || previous === signature, 'Source changed in this process; start a fresh process to load the new candidate');
   loadedSources.set(sourceRoot, signature);
-  const [ai, engine, formations, context] = await Promise.all(['ai.js', 'engine.js', 'formations.js', 'ai-context.js']
+  const [ai, engine, formations, context, resignation] = await Promise.all(['ai.js', 'engine.js', 'formations.js', 'ai-context.js', 'resignation.js']
     .map(name => import(pathToFileURL(path.join(sourceRoot, name)).href)));
-  return { ...engine, ...formations, ...context, ...ai };
+  return { ...engine, ...formations, ...context, ...ai, ...resignation };
 }
 
 function atomicWrite(file, value) {
@@ -126,7 +130,7 @@ function exclusions(config) {
   const used = new Set(), reports = [];
   for (const file of config.trainingReports) {
     const bytes = readFileSync(file), report = JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, ''));
-    ensure(report.schema === 1 && report.protocol?.mode === 'training' && Array.isArray(report.protocol.seeds),
+    ensure([1, 2].includes(report.schema) && report.protocol?.mode === 'training' && Array.isArray(report.protocol.seeds),
       `Not a self-play training report: ${file}`);
     report.protocol.seeds.forEach(seed => used.add(seed));
     reports.push({ file, sha256: hash(bytes), seeds: report.protocol.seeds.slice() });
@@ -152,15 +156,33 @@ function newRecord(descriptor, protocol, api) {
   game.gameId = `self-play-${protocol.mode}-${seed}-${challengerSide}`;
   const contexts = Object.fromEntries(Object.entries(sides).map(([side, policy]) =>
     [side, api.sanitizeAIContext(api.createAIContext(seedFor(seed, policy, 'context')))]));
-  return { schema: 1, descriptor, sides, contexts, game, decisions: [], failures: [], status: 'active',
-    terminal: false, winner: null, startedAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
+  return { schema: 2, descriptor, sides, contexts, game, decisions: [], resignationDecision: null, failures: [], status: 'active',
+    terminal: false, terminalKind: null, winner: null, startedAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
+}
+
+// Verify the claim with the frozen public proof, not with the saved boolean or
+// private referee ranks. A deterministic node bound rechecks the certificate;
+// it does not recreate the recorded wall-clock decision or its actual budget.
+export function verifyResignation(observation, response, api) {
+  const proof = response?.resignation?.proof;
+  ensure(!observation.result && observation.turn === observation.side && response?.move === null && response?.info === null &&
+    !response.error && response.resignation?.resign === true && response.resignation.reason === 'forced-loss' &&
+    proof && [2, 4, 6].includes(proof.maxPlies) && Number.isFinite(proof.elapsedMs) && proof.elapsedMs >= 0,
+  'Malformed resignation response');
+  const verified = api.assessResignation(observation, { clock: () => 0, nodeLimit: 500000, maxPlies: 6 });
+  ensure(verified.resign === true && verified.reason === 'forced-loss', 'Resignation has no complete public forced-loss proof');
+  const facts = value => Object.fromEntries(Object.entries(value).filter(([key]) => key !== 'elapsedMs'));
+  ensure(json(facts(proof)) === json(facts(verified.proof)), 'Resignation proof facts differ from the independent public check');
+  return verified;
 }
 
 // Reconstruct saved state with the referee before resuming; never trust an
 // edited board, outcome, move count, or checkpoint's private repetition hash.
 export function validateRecord(record, descriptor, protocol, api) {
+  ensure(protocol.decisionEntry === (protocol.testOnly ? 'test-policy' : DESKTOP_ENTRY) &&
+    json(protocol.harnessFiles) === json(harnessFiles()), 'Checkpoint uses a different decision entry or harness');
   const expected = newRecord(descriptor, protocol, api);
-  ensure(record.schema === 1 && json(record.descriptor) === json(descriptor) &&
+  ensure(record.schema === 2 && json(record.descriptor) === json(descriptor) &&
     json(record.sides) === json(expected.sides) && json(record.contexts) === json(expected.contexts) &&
     json(record.game.initial) === json(expected.game.initial), 'Checkpoint layout, sides, or context differ from the frozen protocol');
   ensure(Array.isArray(record.decisions) && record.decisions.length === record.game.history.length, 'Checkpoint is missing decisions');
@@ -178,12 +200,27 @@ export function validateRecord(record, descriptor, protocol, api) {
     reconstructed = api.applyMove(reconstructed, event.from, event.to);
     ensure(json(reconstructed.history.at(-1)) === json(event), 'Checkpoint combat record differs from the referee');
   }
+  const resignation = record.resignationDecision;
+  if (resignation !== null) {
+    ensure(resignation && !reconstructed.result && reconstructed.ply < protocol.maxPlies &&
+      resignation.afterPly === reconstructed.ply && resignation.side === reconstructed.turn &&
+      resignation.policy === record.sides[reconstructed.turn] &&
+      resignation.difficulty === (resignation.policy === 'challenger' ? 'hell' : protocol.opponent) &&
+      resignation.rngSeed === seedFor(descriptor.seed, resignation.policy, reconstructed.ply, 'move') &&
+      Number.isFinite(resignation.elapsedMs) && resignation.elapsedMs >= 0,
+    'Resignation decision does not match the final public turn');
+    const observation = api.makeObservation(reconstructed, reconstructed.turn);
+    ensure(resignation.observationSha256 === hash(json(observation)), 'Resignation observation hash mismatch');
+    verifyResignation(observation, resignation.response, api);
+    reconstructed = { ...reconstructed, result: { winner: reconstructed.turn === 'ai' ? 'human' : 'ai', reason: 'resign' } };
+  }
   for (const key of ['board', 'turn', 'ply', 'quiet', 'result', 'rules', 'revealedFlags', 'repetitions', 'gameId'])
     ensure(json(record.game[key]) === json(reconstructed[key]), `Checkpoint referee state mismatch: ${key}`);
   ensure(record.game.ply <= protocol.maxPlies, 'Checkpoint exceeds the game limit');
   const terminal = !!reconstructed.result, capped = !terminal && reconstructed.ply >= protocol.maxPlies;
+  const terminalKind = terminal ? resignation ? 'resignation' : 'rule' : null;
   const winner = terminal ? reconstructed.result.winner === null ? 'draw' : record.sides[reconstructed.result.winner] : capped ? 'capped' : null;
-  ensure(record.terminal === terminal && record.winner === winner &&
+  ensure(record.terminal === terminal && record.terminalKind === terminalKind && record.winner === winner &&
     (terminal || capped ? record.status === 'finished' : ['active', 'failed'].includes(record.status)), 'Checkpoint outcome mismatch');
   return record;
 }
@@ -194,6 +231,8 @@ function summary(records, protocol) {
   const wins = count('challenger'), losses = count('opponent'), draws = count('draw'), capped = count('capped');
   const errors = list.reduce((sum, record) => sum + record.failures.length, 0);
   return { planned: protocol.games, finished: finished.length, terminal: finished.length - capped,
+    ruleTerminals: finished.filter(record => record.terminalKind === 'rule').length,
+    resignations: finished.filter(record => record.terminalKind === 'resignation').length,
     challengerWins: wins, opponentWins: losses, ruleDraws: draws, capped, errors,
     unfinished: protocol.games - finished.length, winsNeeded: Math.floor(protocol.games * .9) + 1,
     winRate: wins / protocol.games, scoreBounds: [(wins + draws * .5) / protocol.games,
@@ -206,11 +245,13 @@ function distribution(values) {
     p95: sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * .95))], max: sorted.at(-1),
     mean: sorted.reduce((sum, value) => sum + value, 0) / sorted.length };
 }
-function searchSummary(records) {
+export function searchSummary(records) {
   const rows = [...records.values()].flatMap(record => record.decisions), result = {};
   for (const policy of ['challenger', 'opponent']) {
     const decisions = rows.filter(row => row.policy === policy);
+    const resignations = [...records.values()].map(record => record.resignationDecision).filter(row => row?.policy === policy);
     result[policy] = { moves: decisions.length, elapsedMs: distribution(decisions.map(row => row.elapsedMs)),
+      resignations: resignations.length, resignationElapsedMs: distribution(resignations.map(row => row.elapsedMs)),
       completedDepth: distribution(decisions.map(row => row.info.diagnostics?.completedDepth)),
       searchedNodes: distribution(decisions.map(row => row.info.searchedNodes)),
       depthCounts: decisions.reduce((counts, row) => { const depth = row.info.diagnostics?.completedDepth ?? 'unreported';
@@ -228,17 +269,18 @@ export async function runSelfPlay(config, controls = {}) {
   const protocol = { mode: config.mode, challenger: 'hell', opponent: config.opponent, paired: config.paired,
     games: config.games, maxPlies: config.maxPlies, seeds: config.seeds, seedPool: config.seedPool,
     sourceRoot: config.sourceRoot, trainingReports, testOnly: !!controls.policy,
+    decisionEntry: controls.policy ? 'test-policy' : DESKTOP_ENTRY, harnessFiles: harnessFiles(),
     budgets: Object.fromEntries(['hell', 'professional'].map(level => [level, api.DIFFICULTIES[level].timeLimitMs])),
     information: 'makeObservation and sanitized playing context only; no profile, archive, referee board, or seed describing the opposing layout is passed to either policy.',
     pairing: 'Each policy keeps its own generated difficulty-specific formation and context while rotating the board and swapping first/second move.',
-    adjudication: 'Only referee terminal results award wins. Ply caps remain unresolved and never count as wins or rule draws.',
+    adjudication: 'Referee rule terminals and independently public-proven desktop resignations are recorded separately. Ply caps remain unresolved and never count as wins or rule draws.',
     reproducibility: 'Layouts and decision RNG seeds are fixed. Real wall-clock budgets may produce different completed depths across loads or hardware.' };
   const plan = planGames(config), records = new Map(), directory = config.output.replace(/\.json$/i, '.games');
   const recordPath = descriptor => path.join(directory, descriptor.id + '.json');
   let startedAt = new Date().toISOString(), stopped = false, runError = null;
   if (config.resume) {
     const saved = read(config.output);
-    ensure(saved.schema === 1 && json(saved.sourceHashes) === json(hashes) && json(saved.protocol) === json(protocol),
+    ensure(saved.schema === 2 && json(saved.sourceHashes) === json(hashes) && json(saved.protocol) === json(protocol),
       'Resume requires identical source hashes, seed plan, policy, budgets and protocol');
     startedAt = saved.startedAt;
     for (const descriptor of plan) if (existsSync(recordPath(descriptor)))
@@ -251,8 +293,8 @@ export async function runSelfPlay(config, controls = {}) {
     const aggregate = summary(records, protocol), unchanged = sourceUnchanged();
     const completed = aggregate.finished === protocol.games && !runError && unchanged;
     const eligible = protocol.mode === 'acceptance' && protocol.opponent === 'professional' && protocol.paired &&
-      protocol.games === 20 && !protocol.testOnly && trainingReports.length > 0 && !aggregate.errors;
-    const report = { schema: 1, startedAt, updatedAt: new Date().toISOString(), completed, sourceUnchanged: unchanged,
+      protocol.games === 20 && !protocol.testOnly && protocol.decisionEntry === DESKTOP_ENTRY && trainingReports.length > 0 && !aggregate.errors;
+    const report = { schema: 2, startedAt, updatedAt: new Date().toISOString(), completed, sourceUnchanged: unchanged,
       sourceHashes: hashes, protocol, summary: aggregate, search: searchSummary(records),
       acceptance: { eligible, passed: eligible && completed && aggregate.terminal === protocol.games && aggregate.challengerWins >= 19,
         reason: protocol.mode !== 'acceptance' ? 'training-run' : !trainingReports.length ? 'training-seed-exclusion-not-evidenced' :
@@ -260,6 +302,7 @@ export async function runSelfPlay(config, controls = {}) {
       games: plan.map(descriptor => { const record = records.get(descriptor.id); return { ...descriptor,
         file: path.relative(path.dirname(config.output), recordPath(descriptor)), status: record?.status || 'pending',
         terminal: record?.terminal || false, winner: record?.winner || null, plies: record?.game.ply || 0,
+        terminalKind: record?.terminalKind || null,
         reason: record?.game.result?.reason || (record?.winner === 'capped' ? 'evaluation-ply-cap' : null),
         recordSha256: record ? hash(readFileSync(recordPath(descriptor))) : null }; }),
       ...(runError ? { error: runError } : {}), interrupted: stopped };
@@ -268,6 +311,8 @@ export async function runSelfPlay(config, controls = {}) {
   const stop = () => { stopped = true; };
   if (controls.signals !== false) { process.on('SIGINT', stop); process.on('SIGTERM', stop); }
   let advanced = 0;
+  const clients = new Map();
+  const closeClients = async () => { await Promise.all([...clients.values()].map(client => client.close())); clients.clear(); };
   try {
     saveReport();
     for (const descriptor of plan) {
@@ -282,26 +327,42 @@ export async function runSelfPlay(config, controls = {}) {
         const side = record.game.turn, policy = record.sides[side], difficulty = policy === 'challenger' ? 'hell' : protocol.opponent;
         const observation = freeze(api.makeObservation(record.game, side)), observationSha256 = hash(json(observation));
         const rngSeed = seedFor(descriptor.seed, policy, record.game.ply, 'move'), tick = performance.now();
-        let move;
+        let move, response;
         try {
-          // This is the sole policy call. The optional sixth argument is omitted
-          // so official 5000/900 ms defaults are neither reduced nor replaced.
-          move = (controls.policy || api.chooseMove)(observation, difficulty, seeded(rngSeed), null,
-            freeze(api.sanitizeAIContext(record.contexts[side])));
-          ensure(move && record.game.board[move.from]?.side === side && api.legalMoves(record.game.board, move.from).includes(move.to),
-            `Policy returned an illegal move at ply ${record.game.ply + 1}`);
+          const context = freeze(api.sanitizeAIContext(record.contexts[side]));
+          if (controls.policy) {
+            move = controls.policy(observation, difficulty, seeded(rngSeed), null, context);
+            response = { move, info: move?.info || null };
+          } else {
+            if (!clients.has(side)) clients.set(side, createDesktopPolicy(config.sourceRoot));
+            response = await clients.get(side).decide({ observation, difficulty, context, rngSeed });
+            ensure(response && !response.error, response?.error || 'Desktop Worker returned no response');
+            move = response.move;
+          }
+          const elapsedMs = performance.now() - tick;
           ensure(sourceUnchanged(), 'Source changed while a decision was being computed');
-          const decision = { ply: record.game.ply + 1, side, policy, difficulty, rngSeed, observationSha256,
-            from: move.from, to: move.to, elapsedMs: performance.now() - tick, info: structuredClone(move.info || {}) };
-          record.game = api.applyMove(record.game, move.from, move.to);
-          record.decisions.push(decision); advanced++;
+          if (response.resignation?.resign === true) {
+            verifyResignation(observation, response, api);
+            record.resignationDecision = { afterPly: record.game.ply, side, policy, difficulty, rngSeed,
+              observationSha256, elapsedMs, response: structuredClone(response) };
+            record.game = { ...record.game, result: { winner: side === 'ai' ? 'human' : 'ai', reason: 'resign' } };
+          } else {
+            ensure(move && record.game.board[move.from]?.side === side && api.legalMoves(record.game.board, move.from).includes(move.to),
+              `Policy returned an illegal move at ply ${record.game.ply + 1}`);
+            const decision = { ply: record.game.ply + 1, side, policy, difficulty, rngSeed, observationSha256,
+              from: move.from, to: move.to, elapsedMs, info: structuredClone(move.info || {}) };
+            record.game = api.applyMove(record.game, move.from, move.to);
+            record.decisions.push(decision); advanced++;
+          }
         } catch (error) {
           record.failures.push({ at: new Date().toISOString(), ply: record.game.ply + 1, side, policy,
             error: String(error.message || error), elapsedMs: performance.now() - tick,
+            ...(response ? { response: structuredClone(response) } : {}),
             ...(move ? { attemptedMove: { from: move.from, to: move.to, info: structuredClone(move.info || {}) } } : {}) });
           record.status = 'failed'; atomicWrite(recordPath(descriptor), record); throw error;
         }
         record.terminal = !!record.game.result;
+        record.terminalKind = record.terminal ? record.resignationDecision ? 'resignation' : 'rule' : null;
         if (record.terminal || record.game.ply >= protocol.maxPlies) {
           record.status = 'finished';
           record.winner = record.terminal ? record.game.result.winner === null ? 'draw' : record.sides[record.game.result.winner] : 'capped';
@@ -311,11 +372,12 @@ export async function runSelfPlay(config, controls = {}) {
           ply: record.game.ply, status: record.status, terminal: record.terminal, winner: record.winner });
         await yieldTurn();
       }
+      await closeClients();
       if (stopped) break;
     }
     return saveReport();
   } catch (error) { runError = String(error.message || error); saveReport(); throw error; }
-  finally { if (controls.signals !== false) { process.off('SIGINT', stop); process.off('SIGTERM', stop); } }
+  finally { await closeClients(); if (controls.signals !== false) { process.off('SIGINT', stop); process.off('SIGTERM', stop); } }
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
