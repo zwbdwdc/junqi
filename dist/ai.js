@@ -481,7 +481,7 @@ export function publicRepetitions(observation, domains = inferDomains(observatio
     const k = key(board, turn); counts.set(k, (counts.get(k) || 0) + 1);
     positions.push({ turn, board: board.slice() });
   };
-  remember('human');
+  remember(observation.firstTurn === undefined ? 'human' : observation.firstTurn);
   for (const event of observation.history || []) {
     const attacker = board[event.from] || { id: event.attackerId };
     board[event.from] = null;

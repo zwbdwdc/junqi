@@ -46,7 +46,7 @@ test('a real archived loss is resigned only after every public escape is ruled o
     initial.slice(0, 60).map(p => p?.side === 'ai' ? p : null), replayFixture.rules);
   for (const event of replayFixture.history) state = applyMove(state, event.from, event.to);
   assert.equal(state.ply, 149); assert.equal(state.result, null);
-  assert.deepEqual(makeObservation(state, 'ai'), fixture.observation);
+  assert.deepEqual(makeObservation(state, 'ai'), { ...fixture.observation, firstTurn: 'human' });
 });
 
 test('every proposed escape also loses under independently sampled complete legal armies', () => {
@@ -107,7 +107,7 @@ function refereeLoses(game, side, depth) {
 
 test('real games with both small and large armies can resign one full turn earlier', () => {
   for (const { observation, game } of earlyFixtures) {
-    assert.deepEqual(makeObservation(game, 'ai'), observation);
+    assert.deepEqual(makeObservation(game, 'ai'), { ...observation, firstTurn: 'human' });
     const previous = assessResignation(observation, { ...deterministic, maxPlies: 2 });
     assert.equal(previous.resign, false);
     const result = assessResignation(observation, { ...deterministic, nodeLimit: 500000 });

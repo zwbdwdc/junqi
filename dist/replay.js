@@ -5,7 +5,7 @@ export function buildReplay(game) {
   if (!game?.result) throw new Error('对局结束后才能明棋复盘');
   if (!Array.isArray(game.initial) || !Array.isArray(game.history)) throw new Error('棋谱不完整');
   const layout = side => game.initial.slice(0, 60).map(p => p?.side === side ? { ...p } : null);
-  let state = createGame(layout('human'), layout('ai'), game.rules);
+  let state = createGame(layout('human'), layout('ai'), { ...game.rules, firstTurn: game.firstTurn });
   const frame = event => ({ board: state.board.map(p => p ? { ...p } : null), event,
     ply: state.ply, revealedFlags: { ...state.revealedFlags } });
   const frames = [frame(null)];
@@ -17,6 +17,7 @@ export function buildReplay(game) {
     frames.push(frame(actual));
   }
   if (JSON.stringify(state.board) !== JSON.stringify(game.board)) throw new Error('棋谱与终局不一致');
+  if (state.turn !== game.turn) throw new Error('棋谱行棋方不一致');
   if (game.result.reason === 'resign') frames.at(-1).result = { ...game.result };
   return frames;
 }

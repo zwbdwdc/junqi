@@ -195,6 +195,8 @@ function positionKey(board, turn) {
 export function createGame(humanBoard, aiBoard, options = {}) {
   const errors = [...validateLayout(humanBoard, 'human'), ...validateLayout(aiBoard, 'ai')];
   if (errors.length) throw new Error(errors.join('；'));
+  const firstTurn = options.firstTurn === undefined ? 'human' : options.firstTurn;
+  if (firstTurn !== 'human' && firstTurn !== 'ai') throw new Error('先手阵营无效');
   const rules = { engineerMountains: options.engineerMountains === true };
   const board = Array(rules.engineerMountains ? 62 : ROWS * COLS).fill(null), ids = new Set();
   for (const [layout, side] of [[humanBoard, 'human'], [aiBoard, 'ai']]) {
@@ -206,10 +208,10 @@ export function createGame(humanBoard, aiBoard, options = {}) {
     });
   }
   return {
-    board, turn: 'human', ply: 0, quiet: 0, result: null, history: [], rules,
+    board, firstTurn, turn: firstTurn, ply: 0, quiet: 0, result: null, history: [], rules,
     revealedFlags: { human: false, ai: false },
     initial: board.map(p => p ? { ...p } : null),
-    repetitions: { [positionKey(board, 'human')]: 1 },
+    repetitions: { [positionKey(board, firstTurn)]: 1 },
   };
 }
 
@@ -288,6 +290,7 @@ export function makeObservation(state, side) {
         (p.type === 'engineer' && engineers.has(p.id)) ? p.type : null,
       origin: p.origin, moved: p.moved,
     } : null),
+    firstTurn: state.firstTurn === undefined ? 'human' : state.firstTurn,
     turn: state.turn, ply: state.ply, quiet: state.quiet,
     result: state.result ? { ...state.result } : null,
     revealedFlags: { ...state.revealedFlags },

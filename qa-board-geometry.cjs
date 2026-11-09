@@ -1,3 +1,4 @@
+const { forceHumanFirstTurn } = require('./qa-randomness.cjs');
 /* Board geometry and hit targets in the actual renderer; isolated player data. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),Module=require('node:module');
 const {randomUUID,createHash}=require('node:crypto'),{app}=require('electron'),rawFs=require('original-fs');
@@ -110,6 +111,7 @@ exports.run=async({win})=>{
    const start=await run("(()=>{const b=document.querySelector('#start-btn');b.scrollIntoView({block:'nearest'});const r=b.getBoundingClientRect(),x=(r.left+r.right)/2,y=(r.top+r.bottom)/2;return {x,y,hit:document.elementFromPoint(x,y)?.id,visible:r.top>=0&&r.bottom<=innerHeight};})()");
    check(caseName+' start reachable after setup scroll',start.visible&&start.hit==='start-btn');
    if(start.visible&&start.hit==='start-btn'){
+    await forceHumanFirstTurn(win);
     win.webContents.sendInputEvent({type:'mouseDown',button:'left',clickCount:1,x:Math.round(start.x*zoom),y:Math.round(start.y*zoom)});
     win.webContents.sendInputEvent({type:'mouseUp',button:'left',clickCount:1,x:Math.round(start.x*zoom),y:Math.round(start.y*zoom)});
     await wait("document.querySelector('#status-title').textContent==='轮到你行棋'");

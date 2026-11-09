@@ -5,6 +5,7 @@ import { captureBattlePieces, playBattleEffect, clearBattleEffect } from './batt
 import { createLearningProfile, sanitizeProfile, learnFromGame } from './learning.js';
 import { createAIContext, sanitizeAIContext, decisionDiagnostics } from './ai-context.js';
 import { sanitizeMarks } from './piece-marks.js';
+import { drawFirstTurn } from './first-turn.js';
 
 const $ = selector => document.querySelector(selector);
 const names = { professional:'职业', hell:'地狱' };
@@ -338,7 +339,7 @@ function renderLog(){
   if(log.dataset.signature===signature)return;
   const follow=log.dataset.gameId!==game.gameId||log.scrollHeight-log.clientHeight-log.scrollTop<32,previousTop=log.scrollTop;
   log.innerHTML='';log.dataset.signature=signature;log.dataset.gameId=game.gameId;
-  if(!game.history.length){const li=document.createElement('li');li.textContent='战局已开启，你执红方先手。';log.append(li);}
+  if(!game.history.length){const li=document.createElement('li');li.textContent=game.firstTurn==='ai'?'战局已开启，本局电脑先手。':'战局已开启，本局你先手。';log.append(li);}
   game.history.slice(-80).forEach((event,index)=>{const li=document.createElement('li');const number=document.createElement('span');number.className='step';number.textContent=String(game.history.length>80?game.history.length-80+index+1:index+1).padStart(2,'0');const text=document.createElement('span');text.textContent=eventText(event);li.append(number,text);log.append(li);});
   if(game.result?.reason==='resign'){const li=document.createElement('li');li.textContent=game.result.winner==='human'?'电脑认输，你赢了。':'我方认输，本局结束。';log.append(li);}
   log.scrollTop=follow?log.scrollHeight:previousTop;
@@ -384,7 +385,19 @@ async function startAI(){
     if(ticket!==requestId)return;cancelAI();render();message(`电脑推演中断：${error.message}。点击这里重试。`,true);$('#message').onclick=()=>{$('#message').onclick=null;startAI();};
   }
 }
-function begin(){if(restoringExperience)return;const errors=validateLayout(setup,'human');if(errors.length){message(errors[0],true);return;}cancelAI();closeMarkMenu();pieceMarks=Object.create(null);game=createGame(setup,createAILayout(difficulty),{engineerMountains:true});game.gameId=crypto.randomUUID();game.startedAt=new Date().toISOString();game.aiContext=createAIContext(crypto.getRandomValues(new Uint32Array(1))[0]);game.aiDecisions=[];selected=null;reserve=null;render();persist();message('你先行棋。');}
+function begin(){
+  if(restoringExperience||game||replay)return;
+  const errors=validateLayout(setup,'human');
+  if(errors.length){message(errors[0],true);return;}
+  const firstTurn=drawFirstTurn();
+  cancelAI();closeMarkMenu();pieceMarks=Object.create(null);
+  game=createGame(setup,createAILayout(difficulty),{engineerMountains:true,firstTurn});
+  game.gameId=crypto.randomUUID();game.startedAt=new Date().toISOString();
+  game.aiContext=createAIContext(crypto.getRandomValues(new Uint32Array(1))[0]);game.aiDecisions=[];
+  selected=null;reserve=null;render();persist();
+  message(firstTurn==='ai'?'本局电脑先手。':'本局你先手。');
+  if(game.turn==='ai')startAI();
+}
 function reset(){if(restoringExperience)return;cancelAI();closeMarkMenu();pieceMarks=Object.create(null);stopReplay();clearBattleEffect($('#board'));replay=null;game=null;selected=null;reserve=null;render();persist();message('已返回布阵。可沿用刚才的阵型，或重新部署。');}
 function confirmAction(title,text,action){$('#confirm-title').textContent=title;$('#confirm-text').textContent=text;$('#confirm-dialog').showModal();$('#confirm-ok').onclick=()=>{$('#confirm-dialog').close();action();};}
 $('#confirm-cancel').onclick=()=>$('#confirm-dialog').close();

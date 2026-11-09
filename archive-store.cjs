@@ -31,7 +31,8 @@ function createArchiveStore({ directory, buildReplay, createGame, applyMove,
       !Array.isArray(game.history) || game.history.length !== game.ply ||
       !Array.isArray(game.initial) || ![60, 62].includes(game.initial.length) ||
       !Array.isArray(game.board) || game.board.length !== game.initial.length ||
-      !SIDES.has(game.turn) || !Number.isSafeInteger(game.quiet) || game.quiet < 0 || game.quiet > 100 ||
+      !SIDES.has(game.turn) || (game.firstTurn !== undefined && !SIDES.has(game.firstTurn)) ||
+      !Number.isSafeInteger(game.quiet) || game.quiet < 0 || game.quiet > 100 ||
       !REASONS.has(game.result.reason) || !(game.result.winner === null || SIDES.has(game.result.winner)) ||
       !object(game.rules) || typeof game.rules.engineerMountains !== 'boolean' ||
       game.board.length !== (game.rules.engineerMountains ? 62 : 60)) throw new Error('棋谱格式不完整');
@@ -61,7 +62,7 @@ function createArchiveStore({ directory, buildReplay, createGame, applyMove,
     // The result, turn and quiet counter must also agree with that history.
     // Resignation is the sole terminal action that has no board move of its own.
     const layout = side => game.initial.slice(0, 60).map(piece => piece?.side === side ? piece : null);
-    let state = createGame(layout('human'), layout('ai'), game.rules);
+    let state = createGame(layout('human'), layout('ai'), { ...game.rules, firstTurn: game.firstTurn });
     for (const event of game.history) state = applyMove(state, event.from, event.to);
     if (state.turn !== game.turn || state.quiet !== game.quiet ||
       (state.result ? state.result.reason !== game.result.reason || state.result.winner !== game.result.winner :

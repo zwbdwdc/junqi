@@ -13,7 +13,7 @@ export function createFlagDrawGuard(observation=null){
   for(const p of observation.ownRoster||[])board[p.origin]={...p,side};
   for(const p of observation.enemyRoster||[])board[p.origin]={...p,side:other(side)};
   const remember=turn=>{const k=key(board,turn);counts.set(k,(counts.get(k)||0)+1);};
-  remember('human');
+  remember(observation.firstTurn === undefined ? 'human' : observation.firstTurn);
   for(const event of observation.history||[]){
    const attacker=board[event.from]||{id:event.attackerId,side:event.side};board[event.from]=null;
    if(event.result==='move'||event.result==='win')board[event.to]=attacker;
