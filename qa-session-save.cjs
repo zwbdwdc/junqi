@@ -62,7 +62,7 @@ exports.run = async ({win}) => {
       await fs.writeFile(reportPath,JSON.stringify(report,null,2));console.log(JSON.stringify(report));app.exit(0);return;
     }
     await win.loadURL('junqi://game/index.html');
-    await wait("document.querySelectorAll('.cell').length===62");
+    await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
     assert.equal(app.getPath('userData'),directory);
     if(phase==='restart') {
       const expected=JSON.parse(await fs.readFile(path.join(directory,'expected.json'),'utf8'));

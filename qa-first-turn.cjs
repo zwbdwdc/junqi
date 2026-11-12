@@ -26,7 +26,7 @@ exports.run = async ({ win }) => {
     throw new Error('Timed out waiting for ' + condition);
   };
   const session = () => run("JSON.parse(localStorage.getItem('junqi-session-v2'))");
-  const ready = () => wait("document.querySelectorAll('.cell').length === 62 && document.querySelector('#new-btn').disabled === false");
+  const ready = () => wait("document.querySelectorAll('.cell').length === 62 && !document.body.inert && document.querySelector('#new-btn').disabled === false");
   const reload = async () => {
     await win.loadURL('junqi://game/index.html');
     await ready();

@@ -27,7 +27,7 @@ exports.run = async ({ win, archiveStore }) => {
   };
   const reload = async () => {
     await win.loadURL('junqi://game/index.html');
-    await wait("document.querySelectorAll('.cell').length===62");
+    await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
   };
   const installSession = async data => {
     // Let the previous renderer persist before installing independent QA state.

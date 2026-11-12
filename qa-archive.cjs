@@ -31,7 +31,7 @@ exports.run = async ({ win, archiveStore, setTrusted }) => {
   };
   try {
     await current.loadURL('junqi://game/index.html');
-    await wait("document.querySelectorAll('.cell').length===62");
+    await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
     check('test process uses isolated userData', () => assert.equal(app.getPath('userData'), directory));
     const bridge = await run("({api:Object.keys(window.junqiArchive).sort(),nodeType:typeof require})");
     check('sandboxed preload exposes only the archive API', () => {

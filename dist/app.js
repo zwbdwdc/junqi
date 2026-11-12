@@ -17,6 +17,8 @@ let pieceMarks=Object.create(null), markTarget=null, markAnchor=null;
 let learning=createLearningProfile();
 const archivedGames=new Map();
 let finalization=Promise.resolve(), learningGeneration=0, restoringExperience=false;
+let initializing=true;
+document.body.inert=true;
 let sessionSaveFailed=false, messageText=$('#message').textContent, messageError=false;
 try{learning=sanitizeProfile(JSON.parse(localStorage.getItem(LEARNING)));}catch{}
 const pos = i => i>=60?[i===60?150:350,332]:[50+(i%5)*100, 38+Math.floor(i/5)*50+(i>=30?38:0)];
@@ -35,6 +37,7 @@ function renderMessage(){
 function message(text,error=false) { messageText=text;messageError=error;renderMessage(); }
 function publicEnemyIds(){const ids=game?revealedEngineerIds(game):new Set();if(game?.revealedFlags?.ai){const flag=game.board.find(p=>p?.side==='ai'&&p.type==='flag');if(flag)ids.add(flag.id);}return ids;}
 function persist(){
+  if(initializing)return false;
   pieceMarks=sanitizeMarks(pieceMarks,game?.board,publicEnemyIds());
   try{localStorage.setItem(STORE,JSON.stringify({version:1,setup,game,difficulty,marks:pieceMarks}));sessionSaveFailed=false;renderMessage();return true;}
   catch{sessionSaveFailed=true;renderMessage();return false;}
@@ -142,14 +145,21 @@ async function saveExperience(){
   }else $('#learning-storage').textContent=localOK?'已自动保存':'经验保存失败，请备份经验。';
 }
 async function initialize(){
-  if(window.junqiExperience){
-    try{
-      const saved=await window.junqiExperience.load();
-      acceptSavedLearning(saved);
-      if(!saved.profile&&learning.games>0&&!saved.error)await saveExperience();
-    }catch(error){$('#learning-storage').textContent='经验文件读取失败：'+error.message;}
+  // Restore before asynchronous experience review. Closing during startup must
+  // never replace a saved game with the renderer's initial empty state.
+  restore();drawRoutes();render();
+  try{
+    if(window.junqiExperience){
+      try{
+        const saved=await window.junqiExperience.load();
+        acceptSavedLearning(saved);
+        if(!saved.profile&&learning.games>0&&!saved.error)await saveExperience();
+      }catch(error){$('#learning-storage').textContent='经验文件读取失败：'+error.message;}
+    }
+    await finishLearning();
+  }finally{
+    initializing=false;document.body.inert=false;render();
   }
-  restore();await finishLearning();drawRoutes();render();
   if(game){message('已恢复上次对局。');if(game.turn==='ai'&&!game.result)startAI();}
 }
 function stopReplay(){clearInterval(replayTimer);replayTimer=null;}
@@ -248,6 +258,7 @@ function render(skipArsenal=false){
     $('#replay-play').textContent=replayTimer?'暂停':'播放';$('#replay-play').disabled=replay.frames.length<2;
     renderReplayLog();
   }
+  if(initializing){$('#status-title').textContent='正在载入';$('#status-help').textContent='请稍候。';}
 }
 
 function renderReplayLog(){
@@ -287,7 +298,7 @@ function renderArsenal(){
 function canSwap(a,b){if(a===b||!setup[a]||b<30)return false;return canPlace(setup[a].type,'human',b)&&(!setup[b]||canPlace(setup[b].type,'human',a));}
 function restriction(type){return type==='flag'?'军旗只能放在大本营。':type==='mine'?'地雷只能放在我方最后两排。':type==='bomb'?'炸弹不能放在最前排；行营内不能布子。':'只能部署在我方空兵站或大本营，行营内不能布子。';}
 function clickCell(i){
-  if(replay||restoringExperience)return;
+  if(initializing||replay||restoringExperience)return;
   if(!game){
     if(isMountain(i)){message('山界不能用于布阵。开战后，工兵可从周围前线铁路站进入。');return;}
     if(i<30){message('这里是对手阵地，布阵时不可查看或放置棋子。',true);return;}
@@ -361,7 +372,7 @@ async function startAI(){
   // Use the last game's confirmed aggregate experience even when a new game
   // is started immediately after its final move.
   await finalization;
-  if(!game||game.result||game.turn!=='ai'||thinking)return;
+  if(initializing||!game||game.result||game.turn!=='ai'||thinking)return;
   thinking=true;selected=null;render();const ticket=++requestId;
   // The worker receives only the redacted observation. Never send game or setup.
   const observation=makeObservation(game,'ai');
@@ -386,7 +397,7 @@ async function startAI(){
   }
 }
 function begin(){
-  if(restoringExperience||game||replay)return;
+  if(initializing||restoringExperience||game||replay)return;
   const errors=validateLayout(setup,'human');
   if(errors.length){message(errors[0],true);return;}
   const firstTurn=drawFirstTurn();
@@ -398,7 +409,7 @@ function begin(){
   message(firstTurn==='ai'?'本局电脑先手。':'本局你先手。');
   if(game.turn==='ai')startAI();
 }
-function reset(){if(restoringExperience)return;cancelAI();closeMarkMenu();pieceMarks=Object.create(null);stopReplay();clearBattleEffect($('#board'));replay=null;game=null;selected=null;reserve=null;render();persist();message('已返回布阵。可沿用刚才的阵型，或重新部署。');}
+function reset(){if(initializing||restoringExperience)return;cancelAI();closeMarkMenu();pieceMarks=Object.create(null);stopReplay();clearBattleEffect($('#board'));replay=null;game=null;selected=null;reserve=null;render();persist();message('已返回布阵。可沿用刚才的阵型，或重新部署。');}
 function confirmAction(title,text,action){$('#confirm-title').textContent=title;$('#confirm-text').textContent=text;$('#confirm-dialog').showModal();$('#confirm-ok').onclick=()=>{$('#confirm-dialog').close();action();};}
 $('#confirm-cancel').onclick=()=>$('#confirm-dialog').close();
 $('#rules-btn').onclick=()=>$('#rules-dialog').showModal();$('#settings-btn').onclick=()=>$('#settings-dialog').showModal();document.querySelectorAll('[data-close]').forEach(button=>button.onclick=()=>document.getElementById(button.dataset.close).close());

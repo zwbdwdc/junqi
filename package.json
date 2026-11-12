@@ -1,6 +1,6 @@
 {
   "name": "junqi-hidden-command",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "private": true,
   "type": "module",
   "description": "离线双人暗棋 · 公平人机对战",

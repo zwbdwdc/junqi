@@ -30,7 +30,7 @@ exports.run=async({win})=>{
   throw Error('Requested viewport did not settle: '+JSON.stringify(viewportChecks.at(-1)));
  };
  const capture=async name=>{await win.webContents.capturePage();win.webContents.invalidate();await delay(100);fs.writeFileSync(path.join(output,name+'.png'),(await win.webContents.capturePage()).toPNG());};
- const install=async(session)=>{await win.loadURL('junqi://game/fixture.html');await run(`localStorage.setItem('junqi-session-v2',${JSON.stringify(JSON.stringify(session))})`);await win.loadURL('junqi://game/index.html');await wait("document.querySelectorAll('.cell').length===62");};
+ const install=async(session)=>{await win.loadURL('junqi://game/fixture.html');await run(`localStorage.setItem('junqi-session-v2',${JSON.stringify(JSON.stringify(session))})`);await win.loadURL('junqi://game/index.html');await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");};
  const geometry=()=>run(`(()=>{
   const box=e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};};
   const overlap=(a,b)=>({width:Math.min(a.right,b.right)-Math.max(a.left,b.left),height:Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)});
@@ -88,7 +88,7 @@ exports.run=async({win})=>{
  };
  let failure=null;
  try{
-  await win.loadURL('junqi://game/index.html');await wait("document.querySelectorAll('.cell').length===62");
+  await win.loadURL('junqi://game/index.html');await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
   const fixtures=await run(`(async()=>{
    const e=await import('./engine.js');let seed=923417;const rng=()=>((seed=Math.imul(seed,1664525)+1013904223>>>0)/4294967296);
    const human=e.randomLayout('human',rng),enemy=e.randomLayout('ai',rng);

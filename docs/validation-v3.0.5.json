@@ -1,0 +1,84 @@
+{
+  "version": "3.0.5",
+  "verifiedAt": "2026-11-12T10:12:10.439Z",
+  "executable": "军棋3.0.5.exe",
+  "downloadFilename": "3.0.5.exe",
+  "sha256": "a2f487ba821eaf03250349f3203827e976b4ccd6b36a0d0504cfbec4f1451c80",
+  "bytes": 157732302,
+  "asarSha256": "f8e47c34e936a0de4677a023fe6daaad7556b366873c31d7aa99cc7963d696d6",
+  "technicalChecksPassed": true,
+  "unitTests": {
+    "tests": 302,
+    "pass": 302,
+    "fail": 0
+  },
+  "packageChecks": [
+    "smoke",
+    "reveal",
+    "archive",
+    "experience",
+    "consolidation",
+    "features",
+    "session-save",
+    "early-resign",
+    "desktop-ui",
+    "board-geometry",
+    "replay-controls",
+    "first-turn",
+    "startup-restore"
+  ],
+  "startupRestore": {
+    "checks": 7,
+    "passed": true,
+    "testSha256": "b7e3854a0771ca2e8282d939add4f31ae304d3371cdc50f0beedb50bf1cd03f3",
+    "nativeCloseAndRestart": true
+  },
+  "firstTurn": {
+    "checks": 8,
+    "passed": true,
+    "testSha256": "87857c1504d22d95744c4dfd09750d3bf24d82eb1fe5539e040c585993159650"
+  },
+  "replayControls": {
+    "checks": 12,
+    "passed": true,
+    "testSha256": "01f819c7e32eab38524d78f4bd4123cad0a977d41bcae25993d011f78d7b5aa1"
+  },
+  "boardGeometry": {
+    "checks": 730,
+    "passed": true
+  },
+  "strengthAccepted": false,
+  "packageFiles": {
+    "dist/ai-context.js": "a0d5d9602ceddcc3e50dc5cba1696814dcbb0cf22aff701479f49d8b8a401456",
+    "dist/ai-worker.js": "4305afb698701060073a01e2f117820cf4c9e9fef6eaa7533412ea3c160d44a1",
+    "dist/ai.js": "7879dec821fa9b0997917fd72ceac47a5edc72366a74810786b9ad04193cdfe2",
+    "dist/app.js": "f9a4c7dc24aac616aa8cd04f1d9ea26ee97f8a7f057f210750f703d914a3838d",
+    "dist/battle-effects.js": "49dd297404fdbef9cb55048c618a98ba3708f3fc32a6fceddbd2c652503faf93",
+    "dist/beliefs.js": "899e4a17c36632e4daf37f56074f7333a1258cbc0dbe99f4b0f743c3964b63d8",
+    "dist/engine.js": "e3d194a6b55b6e7e91f7bd388d10d3105b39fcb1e9748647ea4187afd04bcd81",
+    "dist/first-turn.js": "d1f3124b00975ec2ad6993cfb0b0221b268750b3b1fbb4f1bee3a43521325bb9",
+    "dist/formations.js": "33c6b53a273483f38631ec85b70a9d21b7b9f23a44c7160d0af778858d390954",
+    "dist/icon.png": "16e8d0792d8afecbebd92b090e853eac8f753bca5daca4180bbce04a77396e7d",
+    "dist/index.html": "328173d0fe6bb4f819fa98ba76107cae408c53405bc5dcde1613a72c391305cb",
+    "dist/learning-recovery.js": "2e56b81d82348cb8e1e524afe0b58ede6ad0c425a5553ef8c7e4d5f953f54232",
+    "dist/learning.js": "73c91614be46227fafe2b455d51351dc39e2a1607f4354123becc9ac591c2b1a",
+    "dist/offense.js": "58bbef732c982561f5dafca98a0bb24381bbc4a1d06f19077f1d42fe32209d50",
+    "dist/piece-marks.js": "91df485ae6dc35d7a8a682bd8c87f5622d5cc6ff88271e7ba293f9da49183c58",
+    "dist/postgame-review.js": "c626f2f8e65dc8acb49bdfd928b0e73f8b2c0bdc43211a3ae17d7eb9eee09a1c",
+    "dist/quiet-flag.js": "5d51dfda5772aa5c01646b142e399c3e6c421ef774607725d65c3bb8f8a9abd9",
+    "dist/replay.js": "7e30911de8a9208b0be6abd7a6628bc710ad7b12162c117903e903d5d40d49c1",
+    "dist/resignation.js": "4e4231d888e9531d5a5570c7fd0c203c5c8ac21883a7b7a01af88ce964fbe26c",
+    "dist/route-defense.js": "fe8828bf2085aa463f8440cbd88d9802e2f8f6f25a37b5966f435a1e5b880eb3",
+    "dist/style.css": "6506d6860ba000f4f716069fac50faf973d8a065f4577d370a0be1032716e9a0",
+    "main.cjs": "228bbe020d02e5e9cdd4a5a14364fe3e5af26d7ce1662d0922a018ebff7799a4",
+    "preload.cjs": "be6555e6b0ab57e1f2e94bb268a22b576794cff47cfef86b722fb72bdfe73be2",
+    "storage.cjs": "d634af9672d330fcd34c260642f7ab07a854233f4269b97376cb122406919692",
+    "archive-store.cjs": "5a20d8f06c86a7894922515faaecfda4530fe0663962fb4b06bcd8b7e33a7ebd",
+    "diagnostics-store.cjs": "4ebe33d97f8a74607d44f2a4acf3a4158712fffd0b6b5345dbf9ced96493f913"
+  },
+  "sourceTestsEvidence": "The source and test files match the 302-pass tested build byte for byte. The copied Git checkout did not rerun that suite.",
+  "scope": "Restore the saved game before asynchronous startup loading, block input until ready, and preserve the exact session when closing during loading.",
+  "limits": [
+    "Playing-strength acceptance remains unfulfilled."
+  ]
+}

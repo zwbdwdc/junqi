@@ -31,7 +31,7 @@ exports.run=async({win})=>{
     const setup=original.initial.slice(0,60).map(p=>p?.side==='human'?p:null);
     await run(`localStorage.setItem('junqi-session-v2',${JSON.stringify(JSON.stringify({version:1,setup,game:original,difficulty:'hell',marks:{}}))})`);
     await win.loadURL('junqi://game/index.html');await wait("document.querySelector('#phase-label').textContent==='战局结束'");
-    await wait("document.querySelector('#new-btn').disabled===false");
+    await wait("document.querySelector('#new-btn').disabled===false&&!document.body.inert");
     win.webContents.focus();
     const saved=await run("localStorage.getItem('junqi-session-v2')");
     await click('#replay-btn');

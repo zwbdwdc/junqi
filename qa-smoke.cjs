@@ -20,7 +20,7 @@ app.whenReady().then(async()=>{
   await win.loadURL('junqi://game/index.html');
   const run=code=>win.webContents.executeJavaScript(code);
   const wait=async predicate=>{for(let i=0;i<150;i++){if(await run(predicate))return;await new Promise(r=>setTimeout(r,100));}throw Error('Timeout '+predicate);};
-  await wait("document.querySelectorAll('.cell').length===62");
+  await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
   if(!await run("document.querySelectorAll('[data-level]').length===2 && !document.querySelector('[data-level=\"beginner\"]')"))throw Error('Difficulty removal failed');
   await run("document.querySelector('#clear-btn').click();");
   if(!await run("document.querySelector('#placed-count').textContent.includes('0 / 25')"))throw Error('Clear layout failed');
@@ -63,7 +63,7 @@ app.whenReady().then(async()=>{
   const timingsBeforeReload=await run("JSON.parse(localStorage.getItem('junqi-session-v2')).game.aiDecisions.map(d=>d.info.diagnostics)");
   const before=await run("JSON.parse(localStorage.getItem('junqi-session-v2')).game.ply");
   await win.webContents.reload();await new Promise(r=>setTimeout(r,400));
-  await wait("document.querySelectorAll('.cell').length===62");
+  await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
   const after=await run("JSON.parse(localStorage.getItem('junqi-session-v2')).game.ply");
   if(before!==after)throw Error('Session resume mismatch');
   require('node:assert/strict').deepEqual(await run("JSON.parse(localStorage.getItem('junqi-session-v2')).game.aiContext"),playingStyle,'Resuming must preserve the playing style');
@@ -93,7 +93,7 @@ app.whenReady().then(async()=>{
   await fs.writeFile(path.join(__dirname,'qa-replay.png'),(await win.webContents.capturePage()).toPNG());
   if(experienceBefore!==await run("localStorage.getItem('junqi-learning-v1')"))throw Error('Viewing replay modified experience');
   await win.webContents.reload();await new Promise(r=>setTimeout(r,400));
-  await wait("document.querySelectorAll('.cell').length===62");
+  await wait("document.querySelectorAll('.cell').length===62&&!document.body.inert");
   require('node:assert/strict').deepEqual(JSON.parse(await run("localStorage.getItem('junqi-learning-v1')")),JSON.parse(experienceBefore),'Repeated endgame learned twice or lost experience');
   require('node:assert/strict').deepEqual(await run("JSON.parse(localStorage.getItem('junqi-session-v2')).game.aiDecisions.map(d=>d.info.diagnostics)"),searchDecisions,'Completed replay and another reload must preserve decision timings');
   await forceHumanFirstTurn(win);
