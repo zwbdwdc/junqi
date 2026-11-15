@@ -14,6 +14,7 @@ const STORE='junqi-session-v2', LAYOUT='junqi-layout-v1', LEARNING='junqi-learni
 let setup=randomLayout('human'), game=null, difficulty='professional', selected=null, reserve=null, thinking=false, worker=null, requestId=0;
 let pointerDrag=null, suppressClick=false, replay=null, replayTimer=null;
 let pieceMarks=Object.create(null), markTarget=null, markAnchor=null;
+let historyRequest=0;
 let learning=createLearningProfile();
 const archivedGames=new Map();
 let finalization=Promise.resolve(), learningGeneration=0, restoringExperience=false;
@@ -113,12 +114,17 @@ function archiveFinishedGame(finishedGame,level){
   archivedGames.set(finishedGame.gameId,pending);
   return pending;
 }
+function closeHistory(){historyRequest++;$('#history-dialog').close();}
+$('#history-dialog').addEventListener('cancel',()=>{historyRequest++;});
+$('#history-dialog').addEventListener('close',()=>{if(!$('#history-dialog').open)historyRequest++;});
 async function openHistory(){
   if(game&&!game.result)return;
+  const request=++historyRequest;
   stopReplay();if(replay)render();
   const list=$('#history-list'),empty=$('#history-empty');list.innerHTML='';empty.textContent='正在读取…';$('#history-dialog').showModal();
   if(!window.junqiArchive){empty.textContent='请在桌面软件中查看历史棋谱。';return;}
   const result=await window.junqiArchive.list().catch(error=>({ok:false,error:error.message}));
+  if(request!==historyRequest||!$('#history-dialog').open)return;
   if(!result.ok){empty.textContent='读取失败：'+result.error;return;}
   empty.textContent=result.games.length?'最近 100 局，自动保存。':'还没有保存的棋谱。完成一局后会出现在这里。';
   for(const item of result.games){
@@ -127,11 +133,13 @@ async function openHistory(){
     title.textContent=`${names[item.difficulty]} · ${item.result.winner==='human'?'你赢了':item.result.winner==='ai'?'电脑获胜':'和棋'}`;
     detail.textContent=`${new Date(item.finishedAt).toLocaleString('zh-CN',{hour12:false})} · ${item.ply} 步`;
     button.append(title,detail);button.onclick=async()=>{
+      const selection=++historyRequest;
       button.disabled=true;
       const loaded=await window.junqiArchive.load(item.id).catch(error=>({ok:false,error:error.message}));
       button.disabled=false;
+      if(selection!==historyRequest||!$('#history-dialog').open)return;
       if(!loaded.ok){empty.textContent='棋谱无法打开：'+loaded.error;return;}
-      $('#history-dialog').close();enterReplay(loaded.record.game,loaded.record.difficulty);
+      closeHistory();enterReplay(loaded.record.game,loaded.record.difficulty);
     };list.append(button);
   }
 }
@@ -412,7 +420,7 @@ function begin(){
 function reset(){if(initializing||restoringExperience)return;cancelAI();closeMarkMenu();pieceMarks=Object.create(null);stopReplay();clearBattleEffect($('#board'));replay=null;game=null;selected=null;reserve=null;render();persist();message('已返回布阵。可沿用刚才的阵型，或重新部署。');}
 function confirmAction(title,text,action){$('#confirm-title').textContent=title;$('#confirm-text').textContent=text;$('#confirm-dialog').showModal();$('#confirm-ok').onclick=()=>{$('#confirm-dialog').close();action();};}
 $('#confirm-cancel').onclick=()=>$('#confirm-dialog').close();
-$('#rules-btn').onclick=()=>$('#rules-dialog').showModal();$('#settings-btn').onclick=()=>$('#settings-dialog').showModal();document.querySelectorAll('[data-close]').forEach(button=>button.onclick=()=>document.getElementById(button.dataset.close).close());
+$('#rules-btn').onclick=()=>$('#rules-dialog').showModal();$('#settings-btn').onclick=()=>$('#settings-dialog').showModal();document.querySelectorAll('[data-close]').forEach(button=>button.onclick=()=>button.dataset.close==='history-dialog'?closeHistory():document.getElementById(button.dataset.close).close());
 $('#history-btn').onclick=openHistory;
 $('#new-btn').onclick=()=>game&&!game.result?confirmAction('开始新对局','当前对局将结束，返回布阵。',reset):reset();
 $('#random-btn').onclick=()=>{setup=randomLayout('human');selected=null;reserve=null;render();persist();message('已生成合法阵型，可以继续拖动调整。');};
