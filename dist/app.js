@@ -12,7 +12,7 @@ const names = { professional:'职业', hell:'地狱' };
 const descriptions = { professional:'攻守均衡。', hell:'推演更深，思考稍久。' };
 const STORE='junqi-session-v2', LAYOUT='junqi-layout-v1', LEARNING='junqi-learning-v1';
 let setup=randomLayout('human'), game=null, difficulty='professional', selected=null, reserve=null, thinking=false, worker=null, requestId=0;
-let pointerDrag=null, suppressClick=false, replay=null, replayTimer=null;
+let pointerDrag=null, canceledPointer=false, suppressClick=false, replay=null, replayTimer=null;
 let pieceMarks=Object.create(null), markTarget=null, markAnchor=null;
 let historyRequest=0;
 let learning=createLearningProfile();
@@ -449,19 +449,25 @@ window.addEventListener('keydown',event=>{
       return;
     }
   }
-  if(event.key==='Escape'){selected=null;reserve=null;render();}
+  if(event.key==='Escape'){cancelPointerDrag();selected=null;reserve=null;render();}
 });
+function cancelPointerDrag(){
+  if(!pointerDrag)return false;
+  pointerDrag=null;canceledPointer=true;selected=null;reserve=null;return true;
+}
+document.addEventListener('pointerdown',()=>{canceledPointer=false;suppressClick=false;},true);
 document.addEventListener('pointermove',event=>{
   if(!pointerDrag||pointerDrag.active||Math.hypot(event.clientX-pointerDrag.x,event.clientY-pointerDrag.y)<7)return;
   pointerDrag.active=true;selected=pointerDrag.type?null:pointerDrag.from;reserve=pointerDrag.type||null;render(true);
 });
 document.addEventListener('pointerup',event=>{
-  const drag=pointerDrag;pointerDrag=null;if(!drag?.active)return;
-  const target=document.elementFromPoint(event.clientX,event.clientY)?.closest('.cell');
+  const drag=pointerDrag,canceled=canceledPointer;pointerDrag=null;canceledPointer=false;if(!canceled&&!drag?.active)return;
   suppressClick=true;setTimeout(()=>{suppressClick=false;},80);
+  if(canceled)return;
+  const target=document.elementFromPoint(event.clientX,event.clientY)?.closest('.cell');
   if(target)clickCell(Number(target.dataset.index));else render();
 });
-document.addEventListener('pointercancel',()=>{pointerDrag=null;});
+document.addEventListener('pointercancel',()=>{if(cancelPointerDrag())render();});
 document.addEventListener('click',event=>{if(suppressClick){event.preventDefault();event.stopImmediatePropagation();}},true);
 $('#export-experience').onclick=async()=>{
   await finalization;
